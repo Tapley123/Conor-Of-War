@@ -10,14 +10,6 @@ public class Scrolling : MonoBehaviour
 
     private bool canMoveRight = true;
     private bool canMoveLeft = true;
-    
-    void Start()
-    {
-        /*
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.lockState = CursorLockMode.None;
-        */
-    }
 
     void Update()
     {
@@ -38,33 +30,13 @@ public class Scrolling : MonoBehaviour
         else
             canMoveRight = true;
 
-
-        //transform.position += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed, 0f, 0f);
-
-        if(canMoveRight && Input.GetAxisRaw("Mouse X") > -1)
+        if(Input.mousePosition.x > -10 && canMoveRight)
         {
             transform.position += new Vector3(speed * Time.deltaTime, 0f, 0f);
         }
-        if (canMoveLeft && Input.GetAxisRaw("Mouse X") < 1)
+        if (Input.mousePosition.x < 10 && canMoveLeft)
         {
             transform.position -= new Vector3(speed * Time.deltaTime, 0f, 0f);
         }
     }
-    /*
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.CompareTag("CameraRigthWall"))
-        {
-            Debug.Log("Right Wall");
-            canMoveRight = false;
-            canMoveLeft = true;
-        }
-        if(other.CompareTag("CameraLeftWall"))
-        {
-            Debug.Log("Left Wall");
-            canMoveRight = true;
-            canMoveLeft = false;
-        }
-    }
-    */
 }
