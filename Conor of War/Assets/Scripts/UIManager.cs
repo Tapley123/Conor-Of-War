@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject monster1;
+    public GameObject zombie, werewolf, vampire, skeleton, demon;
     public GameObject spawnObj;
     [SerializeField] private Vector2 spawnPos;
 
@@ -18,9 +18,28 @@ public class UIManager : MonoBehaviour
         
     }
 
-    public void SpawnMonster1()
+    public void Zombie()
     {
-        Instantiate(monster1, spawnPos, monster1.transform.rotation);
-        Debug.Log("monster 1 spawn");
+        Instantiate(zombie, spawnPos, zombie.transform.rotation);
+    }
+
+    public void Werewolf()
+    {
+        Instantiate(werewolf, spawnPos, zombie.transform.rotation);
+    }
+
+    public void Vampire()
+    {
+        Instantiate(vampire, spawnPos, zombie.transform.rotation);
+    }
+
+    public void Skeleton()
+    {
+        Instantiate(skeleton, spawnPos, zombie.transform.rotation);
+    }
+
+    public void Demon()
+    {
+        Instantiate(demon, spawnPos, zombie.transform.rotation);
     }
 }
