@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/_Scenes/MainMenu.unity
     guid: c51dd99f47c07df40a8d23506114a0ec
   - enabled: 1
-    path: Assets/Scenes/Conors Scene.unity
+    path: Assets/_Scenes/Conors Scene.unity
     guid: 1e5610a02fe7a2d42bf36b1a7036e1dd
   m_configObjects: {}
