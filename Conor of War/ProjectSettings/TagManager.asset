@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CameraRightWall
   - CameraLeftWall
+  - Floor
   layers:
   - Default
   - TransparentFX

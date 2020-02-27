@@ -11,7 +11,8 @@ public class Scrolling : MonoBehaviour
     private bool canMoveRight = true;
     private bool canMoveLeft = true;
 
-    public float mouseScrollinfOffset = 80f;
+    public float mouseScrollingXOffset = 80f;
+    public float mouseScrollingYOffset = 80f;
     private float screenWidth, screenHeight;
 
     private void Start()
@@ -22,9 +23,6 @@ public class Scrolling : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log("Screen Height = " + screenHeight);
-        //Debug.Log("Screen Width = " + screenWidth);
-
         if(transform.position.x < cameraLeftClamp)
         {
             canMoveRight = true;
@@ -44,11 +42,11 @@ public class Scrolling : MonoBehaviour
 
 
 
-        if (Input.mousePosition.x > mouseScrollinfOffset && canMoveRight && Input.mousePosition.y < screenHeight - mouseScrollinfOffset)
+        if (Input.mousePosition.x > mouseScrollingXOffset && canMoveRight && Input.mousePosition.y < screenHeight - mouseScrollingYOffset)
         {
             transform.position += new Vector3(speed * Time.deltaTime, 0f, 0f);
         }
-        if (Input.mousePosition.x < screenWidth - mouseScrollinfOffset && canMoveLeft && Input.mousePosition.y < screenHeight - mouseScrollinfOffset)
+        if (Input.mousePosition.x < screenWidth - mouseScrollingXOffset && canMoveLeft && Input.mousePosition.y < screenHeight - mouseScrollingYOffset)
         {
             transform.position -= new Vector3(speed * Time.deltaTime, 0f, 0f);
         }
