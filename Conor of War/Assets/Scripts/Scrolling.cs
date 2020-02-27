@@ -10,6 +10,12 @@ public class Scrolling : MonoBehaviour
 
     private bool canMoveRight = true;
     private bool canMoveLeft = true;
+    private float mouseXStart;
+
+    private void Start()
+    {
+        mouseXStart = Input.mousePosition.x;
+    }
 
     void Update()
     {
@@ -30,6 +36,8 @@ public class Scrolling : MonoBehaviour
         else
             canMoveRight = true;
 
+        /*
+        Debug.Log(Input.mousePosition.x);
         if(Input.mousePosition.x > -10 && canMoveRight)
         {
             transform.position += new Vector3(speed * Time.deltaTime, 0f, 0f);
@@ -38,5 +46,15 @@ public class Scrolling : MonoBehaviour
         {
             transform.position -= new Vector3(speed * Time.deltaTime, 0f, 0f);
         }
+        */
+        if (Input.mousePosition.x > mouseXStart -300 && canMoveRight)
+        {
+            transform.position += new Vector3(speed * Time.deltaTime, 0f, 0f);
+        }
+        if (Input.mousePosition.x < mouseXStart + 300 && canMoveLeft)
+        {
+            transform.position -= new Vector3(speed * Time.deltaTime, 0f, 0f);
+        }
+
     }
 }
