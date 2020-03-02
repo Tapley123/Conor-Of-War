@@ -5,12 +5,15 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     public GameObject zombie, werewolf, vampire, skeleton, demon;
-    public GameObject spawnObj;
-    [SerializeField] private Vector2 spawnPos;
+    public GameObject soldier, knight, archer, rogue, wizard;
+    public GameObject monsterSpawn, humanSpawn;
+    private Vector2 monsterSpawnPos;
+    [SerializeField]private Vector2 humanSpawnPos;
 
     void Start()
     {
-        spawnPos = new Vector2(spawnObj.transform.position.x, spawnObj.transform.position.y);
+        monsterSpawnPos = new Vector2(monsterSpawn.transform.position.x, monsterSpawn.transform.position.y);
+        humanSpawnPos = new Vector2(humanSpawn.transform.position.x, humanSpawn.transform.position.y);
     }
     
     void Update()
@@ -20,26 +23,26 @@ public class UIManager : MonoBehaviour
 
     public void Zombie()
     {
-        Instantiate(zombie, spawnPos, zombie.transform.rotation);
+        Instantiate(zombie, monsterSpawnPos, zombie.transform.rotation);
     }
 
     public void Werewolf()
     {
-        Instantiate(werewolf, spawnPos, zombie.transform.rotation);
+        Instantiate(werewolf, monsterSpawnPos, zombie.transform.rotation);
     }
 
     public void Vampire()
     {
-        Instantiate(vampire, spawnPos, zombie.transform.rotation);
+        Instantiate(vampire, monsterSpawnPos, zombie.transform.rotation);
     }
 
     public void Skeleton()
     {
-        Instantiate(skeleton, spawnPos, zombie.transform.rotation);
+        Instantiate(skeleton, monsterSpawnPos, zombie.transform.rotation);
     }
 
     public void Demon()
     {
-        Instantiate(demon, spawnPos, zombie.transform.rotation);
+        Instantiate(demon, monsterSpawnPos, zombie.transform.rotation);
     }
 }
