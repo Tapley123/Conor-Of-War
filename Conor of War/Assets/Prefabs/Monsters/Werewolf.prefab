@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7202852491759442331}
   - component: {fileID: 170436750560666263}
   - component: {fileID: 376828603717098409}
-  - component: {fileID: -593392931926797166}
   m_Layer: 0
   m_Name: Werewolf
   m_TagString: Werewolf
@@ -146,14 +145,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c24f8b33ececf448ceaf708f737427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 210
-  cost: 30
-  cooldown: 3
+  name: Werewolf
   speedRate: Slow
-  speed: 1
   characterType: Melee
-  damagePerSecond: 60
-  pointPerKill: 45
+  mySpeed: 0
 --- !u!61 &376828603717098409
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -180,18 +175,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.43374938, y: 1.28}
   m_EdgeRadius: 0
---- !u!114 &-593392931926797166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7202852491759442329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffe8133833a35504ea155120a3c30e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7202852492301996312
 GameObject:
   m_ObjectHideFlags: 0

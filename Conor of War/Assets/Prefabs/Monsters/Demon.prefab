@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6285594110524272702}
   - component: {fileID: 3932423081126710066}
   - component: {fileID: 914323535208764987}
-  - component: {fileID: -7926923114417868804}
   m_Layer: 0
   m_Name: Demon
   m_TagString: Demon
@@ -146,14 +145,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c24f8b33ececf448ceaf708f737427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
-  cost: 80
-  cooldown: 8
+  name: Demon
   speedRate: Slow
-  speed: 1
   characterType: Buff/Melee
-  damagePerSecond: 20
-  pointPerKill: 120
+  mySpeed: 0
 --- !u!61 &914323535208764987
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -180,26 +175,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.43374938, y: 1.28}
   m_EdgeRadius: 0
---- !u!114 &-7926923114417868804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6285594110524272700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3bb6b524bf58084e95855656fa2ef40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 50
-  cost: 80
-  cooldown: 8
-  speedRate: Slow
-  speed: 1
-  characterType: Buff/Melee
-  damagePerSecond: 20
-  pointPerKill: 120
 --- !u!1 &6285594111093209277
 GameObject:
   m_ObjectHideFlags: 0

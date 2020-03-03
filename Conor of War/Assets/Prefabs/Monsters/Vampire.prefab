@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 3554161934648435631}
   - component: {fileID: 5835191829437585571}
   - component: {fileID: 6834217391127188956}
-  - component: {fileID: -3230628971416999968}
   m_Layer: 0
   m_Name: Vampire
   m_TagString: Vampire
@@ -227,14 +226,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c24f8b33ececf448ceaf708f737427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 40
-  cost: 20
-  cooldown: 2
+  name: Vampire
   speedRate: Medium
-  speed: 2
   characterType: Ranged/Melee
-  damagePerSecond: 15
-  pointPerKill: 30
+  mySpeed: 0
 --- !u!61 &6834217391127188956
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -261,15 +256,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.43374938, y: 1.28}
   m_EdgeRadius: 0
---- !u!114 &-3230628971416999968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3554161934648435629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb8e0d3eb2473d6499f01a65a8c46074, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

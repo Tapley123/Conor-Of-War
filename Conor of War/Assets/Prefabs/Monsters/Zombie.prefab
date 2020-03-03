@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2789484387364939204}
   - component: {fileID: -4098818567214047544}
   - component: {fileID: 357606377201119132}
-  - component: {fileID: 7610554324594643757}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Zombie
@@ -146,14 +145,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c24f8b33ececf448ceaf708f737427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 70
-  cost: 10
-  cooldown: 1
+  name: Zombie
   speedRate: Medium
-  speed: 2
   characterType: Melee
-  damagePerSecond: 20
-  pointPerKill: 15
+  mySpeed: 0
 --- !u!61 &357606377201119132
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -180,18 +175,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.43374938, y: 1.28}
   m_EdgeRadius: 0
---- !u!114 &7610554324594643757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2789484387364939206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13977a215d39f6141a656d75a4955c7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2789484387887738183
 GameObject:
   m_ObjectHideFlags: 0

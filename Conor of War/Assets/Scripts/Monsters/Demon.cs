@@ -12,6 +12,7 @@ public class Demon : MonoBehaviour
     public string characterType = "Buff/Melee";
     public float damagePerSecond = 20f;
     public float pointPerKill = 120f;
+    
 
     void Start()
     {
