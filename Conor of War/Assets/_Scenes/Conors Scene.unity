@@ -3035,6 +3035,11 @@ MonoBehaviour:
   monsterSpawn: {fileID: 1711659334}
   humanSpawn: {fileID: 1316655792}
   humanSpawnPos: {x: 0, y: 0}
+  zombieCooldownTime: 1
+  werewolfCooldownTime: 3
+  vampireCooldownTime: 2
+  skeletonCooldownTime: 2
+  demonCooldownTime: 8
 --- !u!4 &975501624
 Transform:
   m_ObjectHideFlags: 0
