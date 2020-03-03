@@ -33,32 +33,47 @@ public class UIManager : MonoBehaviour
 
     public void Zombie()
     {
-        StartCoroutine(ZombieCoroutine(zombieCooldownTime));
-        currency -= zombieCost;
+        if(currency >= zombieCost)
+        {
+            StartCoroutine(ZombieCoroutine(zombieCooldownTime));
+            currency -= zombieCost;
+        }
     }
 
     public void Werewolf()
     {
-        StartCoroutine(WerewolfCoroutine(werewolfCooldownTime));
-        currency -= werewolfCost;
+        if (currency >= werewolfCost)
+        {
+            StartCoroutine(WerewolfCoroutine(werewolfCooldownTime));
+            currency -= werewolfCost;
+        }
     }
 
     public void Vampire()
     {
-        StartCoroutine(VampireCoroutine(vampireCooldownTime));
-        currency -= vampireCost;
+        if (currency >= vampireCost)
+        {
+            StartCoroutine(VampireCoroutine(vampireCooldownTime));
+            currency -= vampireCost;
+        }
     }
 
     public void Skeleton()
     {
-        StartCoroutine(SkeletonCoroutine(skeletonCooldownTime));
-        currency -= skeletonCost;
+        if (currency >= skeletonCost)
+        {
+            StartCoroutine(SkeletonCoroutine(skeletonCooldownTime));
+            currency -= skeletonCost;
+        }
     }
 
     public void Demon()
     {
-        StartCoroutine(DemonCoroutine(demonCooldownTime));
-        currency -= demonCost;
+        if (currency >= demonCost)
+        {
+            StartCoroutine(DemonCoroutine(demonCooldownTime));
+            currency -= demonCost;
+        }
     }
 
 
