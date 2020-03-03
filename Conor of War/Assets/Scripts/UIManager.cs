@@ -7,7 +7,9 @@ public class UIManager : MonoBehaviour
 {
     public GameObject zombie, werewolf, vampire, skeleton, demon;
     public GameObject soldier, knight, archer, rogue, wizard;
-    public GameObject monsterSpawn, humanSpawn;
+
+    public Transform cameraT;
+    public GameObject monsterSpawn1, monsterSpawn2, monsterSpawn3, humanSpawn;
     private Vector2 monsterSpawnPos;
     private Vector2 humanSpawnPos;
 
@@ -20,9 +22,9 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        monsterSpawnPos = new Vector2(monsterSpawn.transform.position.x, monsterSpawn.transform.position.y);
+        monsterSpawnPos = new Vector2(monsterSpawn1.transform.position.x, monsterSpawn1.transform.position.y);
         humanSpawnPos = new Vector2(humanSpawn.transform.position.x, humanSpawn.transform.position.y);
-        
+
         currencyText.text = currencyName + ": " + currency.ToString(); ///display currency at the top of the screen
     }
 
@@ -30,7 +32,30 @@ public class UIManager : MonoBehaviour
     {
         currencyText.text = currencyName + ": " + currency.ToString(); ///display currency at the top of the screen
     }
+    
+    
+    /// ///////////////////////////////CHANGING FIGHT ZONES////////////////////////////////////////////////////
+    public void FightZone1()
+    {
+        cameraT.position = new Vector3(cameraT.position.x, 0, cameraT.position.z);
+        monsterSpawnPos = new Vector2(monsterSpawn1.transform.position.x, monsterSpawn1.transform.position.y);
+    }
 
+    public void FightZone2()
+    {
+        cameraT.position = new Vector3(cameraT.position.x, -15, cameraT.position.z);
+        monsterSpawnPos = new Vector2(monsterSpawn2.transform.position.x, monsterSpawn2.transform.position.y);
+    }
+
+    public void FightZone3()
+    {
+        cameraT.position = new Vector3(cameraT.position.x, -30, cameraT.position.z);
+        monsterSpawnPos = new Vector2(monsterSpawn3.transform.position.x, monsterSpawn3.transform.position.y);
+    }
+    /// ///////////////////////////////CHANGING FIGHT ZONES////////////////////////////////////////////////////
+
+
+    /// ///////////////////////////////SPAWNING MONSTERS////////////////////////////////////////////////////
     public void Zombie()
     {
         if(currency >= zombieCost)
@@ -75,11 +100,11 @@ public class UIManager : MonoBehaviour
             currency -= demonCost;
         }
     }
+    /// ///////////////////////////////SPAWNING MONSTERS////////////////////////////////////////////////////
 
 
 
-
-
+    /// ///////////////////////////////MONSTER COOLDOWN TIMERS////////////////////////////////////////////////////
     IEnumerator ZombieCoroutine(float time)
     {
         yield return new WaitForSeconds(time);
@@ -109,4 +134,5 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSeconds(time);
         Instantiate(demon, monsterSpawnPos, zombie.transform.rotation);
     }
+    /// ///////////////////////////////MONSTER COOLDOWN TIMERS////////////////////////////////////////////////////
 }

@@ -6,13 +6,9 @@ public class Monster : MonoBehaviour
 {
     private Rigidbody2D myRb;
 
-    public string name;
+    public string monsterName;
     private float health;
-    private float cost;
-    private float cooldown;
-    public string speedRate;
     private float speed;
-    public string characterType;
     private float damagePerSecond;
     private float pointPerKill;
 
@@ -23,55 +19,45 @@ public class Monster : MonoBehaviour
     {
         myRb = GetComponent<Rigidbody2D>();
 
-        if (name == "Zombie")
+        if (monsterName == "Zombie")
         {
             health = 70f;
-            cost = 10f;
-            cooldown = 1f;
             mySpeed = zombieSpeed;
             speed = zombieSpeed;
             damagePerSecond = 20f;
             pointPerKill = 15f;
         }
 
-        if (name == "Werewolf")
+        if (monsterName == "Werewolf")
         {
             health = 210f;
-            cost = 30f;
-            cooldown = 3f;
             mySpeed = werewolfSpeed;
             speed = werewolfSpeed;
             damagePerSecond = 60f;
             pointPerKill = 45f;
         }
 
-        if (name == "Vampire")
+        if (monsterName == "Vampire")
         {
             health = 40f;
-            cost = 20f;
-            cooldown = 2f;
             mySpeed = vampireSpeed;
             speed = vampireSpeed;
             damagePerSecond = 15f;
             pointPerKill = 30f;
         }
 
-        if (name == "Skeleton")
+        if (monsterName == "Skeleton")
         {
             health = 80f;
-            cost = 20f;
-            cooldown = 2f;
             mySpeed = skeletonSpeed;
             speed = skeletonSpeed;
             damagePerSecond = 60f;
             pointPerKill = 30f;
         }
 
-        if (name == "Demon")
+        if (monsterName == "Demon")
         {
             health = 50f;
-            cost = 80f;
-            cooldown = 8f;
             mySpeed = demonSpeed;
             speed = demonSpeed;
             damagePerSecond = 20f;

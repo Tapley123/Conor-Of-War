@@ -226,9 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c24f8b33ececf448ceaf708f737427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Vampire
-  speedRate: Medium
-  characterType: Ranged/Melee
+  monsterName: Vampire
   mySpeed: 0
 --- !u!61 &6834217391127188956
 BoxCollider2D:

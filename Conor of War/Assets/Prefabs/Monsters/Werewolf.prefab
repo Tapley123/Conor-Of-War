@@ -145,9 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c24f8b33ececf448ceaf708f737427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Werewolf
-  speedRate: Slow
-  characterType: Melee
+  monsterName: Werewolf
   mySpeed: 0
 --- !u!61 &376828603717098409
 BoxCollider2D:
