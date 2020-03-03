@@ -87,34 +87,49 @@ public class Monster : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Demon"))
+        //slowing the object that collides with the back of another object
+        if (collision.CompareTag("Demon") && collision.gameObject.transform.position.x > transform.position.x)
         {
             //Debug.Log("Demon");
-            speed = demonSpeed;
+            GameObject monsterInFront = collision.gameObject;
+            Monster m = monsterInFront.GetComponent<Monster>();
+            speed = m.speed;
         }
 
-        if (collision.CompareTag("Skeleton"))
+        if (collision.CompareTag("Skeleton") && collision.gameObject.transform.position.x > transform.position.x)
         {
             //Debug.Log("Skeleton");
-            speed = skeletonSpeed;
+            //speed = skeletonSpeed;
+            GameObject monsterInFront = collision.gameObject;
+            Monster m = monsterInFront.GetComponent<Monster>();
+            speed = m.speed;
         }
 
-        if (collision.CompareTag("Vampire"))
+        if (collision.CompareTag("Vampire") && collision.gameObject.transform.position.x > transform.position.x)
         {
             // Debug.Log("Vampire");
-            speed = vampireSpeed;
+            //speed = vampireSpeed;
+            GameObject monsterInFront = collision.gameObject;
+            Monster m = monsterInFront.GetComponent<Monster>();
+            speed = m.speed;
         }
 
-        if (collision.CompareTag("Werewolf"))
+        if (collision.CompareTag("Werewolf") && collision.gameObject.transform.position.x > transform.position.x)
         {
             //Debug.Log("Werewolf");
-            speed = werewolfSpeed;
+            //speed = werewolfSpeed;
+            GameObject monsterInFront = collision.gameObject;
+            Monster m = monsterInFront.GetComponent<Monster>();
+            speed = m.speed;
         }
 
-        if (collision.CompareTag("Zombie"))
+        if (collision.CompareTag("Zombie") && collision.gameObject.transform.position.x > transform.position.x)
         {
             //Debug.Log("Zombie");
-            speed = zombieSpeed;
+            //speed = zombieSpeed;
+            GameObject monsterInFront = collision.gameObject;
+            Monster m = monsterInFront.GetComponent<Monster>();
+            speed = m.speed;
         }
     }
 
