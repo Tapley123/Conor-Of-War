@@ -8358,6 +8358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1316655793}
+  - component: {fileID: 1316655794}
   m_Layer: 0
   m_Name: HumanSpawn1
   m_TagString: Untagged
@@ -8379,6 +8380,37 @@ Transform:
   m_Father: {fileID: 841251975}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1316655794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316655792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad9e20faeb43214cbdc6fb3a6594164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hCurrency: 10
+  spawnChoice: 0
+  knightCost: 30
+  rogueCost: 20
+  soldierCost: 10
+  wizardCost: 80
+  archerCost: 20
+  spawnTimer: 5
+  availableHumans: 0
+  humansCost: 
+  humans:
+  - {fileID: 1733795514802614774, guid: 82ede37a49f2c3b40a02b4f93757ea78, type: 3}
+  - {fileID: 7284716061179620582, guid: 97f91a79f5e3d524ebc73b13ffa6e68d, type: 3}
+  - {fileID: 6346390988874068325, guid: 3d27c1632d03c404cb070c0905aab1f6, type: 3}
+  - {fileID: 2048847220809353847, guid: cea2e2500473957429233fd4311ede87, type: 3}
+  - {fileID: 271815959800401163, guid: 906f5a472382f794aa6bf3d98257cde9, type: 3}
+  humanSpawn1: {fileID: 1316655793}
+  humanSpawn2: {fileID: 414534696}
+  humanSpawn3: {fileID: 1448980168}
 --- !u!1 &1319356125
 GameObject:
   m_ObjectHideFlags: 0
