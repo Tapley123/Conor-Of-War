@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    public GameObject zombieDropDown, werewolfDropDown, vampireDropDown, skeletonDropDown, demonDropDown;
+
     public GameObject zombie, werewolf, vampire, skeleton, demon;
     public GameObject soldier, knight, archer, rogue, wizard;
 
@@ -26,6 +28,12 @@ public class UIManager : MonoBehaviour
         humanSpawnPos = new Vector2(humanSpawn.transform.position.x, humanSpawn.transform.position.y);
 
         currencyText.text = currencyName + ": " + currency.ToString(); ///display currency at the top of the screen
+
+        zombieDropDown.SetActive(false);
+        werewolfDropDown.SetActive(false);
+        vampireDropDown.SetActive(false);
+        skeletonDropDown.SetActive(false);
+        demonDropDown.SetActive(false);
     }
 
     void Update()
@@ -102,6 +110,17 @@ public class UIManager : MonoBehaviour
     }
     /// ///////////////////////////////SPAWNING MONSTERS////////////////////////////////////////////////////
 
+
+    /// ///////////////////////////////MONSTER DROP DOWN MENUS////////////////////////////////////////////////////
+    public void ZombieDropDown()
+    {
+        zombieDropDown.SetActive(true);
+    }
+    public void ExitZombieDropDown()
+    {
+        zombieDropDown.SetActive(false);
+    }
+    /// ///////////////////////////////MONSTER DROP DOWN MENUS////////////////////////////////////////////////////
 
 
     /// ///////////////////////////////MONSTER COOLDOWN TIMERS////////////////////////////////////////////////////
