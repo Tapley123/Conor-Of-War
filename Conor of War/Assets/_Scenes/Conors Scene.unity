@@ -8392,7 +8392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ad9e20faeb43214cbdc6fb3a6594164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hCurrency: 10
+  hCurrency: 10000
   spawnChoice: 0
   knightCost: 30
   rogueCost: 20
