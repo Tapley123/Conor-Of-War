@@ -7,6 +7,8 @@ public class Monster : MonoBehaviour
     private Rigidbody2D myRb;
     public Transform healthBar;
 
+    private bool stopped = false;
+
     public string monsterName;
     private float health;
     private float fullHealth;
@@ -98,13 +100,18 @@ public class Monster : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //slowing the object that collides with the back of another object
+        ///////////////////////slowing the object that collides with the back of another object////////////////////////////////////////
         if (collision.CompareTag("Demon") && collision.gameObject.transform.position.x > transform.position.x)
         {
             //Debug.Log("Demon");
             GameObject monsterInFront = collision.gameObject;
             Monster m = monsterInFront.GetComponent<Monster>();
-            speed = m.speed;
+            //speed = m.speed;
+
+            if (stopped)
+                speed = 0;
+            else
+                speed = m.speed;
         }
 
         if (collision.CompareTag("Skeleton") && collision.gameObject.transform.position.x > transform.position.x)
@@ -113,7 +120,12 @@ public class Monster : MonoBehaviour
             //speed = skeletonSpeed;
             GameObject monsterInFront = collision.gameObject;
             Monster m = monsterInFront.GetComponent<Monster>();
-            speed = m.speed;
+            //speed = m.speed;
+
+            if (stopped)
+                speed = 0;
+            else
+                speed = m.speed;
         }
 
         if (collision.CompareTag("Vampire") && collision.gameObject.transform.position.x > transform.position.x)
@@ -122,7 +134,12 @@ public class Monster : MonoBehaviour
             //speed = vampireSpeed;
             GameObject monsterInFront = collision.gameObject;
             Monster m = monsterInFront.GetComponent<Monster>();
-            speed = m.speed;
+            //speed = m.speed;
+
+            if (stopped)
+                speed = 0;
+            else
+                speed = m.speed;
         }
 
         if (collision.CompareTag("Werewolf") && collision.gameObject.transform.position.x > transform.position.x)
@@ -131,7 +148,12 @@ public class Monster : MonoBehaviour
             //speed = werewolfSpeed;
             GameObject monsterInFront = collision.gameObject;
             Monster m = monsterInFront.GetComponent<Monster>();
-            speed = m.speed;
+            //speed = m.speed;
+
+            if (stopped)
+                speed = 0;
+            else
+                speed = m.speed;
         }
 
         if (collision.CompareTag("Zombie") && collision.gameObject.transform.position.x > transform.position.x)
@@ -140,40 +162,53 @@ public class Monster : MonoBehaviour
             //speed = zombieSpeed;
             GameObject monsterInFront = collision.gameObject;
             Monster m = monsterInFront.GetComponent<Monster>();
-            speed = m.speed;
+            //speed = m.speed;
+
+            if (stopped)
+                speed = 0;
+            else
+                speed = m.speed;
         }
+        ///////////////////////slowing the object that collides with the back of another object////////////////////////////////////////
 
 
-
-        if(collision.CompareTag("Archer"))
+        ////////////////////////////////////////////////////////ATTACK/////////////////////////////////////////////////
+        if (collision.CompareTag("Archer"))
         {
+            stopped = true;
             speed = 0;
             StartCoroutine(AttackArcherCoroutine());
         }
         if (collision.CompareTag("Knight"))
         {
+            stopped = true;
             speed = 0;
             StartCoroutine(AttackKnightCoroutine());
         }
         if (collision.CompareTag("Rogue"))
         {
+            stopped = true;
             speed = 0;
             StartCoroutine(AttackRogueCoroutine());
         }
         if (collision.CompareTag("Soldier"))
         {
+            stopped = true;
             speed = 0;
             StartCoroutine(AttackSoldierCoroutine());
         }
         if (collision.CompareTag("Wizard"))
         {
+            stopped = true;
             speed = 0;
             StartCoroutine(AttackWizardCoroutine());
         }
+        ////////////////////////////////////////////////////////ATTACK/////////////////////////////////////////////////
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        stopped = false;
         speed = mySpeed;
         StopAllCoroutines();
     }

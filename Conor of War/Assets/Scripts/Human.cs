@@ -12,9 +12,12 @@ public class Human : MonoBehaviour
 
     public float cost;
     public float cooldown;
+
     public string speedRate;
     public float speed;
     private float mySpeed;
+    private bool stopped = false;
+
     public string characterType;
     public float damagePerSecond;
     public float pointPerKill;
@@ -56,35 +59,101 @@ public class Human : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Zombie"))
+        ///////////////////////slowing the object that collides with the back of another object////////////////////////////////////////
+        if (collision.CompareTag("Archer"))
         {
+            GameObject humanInFront = collision.gameObject;
+            Human h = humanInFront.GetComponent<Human>();
+
+            if (stopped)
+                speed = 0;
+            else
+                speed = h.speed;
+        }
+
+        if (collision.CompareTag("Knight"))
+        {
+            GameObject humanInFront = collision.gameObject;
+            Human h = humanInFront.GetComponent<Human>();
+
+            if (stopped)
+                speed = 0;
+            else
+                speed = h.speed;
+        }
+
+        if (collision.CompareTag("Rogue"))
+        {
+            GameObject humanInFront = collision.gameObject;
+            Human h = humanInFront.GetComponent<Human>();
+
+            if (stopped)
+                speed = 0;
+            else
+                speed = h.speed;
+        }
+
+        if (collision.CompareTag("Soldier"))
+        {
+            GameObject humanInFront = collision.gameObject;
+            Human h = humanInFront.GetComponent<Human>();
+
+            if (stopped)
+                speed = 0;
+            else
+                speed = h.speed;
+        }
+
+        if (collision.CompareTag("Wizard"))
+        {
+            GameObject humanInFront = collision.gameObject;
+            Human h = humanInFront.GetComponent<Human>();
+
+            if (stopped)
+                speed = 0;
+            else
+                speed = h.speed;
+        }
+        ///////////////////////slowing the object that collides with the back of another object////////////////////////////////////////
+
+
+        ////////////////////////////////////////////////////////ATTACK/////////////////////////////////////////////////
+        if (collision.CompareTag("Zombie"))
+        {
+            stopped = true;
             speed = 0;
             StartCoroutine(AttackZombieCoroutine());
         }
         if (collision.CompareTag("Werewolf"))
         {
+            stopped = true;
             speed = 0;
             StartCoroutine(AttackWerewolfCoroutine());
         }
         if (collision.CompareTag("Vampire"))
         {
+            stopped = true;
             speed = 0;
             StartCoroutine(AttackVampireCoroutine());
         }
         if (collision.CompareTag("Skeleton"))
         {
+            stopped = true;
             speed = 0;
             StartCoroutine(AttackSkeletonCoroutine());
         }
         if (collision.CompareTag("Demon"))
         {
+            stopped = true;
             speed = 0;
             StartCoroutine(AttackDemonCoroutine());
         }
+        ////////////////////////////////////////////////////////ATTACK/////////////////////////////////////////////////
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        stopped = false;
         speed = mySpeed;
         StopAllCoroutines();
     }
