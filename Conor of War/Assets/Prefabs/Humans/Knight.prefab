@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48839a46c72b1ee4f9151a7b93a72c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 210
+  health: 120
   healthBar: {fileID: 8484191329693083913}
   cost: 30
   cooldown: 3

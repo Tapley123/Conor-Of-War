@@ -35,7 +35,7 @@ public class Monster : MonoBehaviour
 
         if (monsterName == "Werewolf")
         {
-            health = 210f;
+            health = 120f;
             mySpeed = werewolfSpeed;
             speed = werewolfSpeed;
             damagePerSecond = 60f;
