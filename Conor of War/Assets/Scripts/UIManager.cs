@@ -120,6 +120,46 @@ public class UIManager : MonoBehaviour
     {
         zombieDropDown.SetActive(false);
     }
+
+
+    public void WerewolfDropDown()
+    {
+        werewolfDropDown.SetActive(true);
+    }
+    public void ExitWerewolfDropDown()
+    {
+        werewolfDropDown.SetActive(false);
+    }
+
+
+    public void VampireDropDown()
+    {
+        vampireDropDown.SetActive(true);
+    }
+    public void ExitVampireDropDown()
+    {
+        vampireDropDown.SetActive(false);
+    }
+
+
+    public void SkeletonDropDown()
+    {
+        skeletonDropDown.SetActive(true);
+    }
+    public void ExitSkeletonDropDown()
+    {
+        skeletonDropDown.SetActive(false);
+    }
+
+
+    public void DemonDropDown()
+    {
+        demonDropDown.SetActive(true);
+    }
+    public void ExitDemonDropDown()
+    {
+        demonDropDown.SetActive(false);
+    }
     /// ///////////////////////////////MONSTER DROP DOWN MENUS////////////////////////////////////////////////////
 
 
