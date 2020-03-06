@@ -81,7 +81,7 @@ public class HumanSpawner : MonoBehaviour
         spawnTimer = 5;
 
         int[] humansCost = { soldierCost, archerCost, rogueCost, knightCost, wizardCost };
-        Debug.Log(humansCost[spawnChoice]);
+        //Debug.Log(humansCost[spawnChoice]);
 
         Instantiate(humans[spawnChoice], transform.position, transform.rotation);
 

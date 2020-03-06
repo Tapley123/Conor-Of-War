@@ -13,6 +13,7 @@ public class Monster : MonoBehaviour
     private float pointPerKill;
 
     private float zombieSpeed = 2f, werewolfSpeed = 1f, vampireSpeed = 2f, skeletonSpeed = 3f, demonSpeed = 1f;
+    private float archerDPS = 15f, knightDPS = 60f, rogueDPS = 60f, soldierDPS = 20f, wizardDPS = 20f;
     [SerializeField] private float mySpeed;
 
     void Start()
@@ -69,7 +70,19 @@ public class Monster : MonoBehaviour
     void Update()
     {
         myRb.velocity = new Vector2(speed, 0);
+
+        if(health <= 0)
+        {
+            Dead();
+        }
     }
+
+    private void Dead()
+    {
+        Destroy(this.gameObject);
+    }
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -117,10 +130,82 @@ public class Monster : MonoBehaviour
             Monster m = monsterInFront.GetComponent<Monster>();
             speed = m.speed;
         }
+
+
+
+        if(collision.CompareTag("Archer"))
+        {
+            speed = 0;
+            StartCoroutine(AttackArcherCoroutine());
+        }
+        if (collision.CompareTag("Knight"))
+        {
+            speed = 0;
+            StartCoroutine(AttackKnightCoroutine());
+        }
+        if (collision.CompareTag("Rogue"))
+        {
+            speed = 0;
+            StartCoroutine(AttackRogueCoroutine());
+        }
+        if (collision.CompareTag("Soldier"))
+        {
+            speed = 0;
+            StartCoroutine(AttackSoldierCoroutine());
+        }
+        if (collision.CompareTag("Wizard"))
+        {
+            speed = 0;
+            StartCoroutine(AttackWizardCoroutine());
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         speed = mySpeed;
     }
+
+    
+    /// //////////////////////////////////////////////ATTACK COROUTINES///////////////////////////////////////////////////
+    IEnumerator AttackArcherCoroutine()
+    {
+        while(health > 0)
+        {
+            yield return new WaitForSeconds(1);
+            health -= archerDPS;
+        }
+    }
+    IEnumerator AttackKnightCoroutine()
+    {
+        while (health > 0)
+        {
+            yield return new WaitForSeconds(1);
+            health -= knightDPS;
+        }
+    }
+    IEnumerator AttackRogueCoroutine()
+    {
+        while (health > 0)
+        {
+            yield return new WaitForSeconds(1);
+            health -= rogueDPS;
+        }
+    }
+    IEnumerator AttackSoldierCoroutine()
+    {
+        while (health > 0)
+        {
+            yield return new WaitForSeconds(1);
+            health -= soldierDPS;
+        }
+    }
+    IEnumerator AttackWizardCoroutine()
+    {
+        while (health > 0)
+        {
+            yield return new WaitForSeconds(1);
+            health -= wizardDPS;
+        }
+    }
+    /// //////////////////////////////////////////////ATTACK COROUTINES///////////////////////////////////////////////////
 }

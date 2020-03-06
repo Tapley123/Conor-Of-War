@@ -11,17 +11,116 @@ public class Human : MonoBehaviour
     public float cooldown;
     public string speedRate;
     public float speed;
+    private float mySpeed;
     public string characterType;
     public float damagePerSecond;
     public float pointPerKill;
 
+    private float zombieDPS = 20f, werewolfDPS = 60f, vampireDPS = 15f, skeletonDPS = 60f, demonDPS = 20f;
+
     void Start()
     {
         myRb = GetComponent<Rigidbody2D>();
+        mySpeed = speed;
     }
 
     void Update()
     {
         myRb.velocity = new Vector2(-speed, 0);
+
+        if(health <= 0)
+        {
+            Dead();
+        }
     }
+
+
+    private void Dead()
+    {
+        Destroy(this.gameObject);
+    }
+
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Zombie"))
+        {
+            speed = 0;
+            StartCoroutine(AttackZombieCoroutine());
+        }
+        if (collision.CompareTag("Werewolf"))
+        {
+            speed = 0;
+            StartCoroutine(AttackWerewolfCoroutine());
+        }
+        if (collision.CompareTag("Vampire"))
+        {
+            speed = 0;
+            StartCoroutine(AttackVampireCoroutine());
+        }
+        if (collision.CompareTag("Skeleton"))
+        {
+            speed = 0;
+            StartCoroutine(AttackSkeletonCoroutine());
+        }
+        if (collision.CompareTag("Demon"))
+        {
+            speed = 0;
+            StartCoroutine(AttackDemonCoroutine());
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        speed = mySpeed;
+    }
+
+    /// //////////////////////////////////////////////ATTACK COROUTINES///////////////////////////////////////////////////
+    IEnumerator AttackZombieCoroutine()
+    {
+        while (health > 0)
+        {
+            yield return new WaitForSeconds(1);
+            health -= zombieDPS;
+            Debug.Log(health);
+        }
+    }
+    IEnumerator AttackWerewolfCoroutine()
+    {
+        while (health > 0)
+        {
+            yield return new WaitForSeconds(1);
+            health -= werewolfDPS;
+            Debug.Log(health);
+        }
+    }
+    IEnumerator AttackVampireCoroutine()
+    {
+        while (health > 0)
+        {
+            yield return new WaitForSeconds(1);
+            health -= vampireDPS;
+            Debug.Log(health);
+        }
+    }
+    IEnumerator AttackSkeletonCoroutine()
+    {
+        while (health > 0)
+        {
+            yield return new WaitForSeconds(1);
+            health -= skeletonDPS;
+            Debug.Log(health);
+        }
+    }
+    IEnumerator AttackDemonCoroutine()
+    {
+        while (health > 0)
+        {
+            yield return new WaitForSeconds(1);
+            health -= demonDPS;
+            Debug.Log(health);
+        }
+    }
+    /// //////////////////////////////////////////////ATTACK COROUTINES///////////////////////////////////////////////////
 }
