@@ -7,6 +7,9 @@ public class Human : MonoBehaviour
     private Rigidbody2D myRb;
 
     public float health;
+    private float fullHealth;
+    public Transform healthBar;
+
     public float cost;
     public float cooldown;
     public string speedRate;
@@ -22,6 +25,7 @@ public class Human : MonoBehaviour
     {
         myRb = GetComponent<Rigidbody2D>();
         mySpeed = speed;
+        fullHealth = health;
     }
 
     void Update()
@@ -32,12 +36,20 @@ public class Human : MonoBehaviour
         {
             Dead();
         }
+
+        float healthNormalized = health / fullHealth;
+        SetHealthBarSize(healthNormalized);
     }
 
 
     private void Dead()
     {
         Destroy(this.gameObject);
+    }
+
+    public void SetHealthBarSize(float sizeNormalized)
+    {
+        healthBar.localScale = new Vector3(sizeNormalized, 1f);
     }
 
 
@@ -74,6 +86,7 @@ public class Human : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         speed = mySpeed;
+        StopAllCoroutines();
     }
 
     /// //////////////////////////////////////////////ATTACK COROUTINES///////////////////////////////////////////////////
