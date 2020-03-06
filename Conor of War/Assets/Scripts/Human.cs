@@ -42,6 +42,15 @@ public class Human : MonoBehaviour
 
         float healthNormalized = health / fullHealth;
         SetHealthBarSize(healthNormalized);
+
+        ////////////////////////////Change the health bar colour depending on the amount of health//////////////////////////
+        if (healthNormalized >= .6)
+            SetHealthBarColour(Color.green);
+        if (healthNormalized > .2 && healthNormalized < .6)
+            SetHealthBarColour(Color.yellow);
+        if (healthNormalized <= .2)
+            SetHealthBarColour(Color.red);
+        ////////////////////////////Change the health bar colour depending on the amount of health//////////////////////////
     }
 
 
@@ -53,6 +62,11 @@ public class Human : MonoBehaviour
     public void SetHealthBarSize(float sizeNormalized)
     {
         healthBar.localScale = new Vector3(sizeNormalized, 1f);
+    }
+
+    public void SetHealthBarColour(Color colour)
+    {
+        healthBar.Find("Bar Sprite").GetComponent<SpriteRenderer>().color = colour;
     }
 
 

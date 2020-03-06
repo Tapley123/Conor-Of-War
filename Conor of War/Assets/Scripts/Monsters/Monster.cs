@@ -84,6 +84,15 @@ public class Monster : MonoBehaviour
 
         float healthNormalized = health / fullHealth; //Change the health value to be between 0 and 1
         SetHealthBarSize(healthNormalized);
+
+        ////////////////////////////Change the health bar colour depending on the amount of health//////////////////////////
+        if (healthNormalized >= .6)
+            SetHealthBarColour(Color.green);
+        if (healthNormalized > .2 && healthNormalized < .6)
+            SetHealthBarColour(Color.yellow);
+        if (healthNormalized <= .2)
+            SetHealthBarColour(Color.red);
+        ////////////////////////////Change the health bar colour depending on the amount of health//////////////////////////
     }
 
     private void Dead()
@@ -96,6 +105,12 @@ public class Monster : MonoBehaviour
     {
         healthBar.localScale = new Vector3(sizeNormalized, 1f);
     }
+
+    public void SetHealthBarColour(Color colour)
+    {
+        healthBar.Find("Bar Sprite").GetComponent<SpriteRenderer>().color = colour;
+    }
+
 
 
     private void OnTriggerEnter2D(Collider2D collision)
