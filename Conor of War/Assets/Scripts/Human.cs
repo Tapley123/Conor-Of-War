@@ -83,7 +83,6 @@ public class Human : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             health -= zombieDPS;
-            Debug.Log(health);
         }
     }
     IEnumerator AttackWerewolfCoroutine()
@@ -92,7 +91,6 @@ public class Human : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             health -= werewolfDPS;
-            Debug.Log(health);
         }
     }
     IEnumerator AttackVampireCoroutine()
@@ -101,7 +99,6 @@ public class Human : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             health -= vampireDPS;
-            Debug.Log(health);
         }
     }
     IEnumerator AttackSkeletonCoroutine()
@@ -110,7 +107,6 @@ public class Human : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             health -= skeletonDPS;
-            Debug.Log(health);
         }
     }
     IEnumerator AttackDemonCoroutine()
@@ -119,7 +115,6 @@ public class Human : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             health -= demonDPS;
-            Debug.Log(health);
         }
     }
     /// //////////////////////////////////////////////ATTACK COROUTINES///////////////////////////////////////////////////

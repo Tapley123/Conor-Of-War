@@ -5,16 +5,18 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     private Rigidbody2D myRb;
+    public Transform healthBar;
 
     public string monsterName;
     private float health;
+    private float fullHealth;
     private float speed;
     private float damagePerSecond;
     private float pointPerKill;
 
     private float zombieSpeed = 2f, werewolfSpeed = 1f, vampireSpeed = 2f, skeletonSpeed = 3f, demonSpeed = 1f;
     private float archerDPS = 15f, knightDPS = 60f, rogueDPS = 60f, soldierDPS = 20f, wizardDPS = 20f;
-    [SerializeField] private float mySpeed;
+    private float mySpeed;
 
     void Start()
     {
@@ -64,6 +66,8 @@ public class Monster : MonoBehaviour
             damagePerSecond = 20f;
             pointPerKill = 120f;
         }
+
+        fullHealth = health;
     }
 
 
@@ -75,6 +79,9 @@ public class Monster : MonoBehaviour
         {
             Dead();
         }
+
+        float healthNormalized = health / fullHealth; //Change the health value to be between 0 and 1
+        SetHealthBarSize(healthNormalized);
     }
 
     private void Dead()
@@ -82,6 +89,11 @@ public class Monster : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+
+    public void SetHealthBarSize(float sizeNormalized)
+    {
+        healthBar.localScale = new Vector3(sizeNormalized, 1f);
+    }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
