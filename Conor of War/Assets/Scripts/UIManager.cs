@@ -18,7 +18,7 @@ public class UIManager : MonoBehaviour
     public float zombieCooldownTime, werewolfCooldownTime, vampireCooldownTime, skeletonCooldownTime, demonCooldownTime;
     [SerializeField] private float zombieCost = 10f, werewolfCost = 30f, vampireCost = 20f, skeletonCost = 20f, demonCost = 80f;
 
-    public float currency = 100f;
+    public static float currency = 100f;
     public Text currencyText;
     public string currencyName;
 

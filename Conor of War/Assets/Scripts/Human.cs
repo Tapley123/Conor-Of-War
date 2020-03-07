@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Human : MonoBehaviour
 {
+    private string attacker;
+    private bool dead = false;
+
     private Rigidbody2D myRb;
 
     public float health;
@@ -23,6 +26,7 @@ public class Human : MonoBehaviour
     public float pointPerKill;
 
     private float zombieDPS = 20f, werewolfDPS = 60f, vampireDPS = 15f, skeletonDPS = 60f, demonDPS = 20f;
+    
 
     void Start()
     {
@@ -36,9 +40,7 @@ public class Human : MonoBehaviour
         myRb.velocity = new Vector2(-speed, 0);
 
         if(health <= 0)
-        {
             Dead();
-        }
 
         float healthNormalized = health / fullHealth;
         SetHealthBarSize(healthNormalized);
@@ -56,7 +58,8 @@ public class Human : MonoBehaviour
 
     private void Dead()
     {
-        Destroy(this.gameObject);
+        StartCoroutine(DeathCoroutine(3)); //delay destroying the gameobject
+        this.transform.position = new Vector3(1000, 1000);
     }
 
     public void SetHealthBarSize(float sizeNormalized)
@@ -137,30 +140,35 @@ public class Human : MonoBehaviour
             stopped = true;
             speed = 0;
             StartCoroutine(AttackZombieCoroutine());
+            attacker = "Zombie";
         }
         if (collision.CompareTag("Werewolf"))
         {
             stopped = true;
             speed = 0;
             StartCoroutine(AttackWerewolfCoroutine());
+            attacker = "Werewolf";
         }
         if (collision.CompareTag("Vampire"))
         {
             stopped = true;
             speed = 0;
             StartCoroutine(AttackVampireCoroutine());
+            attacker = "Vampire";
         }
         if (collision.CompareTag("Skeleton"))
         {
             stopped = true;
             speed = 0;
             StartCoroutine(AttackSkeletonCoroutine());
+            attacker = "Skeleton";
         }
         if (collision.CompareTag("Demon"))
         {
             stopped = true;
             speed = 0;
             StartCoroutine(AttackDemonCoroutine());
+            attacker = "Demon";
         }
         ////////////////////////////////////////////////////////ATTACK/////////////////////////////////////////////////
     }
@@ -214,4 +222,10 @@ public class Human : MonoBehaviour
         }
     }
     /// //////////////////////////////////////////////ATTACK COROUTINES///////////////////////////////////////////////////
+
+    IEnumerator DeathCoroutine(float deathTime)
+    {
+        yield return new WaitForSeconds(deathTime);
+        Destroy(this.gameObject);
+    }
 }

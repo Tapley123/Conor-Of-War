@@ -17,6 +17,7 @@ public class Monster : MonoBehaviour
     private float pointPerKill;
 
     private float zombieSpeed = 2f, werewolfSpeed = 1f, vampireSpeed = 2f, skeletonSpeed = 3f, demonSpeed = 1f;
+    private float zombiePPK = 15f, werewolfPPK = 45f, vampirePPK = 30f, skeletonPPK = 30f, demonPPK = 120f; //points per kill
     private float archerDPS = 15f, knightDPS = 60f, rogueDPS = 60f, soldierDPS = 20f, wizardDPS = 20f;
     private float mySpeed;
 
@@ -131,11 +132,8 @@ public class Monster : MonoBehaviour
 
         if (collision.CompareTag("Skeleton") && collision.gameObject.transform.position.x > transform.position.x)
         {
-            //Debug.Log("Skeleton");
-            //speed = skeletonSpeed;
             GameObject monsterInFront = collision.gameObject;
             Monster m = monsterInFront.GetComponent<Monster>();
-            //speed = m.speed;
 
             if (stopped)
                 speed = 0;
@@ -145,11 +143,8 @@ public class Monster : MonoBehaviour
 
         if (collision.CompareTag("Vampire") && collision.gameObject.transform.position.x > transform.position.x)
         {
-            // Debug.Log("Vampire");
-            //speed = vampireSpeed;
             GameObject monsterInFront = collision.gameObject;
             Monster m = monsterInFront.GetComponent<Monster>();
-            //speed = m.speed;
 
             if (stopped)
                 speed = 0;
@@ -159,11 +154,8 @@ public class Monster : MonoBehaviour
 
         if (collision.CompareTag("Werewolf") && collision.gameObject.transform.position.x > transform.position.x)
         {
-            //Debug.Log("Werewolf");
-            //speed = werewolfSpeed;
             GameObject monsterInFront = collision.gameObject;
             Monster m = monsterInFront.GetComponent<Monster>();
-            //speed = m.speed;
 
             if (stopped)
                 speed = 0;
@@ -173,11 +165,8 @@ public class Monster : MonoBehaviour
 
         if (collision.CompareTag("Zombie") && collision.gameObject.transform.position.x > transform.position.x)
         {
-            //Debug.Log("Zombie");
-            //speed = zombieSpeed;
             GameObject monsterInFront = collision.gameObject;
             Monster m = monsterInFront.GetComponent<Monster>();
-            //speed = m.speed;
 
             if (stopped)
                 speed = 0;
@@ -226,6 +215,24 @@ public class Monster : MonoBehaviour
         stopped = false;
         speed = mySpeed;
         StopAllCoroutines();
+
+        if(collision.CompareTag("Archer") || collision.CompareTag("Knight") || collision.CompareTag("Rogue") || collision.CompareTag("Soldier") || collision.CompareTag("Wizard"))
+        {
+            if (monsterName == "Zombie")
+                UIManager.currency = UIManager.currency + zombiePPK;
+
+            if (monsterName == "Werewolf")
+                UIManager.currency = UIManager.currency + werewolfPPK;
+
+            if (monsterName == "Vampire")
+                UIManager.currency = UIManager.currency + vampirePPK;
+
+            if (monsterName == "Skeleton")
+                UIManager.currency = UIManager.currency + skeletonPPK;
+
+            if (monsterName == "Demon")
+                UIManager.currency = UIManager.currency + demonPPK;
+        }
     }
 
     

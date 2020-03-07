@@ -453,6 +453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c24f8b33ececf448ceaf708f737427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiManager: {fileID: 0}
   healthBar: {fileID: 4544374730379957676}
   monsterName: Werewolf
 --- !u!61 &376828603717098409
