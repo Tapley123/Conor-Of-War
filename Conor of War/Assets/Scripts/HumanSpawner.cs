@@ -83,7 +83,8 @@ public class HumanSpawner : MonoBehaviour
         int[] humansCost = { soldierCost, archerCost, rogueCost, knightCost, wizardCost };
         Debug.Log(humansCost[spawnChoice]);
 
-        Instantiate(humans[spawnChoice], transform.position, transform.rotation);
+        GameObject human = Instantiate(humans[spawnChoice], transform.position, transform.rotation);
+        human.transform.parent = GameObject.Find("Humans1").transform;
 
         hCurrency -= humansCost[spawnChoice];
 

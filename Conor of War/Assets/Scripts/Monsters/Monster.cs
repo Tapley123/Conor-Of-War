@@ -7,19 +7,26 @@ public class Monster : MonoBehaviour
     private Rigidbody2D myRb;
 
     public string monsterName;
-    private float health;
-    private float speed;
-    private float damagePerSecond;
-    private float pointPerKill;
+    public float health;
+    public float speed;
+    public float damagePerSecond;
+    public float pointPerKill;
+
+    public GameObject currentTarget;
+
+
+    public bool isAttacking = false;
+    
 
     private float zombieSpeed = 2f, werewolfSpeed = 1f, vampireSpeed = 2f, skeletonSpeed = 3f, demonSpeed = 1f;
     [SerializeField] private float mySpeed;
 
     void Start()
     {
+
         myRb = GetComponent<Rigidbody2D>();
 
-        if (monsterName == "Zombie")
+        if (gameObject.tag == "Zombie")
         {
             health = 70f;
             mySpeed = zombieSpeed;
@@ -28,7 +35,7 @@ public class Monster : MonoBehaviour
             pointPerKill = 15f;
         }
 
-        if (monsterName == "Werewolf")
+        if (gameObject.tag == "Werewolf")
         {
             health = 210f;
             mySpeed = werewolfSpeed;
@@ -37,7 +44,7 @@ public class Monster : MonoBehaviour
             pointPerKill = 45f;
         }
 
-        if (monsterName == "Vampire")
+        if (gameObject.tag == "Vampire")
         {
             health = 40f;
             mySpeed = vampireSpeed;
@@ -46,7 +53,7 @@ public class Monster : MonoBehaviour
             pointPerKill = 30f;
         }
 
-        if (monsterName == "Skeleton")
+        if (gameObject.tag == "Skeleton")
         {
             health = 80f;
             mySpeed = skeletonSpeed;
@@ -55,7 +62,7 @@ public class Monster : MonoBehaviour
             pointPerKill = 30f;
         }
 
-        if (monsterName == "Demon")
+        if (gameObject.tag == "Demon")
         {
             health = 50f;
             mySpeed = demonSpeed;
@@ -117,10 +124,71 @@ public class Monster : MonoBehaviour
             Monster m = monsterInFront.GetComponent<Monster>();
             speed = m.speed;
         }
+
+        /////////////////////////////////ATTACKING////////////////////////////////////////////////////////
+
+
+        if (collision.gameObject.transform.parent.tag == "Humans1")
+        {
+            speed = 0;
+            //Debug.Log("is in contact");
+            currentTarget = collision.gameObject;
+            isAttacking = true;
+            Invoke("Attack", 3f);
+        }
+
     }
+
+    
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         speed = mySpeed;
+        Debug.Log(gameObject + "has exited");
+        if (collision.gameObject.transform.parent.tag == "Humans1")
+        {
+            isAttacking = false;
+            currentTarget = null;
+        }
+    }
+
+    /*private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.transform.parent.tag == "Humans1")
+        {
+            speed = 0;
+            //Debug.Log("is in contact");
+            currentTarget = collision.gameObject;
+            isAttacking = true;
+            Invoke("Attack", 3f);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        speed = mySpeed;
+        if (collision.gameObject.transform.parent.tag == "Humans1")
+        {
+            isAttacking = false;
+            currentTarget = null;
+        }
+    }*/
+
+    IEnumerator Cooldown()
+    {
+        
+        yield return new WaitForSeconds(3f);
+    }
+
+    void Attack()
+    {
+        
+        
+        if(currentTarget != null)
+        {
+            currentTarget.GetComponent<Human>().health -= damagePerSecond;
+            Invoke("Attack", 3f);
+        }
+        
     }
 }

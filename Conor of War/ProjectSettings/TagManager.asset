@@ -17,6 +17,10 @@ TagManager:
   - Rogue
   - Soldier
   - Wizard
+  - Humans1
+  - Humans2
+  - Humans3
+  - Monsters1
   layers:
   - Default
   - TransparentFX

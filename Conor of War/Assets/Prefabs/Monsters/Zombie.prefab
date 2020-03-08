@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2789484387364939211}
   - component: {fileID: 2789484387364939204}
   - component: {fileID: -4098818567214047544}
-  - component: {fileID: 357606377201119132}
+  - component: {fileID: 7539218519685641538}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Zombie
@@ -99,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 1.9434364, y: 0.3278886}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -110,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 1.6206679, y: 1.9357772}
   m_EdgeRadius: 0
 --- !u!50 &2789484387364939204
 Rigidbody2D:
@@ -146,8 +146,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterName: Zombie
+  health: 0
+  speed: 0
+  damagePerSecond: 0
+  pointPerKill: 0
+  currentTarget: {fileID: 0}
+  isAttacking: 0
   mySpeed: 0
---- !u!61 &357606377201119132
+--- !u!61 &7539218519685641538
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,7 +166,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.82824564, y: 0}
+  m_Offset: {x: -0.0027525127, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -171,7 +177,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.43374938, y: 1.28}
+  m_Size: {x: 1.2744956, y: 1.28}
   m_EdgeRadius: 0
 --- !u!1 &2789484387887738183
 GameObject:

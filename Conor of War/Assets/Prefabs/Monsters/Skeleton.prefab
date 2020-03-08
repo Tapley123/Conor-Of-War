@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 3505595011438218225}
   - component: {fileID: 3505595011438218238}
   - component: {fileID: 5840693081252622578}
-  - component: {fileID: 8758011438441535056}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Skeleton
@@ -180,7 +179,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.21491915, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -191,7 +190,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 1.7098383, y: 1.28}
   m_EdgeRadius: 0
 --- !u!50 &3505595011438218238
 Rigidbody2D:
@@ -227,30 +226,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterName: Skeleton
+  health: 0
+  speed: 0
+  damagePerSecond: 0
+  pointPerKill: 0
+  currentTarget: {fileID: 0}
+  isAttacking: 0
   mySpeed: 0
---- !u!61 &8758011438441535056
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3505595011438218236}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.82824564, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1.28, y: 1.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.43374938, y: 1.28}
-  m_EdgeRadius: 0

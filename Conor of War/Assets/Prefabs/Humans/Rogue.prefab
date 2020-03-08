@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 5981232099419184531}
   - component: {fileID: 1515038075779020942}
   - component: {fileID: 2276645715849562278}
+  - component: {fileID: -7358045611609981162}
   m_Layer: 0
   m_Name: Rogue
   m_TagString: Rogue
@@ -233,3 +234,32 @@ MonoBehaviour:
   characterType: Melee
   damagePerSecond: 60
   pointPerKill: 30
+  mySpeed: 0
+  isAttacking: 0
+  currentTarget: {fileID: 0}
+--- !u!61 &-7358045611609981162
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6346390988874068325}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.28, y: 1.28}
+  m_EdgeRadius: 0

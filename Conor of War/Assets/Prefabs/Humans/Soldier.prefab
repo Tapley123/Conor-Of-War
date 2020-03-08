@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 1377221640188255488}
   - component: {fileID: 6132559317616982045}
   - component: {fileID: 6882907709017770037}
+  - component: {fileID: 8339852962456757466}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Soldier
@@ -233,3 +234,22 @@ MonoBehaviour:
   characterType: Melee
   damagePerSecond: 20
   pointPerKill: 15
+  mySpeed: 0
+  isAttacking: 0
+  currentTarget: {fileID: 0}
+--- !u!70 &8339852962456757466
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733795514802614774}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.4192863, y: 0.000000049982816}
+  m_Size: {x: 2.1185765, y: 1.2800024}
+  m_Direction: 1

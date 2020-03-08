@@ -108,19 +108,22 @@ public class UIManager : MonoBehaviour
     IEnumerator ZombieCoroutine(float time)
     {
         yield return new WaitForSeconds(time);
-        Instantiate(zombie, monsterSpawnPos, zombie.transform.rotation);
+        GameObject zombGO = Instantiate(zombie, monsterSpawnPos, zombie.transform.rotation);
+        zombGO.transform.parent = GameObject.Find("Monsters1").transform;
     }
 
     IEnumerator WerewolfCoroutine(float time)
     {
         yield return new WaitForSeconds(time);
-        Instantiate(werewolf, monsterSpawnPos, zombie.transform.rotation);
+        GameObject wereGO = Instantiate(werewolf, monsterSpawnPos, zombie.transform.rotation);
+        wereGO.transform.parent = GameObject.Find("Monsters1").transform;
     }
 
     IEnumerator VampireCoroutine(float time)
     {
         yield return new WaitForSeconds(time);
-        Instantiate(vampire, monsterSpawnPos, zombie.transform.rotation);
+        GameObject vampGO = Instantiate(vampire, monsterSpawnPos, zombie.transform.rotation);
+        vampGO.transform.parent = GameObject.Find("Monsters1").transform;
     }
 
     IEnumerator SkeletonCoroutine(float time)
