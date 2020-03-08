@@ -11,14 +11,14 @@ public class UIManager : MonoBehaviour
     public GameObject soldier, knight, archer, rogue, wizard;
 
     public Transform cameraT;
-    public GameObject monsterSpawn1, monsterSpawn2, monsterSpawn3, humanSpawn;
+    public GameObject monsterSpawn1, monsterSpawn1Part2, monsterSpawn2, monsterSpawn2Part2, monsterSpawn3, monsterSpawn3Part2, monsterSpawnMyBase, monsterSpawnEnemyBase, humanSpawn;
     private Vector2 monsterSpawnPos;
     private Vector2 humanSpawnPos;
 
     public float zombieCooldownTime, werewolfCooldownTime, vampireCooldownTime, skeletonCooldownTime, demonCooldownTime;
     [SerializeField] private float zombieCost = 10f, werewolfCost = 30f, vampireCost = 20f, skeletonCost = 20f, demonCost = 80f;
 
-    public static float currency = 100f;
+    public static float currency = 1000f;
     public Text currencyText;
     public string currencyName;
 
@@ -40,25 +40,64 @@ public class UIManager : MonoBehaviour
     {
         currencyText.text = currencyName + ": " + currency.ToString(); ///display currency at the top of the screen
     }
-    
-    
+
+
+    ///////////////////////////////////////////////MAP/////////////////////////////////////////////////////////
+    public void Map()
+    {
+        cameraT.position = new Vector3(cameraT.position.x, 15, cameraT.position.z);
+    }
+    ///////////////////////////////////////////////MAP/////////////////////////////////////////////////////////
+
     /// ///////////////////////////////CHANGING FIGHT ZONES////////////////////////////////////////////////////
     public void FightZone1()
     {
-        cameraT.position = new Vector3(cameraT.position.x, 0, cameraT.position.z);
+        cameraT.position = new Vector3(0, 0, cameraT.position.z);
         monsterSpawnPos = new Vector2(monsterSpawn1.transform.position.x, monsterSpawn1.transform.position.y);
     }
+    public void FightZone1Part2()
+    {
+        cameraT.position = new Vector3(0, -45, cameraT.position.z);
+        monsterSpawnPos = new Vector2(monsterSpawn1Part2.transform.position.x, monsterSpawn1Part2.transform.position.y);
+    }
+
+
 
     public void FightZone2()
     {
-        cameraT.position = new Vector3(cameraT.position.x, -15, cameraT.position.z);
+        cameraT.position = new Vector3(0, -15, cameraT.position.z);
         monsterSpawnPos = new Vector2(monsterSpawn2.transform.position.x, monsterSpawn2.transform.position.y);
     }
+    public void FightZone2Part2()
+    {
+        cameraT.position = new Vector3(0, -60, cameraT.position.z);
+        monsterSpawnPos = new Vector2(monsterSpawn2Part2.transform.position.x, monsterSpawn2Part2.transform.position.y);
+    }
+
+
 
     public void FightZone3()
     {
-        cameraT.position = new Vector3(cameraT.position.x, -30, cameraT.position.z);
+        cameraT.position = new Vector3(0, -30, cameraT.position.z);
         monsterSpawnPos = new Vector2(monsterSpawn3.transform.position.x, monsterSpawn3.transform.position.y);
+    }
+    public void FightZone3Part2()
+    {
+        cameraT.position = new Vector3(0, -75, cameraT.position.z);
+        monsterSpawnPos = new Vector2(monsterSpawn3Part2.transform.position.x, monsterSpawn3Part2.transform.position.y);
+    }
+
+
+
+    public void MyBase()
+    {
+        cameraT.position = new Vector3(0, -90, cameraT.position.z);
+        monsterSpawnPos = new Vector2(monsterSpawnMyBase.transform.position.x, monsterSpawnMyBase.transform.position.y);
+    }
+    public void EnemyBase()
+    {
+        cameraT.position = new Vector3(0, -105, cameraT.position.z);
+        monsterSpawnPos = new Vector2(monsterSpawnEnemyBase.transform.position.x, monsterSpawnEnemyBase.transform.position.y);
     }
     /// ///////////////////////////////CHANGING FIGHT ZONES////////////////////////////////////////////////////
 
