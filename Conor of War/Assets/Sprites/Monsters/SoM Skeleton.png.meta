@@ -1,0 +1,475 @@
+fileFormatVersion: 2
+guid: c9f3065728d7e6e4782ce1d8e04ff17e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8977158592828008697
+    second: SoM Skeleton_Torso
+  - first:
+      213: 515630050875692132
+    second: SoM Skeleton_Left Arm upper
+  - first:
+      213: -1528253496057285812
+    second: SoM Skeleton_Right Arm Upper
+  - first:
+      213: 8359147738632027128
+    second: SoM Skeleton_Head
+  - first:
+      213: -5343446370438403334
+    second: SoM Skeleton_Left Arm Lower
+  - first:
+      213: 3020187755946006086
+    second: SoM Skeleton_Left Hand
+  - first:
+      213: 8541260052614553477
+    second: SoM Skeleton_Right Arm Lower
+  - first:
+      213: -7010134599180468516
+    second: SoM Skeleton_Right Hand
+  - first:
+      213: -6844476928355058539
+    second: SoM Skeleton_Left Leg Upper
+  - first:
+      213: 1170611063123125022
+    second: SoM Skeleton_9
+  - first:
+      213: -3891040853101248346
+    second: SoM Skeleton_Pelvis
+  - first:
+      213: -6847003227116485547
+    second: SoM Skeleton_Left Foot
+  - first:
+      213: -8719891752189166592
+    second: SoM Skeleton Left Leg Lower
+  - first:
+      213: -8202456003388312539
+    second: SoM Skeleton_Right foot
+  - first:
+      213: 2574310573245473710
+    second: SoM Skeleton_Right Leg Lower
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SoM Skeleton_Torso
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 764
+        width: 207
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7071426a2d9ba6380800000000000000
+      internalID: -8977158592828008697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Skeleton_Left Arm upper
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1022
+        width: 90
+        height: 248
+      alignment: 9
+      pivot: {x: 0.24936184, y: 0.9274991}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46456f1acc2e72700800000000000000
+      internalID: 515630050875692132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Skeleton_Right Arm Upper
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 998
+        width: 90
+        height: 248
+      alignment: 9
+      pivot: {x: 0.27442628, y: 0.9184029}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c43b1c8da8d8acae0800000000000000
+      internalID: -1528253496057285812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Skeleton_Head
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1099
+        width: 165
+        height: 187
+      alignment: 9
+      pivot: {x: 0.30860338, y: 0.3673089}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fbfb226498a10470800000000000000
+      internalID: 8359147738632027128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Skeleton_Left Arm Lower
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 826
+        width: 102
+        height: 190
+      alignment: 9
+      pivot: {x: 0.30096376, y: 0.9511478}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa2bad36d348d5b0800000000000000
+      internalID: -5343446370438403334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Skeleton_Left Hand
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 734
+        width: 79
+        height: 105
+      alignment: 9
+      pivot: {x: 0.21446286, y: 0.8437314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 646552c23ccd9e920800000000000000
+      internalID: 3020187755946006086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Skeleton_Right Arm Lower
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 826
+        width: 102
+        height: 190
+      alignment: 9
+      pivot: {x: 0.27884927, y: 0.9392755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f135aa3c6a88670800000000000000
+      internalID: 8541260052614553477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Skeleton_Right Hand
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 744
+        width: 65
+        height: 95
+      alignment: 9
+      pivot: {x: 0.22237079, y: 0.8561684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde3c2c29bff6be90800000000000000
+      internalID: -7010134599180468516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Skeleton_Left Leg Upper
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 367
+        width: 65
+        height: 271
+      alignment: 9
+      pivot: {x: 0.46529636, y: 0.9245119}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c3a0c4f788301a0800000000000000
+      internalID: -6844476928355058539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Skeleton_9
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 367
+        width: 65
+        height: 271
+      alignment: 9
+      pivot: {x: 0.5, y: 0.93283564}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e13a89b4f88de3010800000000000000
+      internalID: 1170611063123125022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Skeleton_Pelvis
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 474
+        width: 154
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a00e50b5fe300ac0800000000000000
+      internalID: -3891040853101248346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Skeleton_Left Foot
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 41
+        width: 175
+        height: 57
+      alignment: 9
+      pivot: {x: 0.28087097, y: 0.737446}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554c4c787de8af0a0800000000000000
+      internalID: -6847003227116485547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Skeleton Left Leg Lower
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 81
+        width: 80
+        height: 308
+      alignment: 9
+      pivot: {x: 0.50000036, y: 0.91013414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00cf7eeb6a8bcf680800000000000000
+      internalID: -8719891752189166592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Skeleton_Right foot
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 41
+        width: 175
+        height: 57
+      alignment: 9
+      pivot: {x: 0.29376063, y: 0.737446}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524f44039b50b2e80800000000000000
+      internalID: -8202456003388312539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Skeleton_Right Leg Lower
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 81
+        width: 80
+        height: 308
+      alignment: 9
+      pivot: {x: 0.5, y: 0.89548653}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea324dbb3d9c9b320800000000000000
+      internalID: 2574310573245473710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
