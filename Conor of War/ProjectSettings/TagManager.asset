@@ -3,7 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CameraRightWall
+  - CameraLeftWall
+  - Floor
+  - Demon
+  - Skeleton
+  - Vampire
+  - Werewolf
+  - Zombie
+  - Archer
+  - Knight
+  - Rogue
+  - Soldier
+  - Wizard
   layers:
   - Default
   - TransparentFX
@@ -40,4 +53,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1359620085
+    locked: 0
+  - name: Forground
+    uniqueID: 2872069293
     locked: 0
