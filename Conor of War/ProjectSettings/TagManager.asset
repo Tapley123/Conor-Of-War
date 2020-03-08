@@ -17,6 +17,20 @@ TagManager:
   - Rogue
   - Soldier
   - Wizard
+  - Win1
+  - Win2
+  - Win3
+  - Win1Part2
+  - Win2Part2
+  - Win3Part2
+  - WinGame
+  - Lose1
+  - Lose2
+  - Lose3
+  - Lose1Part2
+  - Lose2Part2
+  - Lose3Part2
+  - LoseGame
   layers:
   - Default
   - TransparentFX
