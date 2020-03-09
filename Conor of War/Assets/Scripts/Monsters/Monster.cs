@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
+    private bool advanceStages = true; //if true you can win
+    private bool winZone1 = false, winZone1Part2 = false, winZone2 = false, winZone2Part2 = false, winZone3 = false, winZone3Part2 = false;
+    private bool win1 = false, win1Part2 = false, win2 = false, win2Part2 = false, win3 = false, win3Part2 = false;
+    private float winTime = 5f;
+
     private Rigidbody2D myRb;
     public Transform healthBar;
 
@@ -76,6 +81,45 @@ public class Monster : MonoBehaviour
 
     void Update()
     {
+        /*
+        if (win1)
+        {
+            Debug.Log("You Win!");
+        }
+        */
+        /////////////////////////////////////////////////////Win Conditions/////////////////////////////////////////////////////
+        if(advanceStages)
+        {
+            if (winZone1)
+                StartCoroutine(WinCoroutine1(winTime));
+            else if (!winZone1)
+                StopCoroutine("WinCoroutine1");
+            if (winZone1Part2)
+                StartCoroutine(WinCoroutine1Part2(winTime));
+            else if (!winZone1Part2)
+                StopCoroutine("WinCoroutine1Part2");
+            
+            if (winZone2)
+                StartCoroutine(WinCoroutine2(winTime));
+            else if (!winZone2)
+                StopCoroutine("WinCoroutine2");
+            if (winZone2Part2)
+                StartCoroutine(WinCoroutine2Part2(winTime));
+            else if (!winZone2Part2)
+                StopCoroutine("WinCoroutine2Part2");
+            
+            if (winZone3)
+                StartCoroutine(WinCoroutine3(winTime));
+            else if (!winZone3)
+                StopCoroutine("WinCoroutine3");
+            if (winZone3Part2)
+                StartCoroutine(WinCoroutine3Part2(winTime));
+            else if (!winZone3Part2)
+                StopCoroutine("WinCoroutine3Part2");
+        }
+        /////////////////////////////////////////////////////Win Conditions/////////////////////////////////////////////////////
+
+
         myRb.velocity = new Vector2(speed, 0);
 
         if(health <= 0)
@@ -116,6 +160,25 @@ public class Monster : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(advanceStages)
+        {
+            if (collision.CompareTag("Win1"))
+                winZone1 = true;
+            if (collision.CompareTag("Win1Part2"))
+                winZone1Part2 = true;
+
+            if (collision.CompareTag("Win2"))
+                winZone2 = true;
+            if (collision.CompareTag("Win2Part2"))
+                winZone2Part2 = true;
+
+            if (collision.CompareTag("Win3"))
+                winZone3 = true;
+            if (collision.CompareTag("Win3Part2"))
+                winZone3Part2 = true;
+        }
+        
+
         ///////////////////////slowing the object that collides with the back of another object////////////////////////////////////////
         if (collision.CompareTag("Demon") && collision.gameObject.transform.position.x > transform.position.x)
         {
@@ -212,6 +275,16 @@ public class Monster : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if(advanceStages)
+        {
+            winZone1 = false;
+            winZone2 = false;
+            winZone3 = false;
+            winZone1Part2 = false;
+            winZone2Part2 = false;
+            winZone3Part2 = false;
+        }
+
         stopped = false;
         speed = mySpeed;
         StopAllCoroutines();
@@ -278,4 +351,77 @@ public class Monster : MonoBehaviour
         }
     }
     /// //////////////////////////////////////////////ATTACK COROUTINES///////////////////////////////////////////////////
+
+
+    ////////////////////////////////////////////////////WIN COROUTINES////////////////////////////////////////////////////
+    IEnumerator WinCoroutine1(float winTime)
+    {
+        if (winZone1)
+        {
+            //Debug.Log("Time to win = " + winTime);
+            yield return new WaitForSeconds(winTime);
+            win1 = true;
+            //Debug.Log("Win1");
+        }
+        else yield return null;
+    }
+
+    IEnumerator WinCoroutine1Part2(float winTime)
+    {
+        if (winZone1Part2)
+        {
+            yield return new WaitForSeconds(winTime);
+            win1Part2 = true;
+            //Debug.Log("Win1Part2");
+        }
+        else yield return null;
+    }
+
+
+    IEnumerator WinCoroutine2(float winTime)
+    {
+        if (winZone2)
+        {
+            //Debug.Log("Time to win = " + winTime);
+            yield return new WaitForSeconds(winTime);
+            win2 = true;
+           //Debug.Log("Win2");
+        }
+        else yield return null;
+    }
+
+    IEnumerator WinCoroutine2Part2(float winTime)
+    {
+        if (winZone2Part2)
+        {
+            yield return new WaitForSeconds(winTime);
+            win2Part2 = true;
+            //Debug.Log("Win2Part2");
+        }
+        else yield return null;
+    }
+
+
+    IEnumerator WinCoroutine3(float winTime)
+    {
+        if (winZone3)
+        {
+            yield return new WaitForSeconds(winTime);
+            win3 = true;
+            //Debug.Log("Win3");
+        }
+        else yield return null;
+    }
+
+    IEnumerator WinCoroutine3Part2(float winTime)
+    {
+        if (winZone3Part2)
+        {
+            yield return new WaitForSeconds(winTime);
+            win3Part2 = true;
+            //Debug.Log("Win3Part2");
+        }
+        else yield return null;
+    }
+    ////////////////////////////////////////////////////WIN COROUTINES////////////////////////////////////////////////////
 }

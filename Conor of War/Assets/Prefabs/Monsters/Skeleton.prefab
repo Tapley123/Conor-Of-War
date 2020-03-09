@@ -290,6 +290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c24f8b33ececf448ceaf708f737427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winTime: 30
+  gameController: {fileID: 0}
   healthBar: {fileID: 5263148968706518753}
   monsterName: Skeleton
 --- !u!61 &8758011438441535056

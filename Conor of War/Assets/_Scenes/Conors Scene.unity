@@ -5758,7 +5758,7 @@ GameObject:
   - component: {fileID: 318099837}
   m_Layer: 0
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: Win1Part2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7630,7 +7630,7 @@ GameObject:
   - component: {fileID: 412870201}
   m_Layer: 0
   m_Name: Left
-  m_TagString: Untagged
+  m_TagString: Lose2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9523,7 +9523,7 @@ GameObject:
   - component: {fileID: 510690236}
   m_Layer: 0
   m_Name: Left
-  m_TagString: Untagged
+  m_TagString: Lose3Part2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10294,7 +10294,7 @@ GameObject:
   - component: {fileID: 555871981}
   m_Layer: 0
   m_Name: Left
-  m_TagString: Untagged
+  m_TagString: Lose2Part2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16895,7 +16895,7 @@ GameObject:
   - component: {fileID: 865369709}
   m_Layer: 0
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: Win2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17505,7 +17505,7 @@ GameObject:
   - component: {fileID: 875581534}
   m_Layer: 0
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: Win2Part2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18944,7 +18944,7 @@ GameObject:
   - component: {fileID: 934774862}
   m_Layer: 0
   m_Name: Left
-  m_TagString: Untagged
+  m_TagString: Lose3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21632,7 +21632,7 @@ GameObject:
   - component: {fileID: 1056650254}
   m_Layer: 0
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: Win3Part2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28334,7 +28334,7 @@ GameObject:
   - component: {fileID: 1431072881}
   m_Layer: 0
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: Win3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34233,7 +34233,7 @@ GameObject:
   - component: {fileID: 1678794016}
   m_Layer: 0
   m_Name: Left
-  m_TagString: Untagged
+  m_TagString: Lose1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34918,7 +34918,7 @@ GameObject:
   - component: {fileID: 1711162403}
   m_Layer: 0
   m_Name: Left
-  m_TagString: Untagged
+  m_TagString: Lose1Part2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40606,7 +40606,7 @@ GameObject:
   - component: {fileID: 2049593630}
   m_Layer: 0
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: Win1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
