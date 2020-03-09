@@ -81,12 +81,6 @@ public class Monster : MonoBehaviour
 
     void Update()
     {
-        /*
-        if (win1)
-        {
-            Debug.Log("You Win!");
-        }
-        */
         /////////////////////////////////////////////////////Win Conditions/////////////////////////////////////////////////////
         if(advanceStages)
         {

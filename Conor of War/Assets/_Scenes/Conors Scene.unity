@@ -10052,6 +10052,10 @@ MonoBehaviour:
   humanSpawn3Part2: {fileID: 1741413011}
   humanBaseSpawn: {fileID: 531171790}
   monsterBaseSpawn: {fileID: 1365547182}
+  battleZone1: 1
+  battleZone2: 0
+  monsterBaseZone: 0
+  humanBaseZone: 0
 --- !u!4 &528512740
 Transform:
   m_ObjectHideFlags: 0
@@ -19716,7 +19720,7 @@ MonoBehaviour:
   skeletonCost: 20
   demonCost: 80
   currencyText: {fileID: 2142498890}
-  currencyName: Money
+  currencyName: Soul Points
 --- !u!4 &975501624
 Transform:
   m_ObjectHideFlags: 0
@@ -27351,6 +27355,90 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1350736576
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2537802631823478200, guid: b6c2bba8cd68b3844bfa29d142f3ee89,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.7741724
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537802631823478200, guid: b6c2bba8cd68b3844bfa29d142f3ee89,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 32.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537802631823478200, guid: b6c2bba8cd68b3844bfa29d142f3ee89,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.860765
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537802631823478200, guid: b6c2bba8cd68b3844bfa29d142f3ee89,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537802631823478200, guid: b6c2bba8cd68b3844bfa29d142f3ee89,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537802631823478200, guid: b6c2bba8cd68b3844bfa29d142f3ee89,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537802631823478200, guid: b6c2bba8cd68b3844bfa29d142f3ee89,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537802631823478200, guid: b6c2bba8cd68b3844bfa29d142f3ee89,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537802631823478200, guid: b6c2bba8cd68b3844bfa29d142f3ee89,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537802631823478200, guid: b6c2bba8cd68b3844bfa29d142f3ee89,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537802631823478200, guid: b6c2bba8cd68b3844bfa29d142f3ee89,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537802631823478203, guid: b6c2bba8cd68b3844bfa29d142f3ee89,
+        type: 3}
+      propertyPath: m_Name
+      value: Map
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537802632091460895, guid: b6c2bba8cd68b3844bfa29d142f3ee89,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537802632336666775, guid: b6c2bba8cd68b3844bfa29d142f3ee89,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537802632403547521, guid: b6c2bba8cd68b3844bfa29d142f3ee89,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b6c2bba8cd68b3844bfa29d142f3ee89, type: 3}
 --- !u!1 &1356267725
 GameObject:
   m_ObjectHideFlags: 0
@@ -42509,8 +42597,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -1.2000122, y: 0.00044250488}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0.000030517578, y: 0.00044250488}
+  m_SizeDelta: {x: 229.39, y: 30}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &2142498890
 MonoBehaviour:
@@ -42537,13 +42625,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Currency: '
+  m_Text: Soul Points
 --- !u!222 &2142498891
 CanvasRenderer:
   m_ObjectHideFlags: 0
