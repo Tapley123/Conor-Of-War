@@ -81,6 +81,39 @@ public class Monster : MonoBehaviour
 
     void Update()
     {
+        ///////Map And Advance Stages//////
+        if(advanceStages)
+        {
+            if (win1)
+            {
+                MapManager.battleZone1Owned = true;
+            }
+            if (win1Part2)
+            {
+                MapManager.battleZone1Part2Owned = true;
+            }
+
+
+            if (win2)
+            {
+                MapManager.battleZone2Owned = true;
+            }
+            if (win2Part2)
+            {
+                MapManager.battleZone2Part2Owned = true;
+            }
+
+
+            if (win3)
+            {
+                MapManager.battleZone3Owned = true;
+            }
+            if (win2Part2)
+            {
+                MapManager.battleZone3Part2Owned = true;
+            }
+        }
+
         /////////////////////////////////////////////////////Win Conditions/////////////////////////////////////////////////////
         if(advanceStages)
         {
