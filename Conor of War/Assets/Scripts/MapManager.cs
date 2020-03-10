@@ -84,12 +84,16 @@ public class MapManager : MonoBehaviour
             if (battleZone1Owned)
             {
                 battleZone1.SetActive(true);
+                button1p2.SetActive(true);
+                button1.SetActive(false);
             }
             else
             {
                 battleZone1.SetActive(false);
+                button1p2.SetActive(false);
+                button1.SetActive(true);
             }
-
+            //////////////////////Add in if they are at your base that the first battle is not active
 
             if (battleZone1Part2Owned)
             {

@@ -9244,7 +9244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 8300000, guid: 0c9997fd2d0eab049b47b33ef61204b0, type: 3}
   zombie: {fileID: 8300000, guid: 83f71703e4f971647ae9dc0b660bc20d, type: 3}
-  vampire: {fileID: 8300000, guid: ca2a40a658e47494291cbe1f0fadd1b0, type: 3}
+  vampire: {fileID: 8300000, guid: 8fc11ebe70ca7b548a472c733789052b, type: 3}
   skeleton: {fileID: 8300000, guid: 80c039d53d8140c439b9df44caffe51e, type: 3}
   demon: {fileID: 8300000, guid: 613a72ec99d90354e94a86a7181f5d7a, type: 3}
   werewolf: {fileID: 8300000, guid: 9376fa66efb51564a8853ca93ec7315b, type: 3}
