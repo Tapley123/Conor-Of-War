@@ -5,8 +5,8 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     private bool advanceStages = true; //if true you can win
-    private bool winZone1 = false, winZone1Part2 = false, winZone2 = false, winZone2Part2 = false, winZone3 = false, winZone3Part2 = false;
-    private bool win1 = false, win1Part2 = false, win2 = false, win2Part2 = false, win3 = false, win3Part2 = false;
+    private bool winZone1 = false, winZone1Part2 = false, winZone2 = false, winZone2Part2 = false, winZone3 = false, winZone3Part2 = false, winZoneHumanBase = false;
+    private bool win1 = false, win1Part2 = false, win2 = false, win2Part2 = false, win3 = false, win3Part2 = false, winGame = false;
     private float winTime = 5f;
 
     private Rigidbody2D myRb;
@@ -108,7 +108,7 @@ public class Monster : MonoBehaviour
             {
                 MapManager.battleZone3Owned = true;
             }
-            if (win2Part2)
+            if (win3Part2)
             {
                 MapManager.battleZone3Part2Owned = true;
             }
@@ -143,6 +143,11 @@ public class Monster : MonoBehaviour
                 StartCoroutine(WinCoroutine3Part2(winTime));
             else if (!winZone3Part2)
                 StopCoroutine("WinCoroutine3Part2");
+
+            if (winZoneHumanBase)
+                StartCoroutine(WinCoroutineHumanBase(winTime));
+            else if (!winZoneHumanBase)
+                StopCoroutine("WinCoroutineHumanBase");
         }
         /////////////////////////////////////////////////////Win Conditions/////////////////////////////////////////////////////
 
@@ -203,6 +208,9 @@ public class Monster : MonoBehaviour
                 winZone3 = true;
             if (collision.CompareTag("Win3Part2"))
                 winZone3Part2 = true;
+
+            if (collision.CompareTag("WinGame"))
+                winZoneHumanBase = true;
         }
         
 
@@ -446,6 +454,17 @@ public class Monster : MonoBehaviour
         {
             yield return new WaitForSeconds(winTime);
             win3Part2 = true;
+            //Debug.Log("Win3Part2");
+        }
+        else yield return null;
+    }
+
+    IEnumerator WinCoroutineHumanBase(float winTime)
+    {
+        if (winZoneHumanBase)
+        {
+            yield return new WaitForSeconds(winTime);
+            winGame = true;
             //Debug.Log("Win3Part2");
         }
         else yield return null;

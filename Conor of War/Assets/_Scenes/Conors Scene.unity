@@ -16193,7 +16193,7 @@ GameObject:
   - component: {fileID: 849935631}
   - component: {fileID: 849935630}
   m_Layer: 5
-  m_Name: My Base
+  m_Name: Monster Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24823,7 +24823,7 @@ GameObject:
   - component: {fileID: 1237735474}
   m_Layer: 0
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: WinGame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28943,7 +28943,7 @@ GameObject:
   - component: {fileID: 1435380438}
   - component: {fileID: 1435380437}
   m_Layer: 5
-  m_Name: Enemy Base
+  m_Name: Human Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42862,6 +42862,14 @@ MonoBehaviour:
   battleZone2Part2: {fileID: 782956937}
   battleZone3: {fileID: 1908528710}
   battleZone3Part2: {fileID: 1586872234}
+  button1: {fileID: 2125502470}
+  button1p2: {fileID: 1314208741}
+  button2: {fileID: 1983386115}
+  button2p2: {fileID: 1249628872}
+  button3: {fileID: 274983082}
+  button3p2: {fileID: 366175202}
+  buttonHBase: {fileID: 1435380435}
+  buttonMBase: {fileID: 849935628}
 --- !u!4 &2133857639
 Transform:
   m_ObjectHideFlags: 0

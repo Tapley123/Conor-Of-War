@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MapManager : MonoBehaviour
 {
@@ -8,15 +9,27 @@ public class MapManager : MonoBehaviour
     public GameObject humanBase, mHumanBase, bHumanBase, tHumanBase;    
     public GameObject battleZone1, battleZone1Part2, battleZone2, battleZone2Part2, battleZone3, battleZone3Part2;
 
+    public GameObject button1, button1p2, button2, button2p2, button3, button3p2, buttonHBase, buttonMBase;
+
     private bool useBattleZones = true, useBaseZones = true;
 
     public static bool monsterBaseOwned = true;
+    public static bool humanBaseOwned = false;
     public static bool battleZone1Owned = false, battleZone1Part2Owned = false;
     public static bool battleZone2Owned = false, battleZone2Part2Owned = false;
     public static bool battleZone3Owned = false, battleZone3Part2Owned = false;
 
     void Start()
     {
+        /////////Buttons///////////
+        button1.SetActive(true);
+        button2.SetActive(true);
+        button3.SetActive(true);
+        button1p2.SetActive(false);
+        button2p2.SetActive(false);
+        button3p2.SetActive(false);
+        buttonHBase.SetActive(false);
+        buttonMBase.SetActive(false);
         ////////Monster Base////////
         monsterBase.SetActive(true);
         mMonsterBase.SetActive(true);
@@ -50,10 +63,20 @@ public class MapManager : MonoBehaviour
             if (monsterBaseOwned)
             {
                 monsterBase.SetActive(true);
-                mMonsterBase.SetActive(true);
-                tMonsterBase.SetActive(true);
-                bMonsterBase.SetActive(true);
             }
+            else
+                monsterBase.SetActive(false);
+
+
+            if(humanBaseOwned)
+            {
+                humanBase.SetActive(true);
+                mHumanBase.SetActive(true);
+                tHumanBase.SetActive(true);
+                bHumanBase.SetActive(true);
+            }
+            if (!humanBaseOwned)
+                humanBase.SetActive(false);
         }
         
         if(useBattleZones)
@@ -71,6 +94,7 @@ public class MapManager : MonoBehaviour
             if (battleZone1Part2Owned)
             {
                 battleZone1Part2.SetActive(true);
+                tHumanBase.SetActive(true);
             }
             else
             {
@@ -91,6 +115,7 @@ public class MapManager : MonoBehaviour
             if (battleZone2Part2Owned)
             {
                 battleZone2Part2.SetActive(true);
+                mHumanBase.SetActive(true);
             }
             else
             {
@@ -111,6 +136,7 @@ public class MapManager : MonoBehaviour
             if (battleZone3Part2Owned)
             {
                 battleZone3Part2.SetActive(true);
+                bHumanBase.SetActive(true);
             }
             else
             {
