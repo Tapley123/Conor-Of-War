@@ -90,20 +90,24 @@ public class Human : MonoBehaviour
         }
 
 
-        if (collision.gameObject.transform.parent.tag == "Monsters1" && !isAttacking)
-        {
-            //speed = 0;
-            Debug.Log("is in contact");
-            currentTarget = collision.gameObject;
-            isAttacking = true;
-            Invoke("Attack", 3f);
-        }
+        
 
-       
+        
 
     }
 
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.transform.parent.tag == "Monsters1" && !isAttacking && collision is BoxCollider2D)
+        {
+            speed = 0;
+            //Debug.Log("is in contact");
+            currentTarget = collision.gameObject;
+            isAttacking = true;
+            StartCoroutine("Attack");
+        }
+    }
 
     /*private void OnTriggerExit2D(Collider2D collision)
     {
@@ -117,43 +121,41 @@ public class Human : MonoBehaviour
         }
     }*/
 
-   /* private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.transform.parent.tag == "Monsters1")
-        {
-            speed = 0;
-            //Debug.Log("is in contact");
-            currentTarget = collision.gameObject;
-            isAttacking = true;
-            Invoke("Attack", 3f);
-        }
-    }
+    /* private void OnCollisionEnter2D(Collision2D collision)
+     {
+         if (collision.gameObject.transform.parent.tag == "Monsters1")
+         {
+             speed = 0;
+             //Debug.Log("is in contact");
+             currentTarget = collision.gameObject;
+             isAttacking = true;
+             Invoke("Attack", 3f);
+         }
+     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        speed = mySpeed;
-        if (collision.gameObject.transform.parent.tag == "Monsters1")
-        {
-            isAttacking = false;
-            currentTarget = null;
-        }
-    }*/
+     private void OnCollisionExit2D(Collision2D collision)
+     {
+         speed = mySpeed;
+         if (collision.gameObject.transform.parent.tag == "Monsters1")
+         {
+             isAttacking = false;
+             currentTarget = null;
+         }
+     }*/
 
-    IEnumerator Cooldown()
-    {
-
-        yield return new WaitForSeconds(3f);
-    }
-
-    void Attack()
+    IEnumerator Attack()
     {
         
-        
+
         if (currentTarget != null)
         {
             currentTarget.GetComponent<Monster>().health -= damagePerSecond;
-            Invoke("Attack", 3f);
-        }
+            
 
+        }
+        yield return new WaitForSeconds(3f);
+        isAttacking = false;
     }
+
+    
 }

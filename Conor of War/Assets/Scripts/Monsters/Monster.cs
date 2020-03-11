@@ -12,6 +12,8 @@ public class Monster : MonoBehaviour
     public float damagePerSecond;
     public float pointPerKill;
 
+    public bool canBypass;
+
     public GameObject currentTarget;
 
 
@@ -25,6 +27,8 @@ public class Monster : MonoBehaviour
     {
 
         myRb = GetComponent<Rigidbody2D>();
+
+        canBypass = true;
 
         if (gameObject.tag == "Zombie")
         {
@@ -76,6 +80,11 @@ public class Monster : MonoBehaviour
     void Update()
     {
         myRb.velocity = new Vector2(speed, 0);
+
+        if (health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -128,18 +137,33 @@ public class Monster : MonoBehaviour
         /////////////////////////////////ATTACKING////////////////////////////////////////////////////////
 
 
-        if (collision.gameObject.transform.parent.tag == "Humans1")
-        {
-            speed = 0;
-            //Debug.Log("is in contact");
-            currentTarget = collision.gameObject;
-            isAttacking = true;
-            Invoke("Attack", 3f);
-        }
+        
+
+        
 
     }
 
-    
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (this.gameObject.tag == "Vampire" && collision.gameObject.tag == "Werewolf")
+        {
+            canBypass = false;
+        }
+
+        if (collision.gameObject.transform.parent.tag == "Humans1")
+        {
+            if (canBypass && isAttacking == false)
+            {
+                speed = 0;
+                //Debug.Log("is in contact");
+                currentTarget = collision.gameObject;
+                isAttacking = true;
+                StartCoroutine("Attack");
+            }
+
+        }
+    }
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -149,6 +173,11 @@ public class Monster : MonoBehaviour
         {
             isAttacking = false;
             currentTarget = null;
+        }
+
+        if (this.gameObject.tag == "Vampire" && collision.gameObject.tag == "Werewolf")
+        {
+            canBypass = true;
         }
     }
 
@@ -174,21 +203,18 @@ public class Monster : MonoBehaviour
         }
     }*/
 
-    IEnumerator Cooldown()
+    IEnumerator Attack()
     {
         
+        
+        if (currentTarget != null)
+        {
+
+            currentTarget.GetComponent<Human>().health -= damagePerSecond;
+        }
         yield return new WaitForSeconds(3f);
+        isAttacking = false;
     }
 
-    void Attack()
-    {
-        
-        
-        if(currentTarget != null)
-        {
-            currentTarget.GetComponent<Human>().health -= damagePerSecond;
-            Invoke("Attack", 3f);
-        }
-        
-    }
+    
 }
