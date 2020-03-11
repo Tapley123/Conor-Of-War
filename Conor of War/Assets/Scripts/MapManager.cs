@@ -199,23 +199,47 @@ public class MapManager : MonoBehaviour
             */
         }
 
-        //if you are in Battle 1
-        if(b1Status == 0 || monstersWonBattle1 && humansWonBattle1Part2 || humansWonBattle1 && monstersSavedTheirBase)
+        if(humansCanProgress && monsterCanProgress)
         {
-            button1.SetActive(true);
-            button1p2.SetActive(false);
-            monsterBase.SetActive(true);
-            tMonsterBase.SetActive(true);
+            //if you are in Battle 1
+            if (b1Status == 0 || monstersWonBattle1 && humansWonBattle1Part2 || humansWonBattle1 && monstersSavedTheirBase)
+            {
+                button1.SetActive(true);
+                button1p2.SetActive(false);
+                monsterBase.SetActive(true);
+                tMonsterBase.SetActive(true);
+            }
+            //if you are in Battle 1 part 2
+            if (monstersWonBattle1)
+            {
+                button1.SetActive(false);
+                button1p2.SetActive(true);
+                monsterBase.SetActive(true);
+                tMonsterBase.SetActive(true);
+                battleZone1.SetActive(true);
+            }
+
+            //if you are in the human base
+            if (monstersWonBattle1 && monstersWonBattle1Part2)
+            {
+                button1.SetActive(false);
+                buttonHBase.SetActive(true);
+                button1p2.SetActive(false);
+                monsterBase.SetActive(true);
+                tMonsterBase.SetActive(true);
+                battleZone1.SetActive(true);
+                battleZone1Part2.SetActive(true);
+                tHumanBase.SetActive(true);
+            }
+
+            //if you are in the monster base
+            if(humansWonBattle1)
+            {
+                button1.SetActive(false);
+                buttonMBase.SetActive(false);
+            }
         }
-        //if you are in Battle 1 part 2
-        if(b1p2Status == 0 || monstersWonBattle1 || humansSavedTheirBase)
-        {
-            button1.SetActive(false);
-            button1p2.SetActive(true);
-            monsterBase.SetActive(true);
-            tMonsterBase.SetActive(true);
-            battleZone1.SetActive(true);
-        }
+        
 
         /*
         if(useBaseZones)
