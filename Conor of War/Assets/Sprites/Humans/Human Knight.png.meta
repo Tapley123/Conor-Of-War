@@ -1,0 +1,547 @@
+fileFormatVersion: 2
+guid: c2f9b82c24c0cf84dbfb3bddc920e6ad
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1534257098859018035
+    second: Human Knight_Upper Arm
+  - first:
+      213: -3921618937514048175
+    second: Human Knight_Sheild
+  - first:
+      213: 7233128866100684038
+    second: Human Knight_Head
+  - first:
+      213: 7504624831898151580
+    second: Human Knight_Torso
+  - first:
+      213: -7335396255720838277
+    second: Human Knight_4
+  - first:
+      213: 7654341877499575469
+    second: Human Knight_5
+  - first:
+      213: -6628783349805665741
+    second: Human Knight_Lower Arm
+  - first:
+      213: 2208238672736110424
+    second: Human Knight_7
+  - first:
+      213: 8510699828378574917
+    second: Human Knight_Upper Leg
+  - first:
+      213: -7694552524514084317
+    second: Human Knight_9
+  - first:
+      213: -5355086973726629692
+    second: Human Knight_10
+  - first:
+      213: -4717059064024170686
+    second: Human Knight_Hand
+  - first:
+      213: -3773545168164473091
+    second: Human Knight_12
+  - first:
+      213: 3862537349490003224
+    second: Human Knight_Lower Leg
+  - first:
+      213: -2343269401389712568
+    second: Human Knight_Pelvis
+  - first:
+      213: -5377787285308280781
+    second: Human Knight_15
+  - first:
+      213: -4889194212029621833
+    second: Human Knight_Foot
+  - first:
+      213: 5156979973603532915
+    second: Human Knight_17
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Human Knight_Upper Arm
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1012
+        width: 139
+        height: 293
+      alignment: 9
+      pivot: {x: 0.64605504, y: 0.8541431}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 337fc9bd3b6ca4510800000000000000
+      internalID: 1534257098859018035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Knight_Sheild
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 561
+        width: 224
+        height: 772
+      alignment: 9
+      pivot: {x: 0.8121782, y: 0.5584388}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155c70d9a5c9399c0800000000000000
+      internalID: -3921618937514048175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Knight_Head
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 1110
+        width: 182
+        height: 222
+      alignment: 9
+      pivot: {x: 0.7354897, y: 0.20533106}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6052e86816c316460800000000000000
+      internalID: 7233128866100684038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Knight_Torso
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 762
+        width: 216
+        height: 520
+      alignment: 9
+      pivot: {x: 0.5835458, y: 0.13994904}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a6dddf588c52860800000000000000
+      internalID: 7504624831898151580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Knight_4
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 948
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b670358ff633a90800000000000000
+      internalID: -7335396255720838277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Knight_5
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 683
+        width: 139
+        height: 293
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac32c5126fa93a60800000000000000
+      internalID: 7654341877499575469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Knight_Lower Arm
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 741
+        width: 147
+        height: 204
+      alignment: 9
+      pivot: {x: 0.7455226, y: 0.8648987}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3323fc50aa4d104a0800000000000000
+      internalID: -6628783349805665741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Knight_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 568
+        width: 147
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85747b38f5d35ae10800000000000000
+      internalID: 2208238672736110424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Knight_Upper Leg
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 306
+        width: 151
+        height: 327
+      alignment: 9
+      pivot: {x: 0.4701227, y: 0.87940556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540ab7cf6641c1670800000000000000
+      internalID: 8510699828378574917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Knight_9
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 619
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ab0c61f35773590800000000000000
+      internalID: -7694552524514084317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Knight_10
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 278
+        width: 151
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0e3b515c8eea5b0800000000000000
+      internalID: -5355086973726629692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Knight_Hand
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 471
+        width: 117
+        height: 134
+      alignment: 9
+      pivot: {x: 0.7699173, y: 0.80300903}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f7d48f5c3a98eb0800000000000000
+      internalID: -4717059064024170686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Knight_12
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 435
+        width: 117
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df63aa3a9aca1abc0800000000000000
+      internalID: -3773545168164473091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Knight_Lower Leg
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 130
+        width: 176
+        height: 266
+      alignment: 9
+      pivot: {x: 0.25648257, y: 0.9155307}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81dc708314d7a9530800000000000000
+      internalID: 3862537349490003224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Knight_Pelvis
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 221
+        width: 164
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84bbf1505e80b7fd0800000000000000
+      internalID: -2343269401389712568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Knight_15
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 106
+        width: 170
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 330769de4f24e55b0800000000000000
+      internalID: -5377787285308280781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Knight_Foot
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 26
+        width: 218
+        height: 140
+      alignment: 9
+      pivot: {x: 0.7483383, y: 0.8222484}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9141aa4c7162cb0800000000000000
+      internalID: -4889194212029621833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Knight_17
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 26
+        width: 218
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370217096f5419740800000000000000
+      internalID: 5156979973603532915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

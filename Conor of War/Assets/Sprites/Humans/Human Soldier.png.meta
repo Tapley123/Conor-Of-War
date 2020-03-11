@@ -1,0 +1,547 @@
+fileFormatVersion: 2
+guid: b27a954aa647f6f409bbda7ebd16e268
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4427906582010780600
+    second: Human Soldier_Upper Arm
+  - first:
+      213: -1545722795553634410
+    second: Human Soldier_Sword
+  - first:
+      213: 6018893151400919572
+    second: Human Soldier_Head
+  - first:
+      213: -4812075643791341924
+    second: Human Soldier_Torso
+  - first:
+      213: -8373187018303466297
+    second: Human Soldier_4
+  - first:
+      213: 3790472994266540137
+    second: Human Soldier_5
+  - first:
+      213: 4524793621144912233
+    second: Human Soldier_Lower Arm
+  - first:
+      213: 674857038271818043
+    second: Human Soldier_7
+  - first:
+      213: -8014848509971496088
+    second: Human Soldier_Upper Leg
+  - first:
+      213: -4913275933432757420
+    second: Human Soldier_Hand
+  - first:
+      213: 6828411387613482897
+    second: Human Soldier_10
+  - first:
+      213: 430321120812877641
+    second: Human Soldier_11
+  - first:
+      213: 6087166894767053013
+    second: Human Soldier_12
+  - first:
+      213: 1201878661198063448
+    second: Human Soldier_Lower Leg
+  - first:
+      213: -4292705693498792723
+    second: Human Soldier_Pelvis
+  - first:
+      213: -927273500882186140
+    second: Human Soldier_15
+  - first:
+      213: -6920402204290251094
+    second: Human Soldier_Foot
+  - first:
+      213: 5838597971752785044
+    second: Human Soldier_17
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Human Soldier_Upper Arm
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1012
+        width: 139
+        height: 293
+      alignment: 9
+      pivot: {x: 0.64605504, y: 0.8079505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bbdd578395137d30800000000000000
+      internalID: 4427906582010780600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Soldier_Sword
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 771
+        width: 205
+        height: 508
+      alignment: 9
+      pivot: {x: 0.4559853, y: 0.14920573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6974dc99e4d7c8ae0800000000000000
+      internalID: -1545722795553634410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Soldier_Head
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 1110
+        width: 182
+        height: 222
+      alignment: 9
+      pivot: {x: 0.77267224, y: 0.19517009}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41288468e67678350800000000000000
+      internalID: 6018893151400919572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Soldier_Torso
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 762
+        width: 216
+        height: 520
+      alignment: 9
+      pivot: {x: 0.62531877, y: 0.11825925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96028b82b2183db0800000000000000
+      internalID: -4812075643791341924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Soldier_4
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 948
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c41c1815c67ccb80800000000000000
+      internalID: -8373187018303466297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Soldier_5
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 669
+        width: 139
+        height: 293
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968e7f10b177a9430800000000000000
+      internalID: 3790472994266540137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Soldier_Lower Arm
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 741
+        width: 147
+        height: 204
+      alignment: 9
+      pivot: {x: 0.73017746, y: 0.8206685}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961cb4633db4bce30800000000000000
+      internalID: 4524793621144912233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Soldier_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 568
+        width: 147
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b392d5896e29d5900800000000000000
+      internalID: 674857038271818043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Soldier_Upper Leg
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 304
+        width: 151
+        height: 327
+      alignment: 9
+      pivot: {x: 0.54481596, y: 0.88630384}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8638492aeb985c090800000000000000
+      internalID: -8014848509971496088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Soldier_Hand
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 509
+        width: 117
+        height: 134
+      alignment: 9
+      pivot: {x: 0.7699173, y: 0.8871788}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 453c348f19980dbb0800000000000000
+      internalID: -4913275933432757420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Soldier_10
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 605
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f0fe28af363ce50800000000000000
+      internalID: 6828411387613482897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Soldier_11
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 278
+        width: 151
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947466987cec8f500800000000000000
+      internalID: 430321120812877641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Soldier_12
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 435
+        width: 117
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d89b132a06f97450800000000000000
+      internalID: 6087166894767053013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Soldier_Lower Leg
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 126
+        width: 176
+        height: 270
+      alignment: 9
+      pivot: {x: 0.3333827, y: 0.88431114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85725d7464eeda010800000000000000
+      internalID: 1201878661198063448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Soldier_Pelvis
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 221
+        width: 164
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de425bd5aee3d64c0800000000000000
+      internalID: -4292705693498792723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Soldier_15
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 86
+        width: 170
+        height: 310
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460d842f9a9a123f0800000000000000
+      internalID: -927273500882186140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Soldier_Foot
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 26
+        width: 218
+        height: 140
+      alignment: 9
+      pivot: {x: 0.73799086, y: 0.8383608}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6037e6cdac5ff90800000000000000
+      internalID: -6920402204290251094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Soldier_17
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 26
+        width: 218
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49414accbedd60150800000000000000
+      internalID: 5838597971752785044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
