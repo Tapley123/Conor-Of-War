@@ -38,7 +38,7 @@ public class Human : MonoBehaviour
     void Start()
     {
         //for testing
-        speed = speed * testingSpeedBoost;
+        //speed = speed * testingSpeedBoost;
 
         myRb = GetComponent<Rigidbody2D>();
         mySpeed = speed;
