@@ -5,9 +5,9 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     private bool advanceStages = true; //if true you can win
-    private bool winZone1 = false, winZone1Part2 = false, winZone2 = false, winZone2Part2 = false, winZone3 = false, winZone3Part2 = false, winZoneHumanBase = false;
+    private bool winZone1 = false, winZone1Part2 = false, winZone2 = false, winZone2Part2 = false, winZone3 = false, winZone3Part2 = false, winZoneHumanBase = false, winZoneMonsterBase = false;
     private bool win1 = false, win1Part2 = false, win2 = false, win2Part2 = false, win3 = false, win3Part2 = false, winGame = false;
-    private float winTime = 5f;
+    private float winTime = 1f;
 
     private Rigidbody2D myRb;
     public Transform healthBar;
@@ -21,7 +21,7 @@ public class Monster : MonoBehaviour
     private float damagePerSecond;
     private float pointPerKill;
 
-    private float zombieSpeed = 2f, werewolfSpeed = 1f, vampireSpeed = 2f, skeletonSpeed = 3f, demonSpeed = 1f;
+    private float zombieSpeed = 2f, werewolfSpeed = 1f, vampireSpeed = 2f, skeletonSpeed = 30f, demonSpeed = 1f;
     private float zombiePPK = 15f, werewolfPPK = 45f, vampirePPK = 30f, skeletonPPK = 30f, demonPPK = 120f; //points per kill
     private float archerDPS = 15f, knightDPS = 60f, rogueDPS = 60f, soldierDPS = 20f, wizardDPS = 20f;
     private float mySpeed;
@@ -82,6 +82,7 @@ public class Monster : MonoBehaviour
     void Update()
     {
         ///////Map And Advance Stages//////
+        /*
         if(advanceStages)
         {
             if (win1)
@@ -113,7 +114,7 @@ public class Monster : MonoBehaviour
                 MapManager.battleZone3Part2Owned = true;
             }
         }
-
+        */
         /////////////////////////////////////////////////////Win Conditions/////////////////////////////////////////////////////
         if(advanceStages)
         {
@@ -148,6 +149,12 @@ public class Monster : MonoBehaviour
                 StartCoroutine(WinCoroutineHumanBase(winTime));
             else if (!winZoneHumanBase)
                 StopCoroutine("WinCoroutineHumanBase");
+
+            if (winZoneMonsterBase)
+                StartCoroutine(WinCoroutineMonsterBase(winTime));
+            else if (!winZoneMonsterBase)
+                StopCoroutine("WinCoroutineMonsterBase");
+
         }
         /////////////////////////////////////////////////////Win Conditions/////////////////////////////////////////////////////
 
@@ -211,6 +218,9 @@ public class Monster : MonoBehaviour
 
             if (collision.CompareTag("WinGame"))
                 winZoneHumanBase = true;
+
+            if (collision.CompareTag("LoseGame"))
+                winZoneMonsterBase = true;
         }
         
 
@@ -310,7 +320,7 @@ public class Monster : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(advanceStages)
+        if (advanceStages)
         {
             winZone1 = false;
             winZone2 = false;
@@ -318,6 +328,8 @@ public class Monster : MonoBehaviour
             winZone1Part2 = false;
             winZone2Part2 = false;
             winZone3Part2 = false;
+            winZoneMonsterBase = false;
+            winZoneHumanBase = false;
         }
 
         stopped = false;
@@ -393,10 +405,12 @@ public class Monster : MonoBehaviour
     {
         if (winZone1)
         {
-            //Debug.Log("Time to win = " + winTime);
             yield return new WaitForSeconds(winTime);
-            win1 = true;
-            //Debug.Log("Win1");
+            //MapManager.battle1Neutral = false;
+            //MapManager.battleZone1Owned = true;
+            //MapManager.humansWonBattle1 = false;
+            //MapManager.monstersWonBattle1 = true;
+            MapManager.b1Status = 1;
         }
         else yield return null;
     }
@@ -406,8 +420,11 @@ public class Monster : MonoBehaviour
         if (winZone1Part2)
         {
             yield return new WaitForSeconds(winTime);
-            win1Part2 = true;
-            //Debug.Log("Win1Part2");
+            //MapManager.battle1Part2Neutral = false;
+            //MapManager.battleZone1Part2Owned = true;
+            //MapManager.humansWonBattle1Part2 = false;
+            //MapManager.monstersWonBattle1Part2 = true;
+            MapManager.b1p2Status = 1;
         }
         else yield return null;
     }
@@ -417,10 +434,12 @@ public class Monster : MonoBehaviour
     {
         if (winZone2)
         {
-            //Debug.Log("Time to win = " + winTime);
             yield return new WaitForSeconds(winTime);
-            win2 = true;
-           //Debug.Log("Win2");
+            //MapManager.battle2Neutral = false;
+            //MapManager.battleZone2Owned = true;
+            //MapManager.humansWonBattle2 = false;
+            //MapManager.monstersWonBattle2 = true;
+            MapManager.b2Status = 1;
         }
         else yield return null;
     }
@@ -430,8 +449,11 @@ public class Monster : MonoBehaviour
         if (winZone2Part2)
         {
             yield return new WaitForSeconds(winTime);
-            win2Part2 = true;
-            //Debug.Log("Win2Part2");
+            //MapManager.battle2Part2Neutral = false;
+            //MapManager.battleZone2Part2Owned = true;
+            //MapManager.humansWonBattle2Part2 = false;
+            //MapManager.monstersWonBattle2Part2 = true;
+            MapManager.b2p2Status = 1;
         }
         else yield return null;
     }
@@ -442,8 +464,11 @@ public class Monster : MonoBehaviour
         if (winZone3)
         {
             yield return new WaitForSeconds(winTime);
-            win3 = true;
-            //Debug.Log("Win3");
+            //MapManager.battle3Neutral = false;
+            //MapManager.battleZone3Owned = true;
+            //MapManager.humansWonBattle3 = false;
+            //MapManager.monstersWonBattle3 = true;
+            MapManager.b3Status = 1;
         }
         else yield return null;
     }
@@ -453,8 +478,11 @@ public class Monster : MonoBehaviour
         if (winZone3Part2)
         {
             yield return new WaitForSeconds(winTime);
-            win3Part2 = true;
-            //Debug.Log("Win3Part2");
+            //MapManager.battle3Part2Neutral = false;
+            //MapManager.battleZone3Part2Owned = true;
+            //MapManager.humansWonBattle3Part2 = false;
+            //MapManager.monstersWonBattle3Part2 = true;
+            MapManager.b3p2Status = 1;
         }
         else yield return null;
     }
@@ -465,7 +493,22 @@ public class Monster : MonoBehaviour
         {
             yield return new WaitForSeconds(winTime);
             winGame = true;
-            //Debug.Log("Win3Part2");
+            //MapManager.battleHbaseNeutral = false;
+            //MapManager.humanBaseOwned = true;
+            MapManager.hbStatus = 1;
+        }
+        else yield return null;
+    }
+
+    IEnumerator WinCoroutineMonsterBase(float winTime)
+    {
+        if (winZoneMonsterBase)
+        {
+            yield return new WaitForSeconds(winTime);
+            winGame = true;
+            //MapManager.battleHbaseNeutral = false;
+            //MapManager.humanBaseOwned = true;
+            MapManager.hbStatus = 1;
         }
         else yield return null;
     }

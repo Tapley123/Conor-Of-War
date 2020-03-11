@@ -9228,7 +9228,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &474251412
 MonoBehaviour:
@@ -10330,7 +10330,11 @@ MonoBehaviour:
   humanBaseSpawn: {fileID: 531171790}
   monsterBaseSpawn: {fileID: 1365547182}
   battleZone1: 0
+  battleZone1Part2: 0
   battleZone2: 0
+  battleZone2Part2: 0
+  battleZone3: 0
+  battleZone3Part2: 0
   monsterBaseZone: 0
   humanBaseZone: 0
 --- !u!4 &528512740
@@ -27802,6 +27806,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zone1p2
       objectReference: {fileID: 0}
+    - target: {fileID: 2537802631585517690, guid: b6c2bba8cd68b3844bfa29d142f3ee89,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2537802631660186019, guid: b6c2bba8cd68b3844bfa29d142f3ee89,
         type: 3}
       propertyPath: m_SortingOrder
@@ -43256,6 +43265,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd3c3204ad5088f4bb8bd90ab7058f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  humansWonBattle1: 0
+  humansWonBattle1Part2: 0
+  humansWonBattle2: 0
+  humansWonBattle2Part2: 0
+  humansWonBattle3: 0
+  humansWonBattle3Part2: 0
+  humansWonTheGame: 0
+  humansSavedTheirBase: 0
+  monstersWonBattle1: 0
+  monstersWonBattle1Part2: 0
+  monstersWonBattle2: 0
+  monstersWonBattle2Part2: 0
+  monstersWonBattle3: 0
+  monstersWonBattle3Part2: 0
+  monstersWonTheGame: 0
+  monstersSavedTheirBase: 0
   monsterBase: {fileID: 1137253698}
   mMonsterBase: {fileID: 692730759}
   bMonsterBase: {fileID: 2078791382}
@@ -43290,7 +43315,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2142498888
 GameObject:

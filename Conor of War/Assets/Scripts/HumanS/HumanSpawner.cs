@@ -14,7 +14,7 @@ public class HumanSpawner : MonoBehaviour
     public GameObject[] humans;
 
     public Transform humanSpawn1, humanSpawn1Part2, humanSpawn2, humanSpawn2Part2, humanSpawn3, humanSpawn3Part2, humanBaseSpawn, monsterBaseSpawn;
-    [SerializeField] private bool battleZone1 = true, battleZone2 = false, monsterBaseZone = false, humanBaseZone = false;
+    [SerializeField] private bool battleZone1 = true, battleZone1Part2 = false, battleZone2 = false, battleZone2Part2 = false, battleZone3 = false, battleZone3Part2 = false, monsterBaseZone = false, humanBaseZone = false;
 
     private void Start()
     {
@@ -84,25 +84,26 @@ public class HumanSpawner : MonoBehaviour
         int[] humansCost = { soldierCost, archerCost, rogueCost, knightCost, wizardCost };
         //Debug.Log(humansCost[spawnChoice]);
 
-        ///////////////////////////////////////////////////////////////////////////////////////////
-        if(battleZone1)
-        {
-            Instantiate(humans[spawnChoice], humanSpawn1.position, transform.rotation);
-            Instantiate(humans[spawnChoice], humanSpawn2.position, transform.rotation);
-            Instantiate(humans[spawnChoice], humanSpawn3.position, transform.rotation);
-        }
-
-        if (battleZone2)
-        {
-            Instantiate(humans[spawnChoice], humanSpawn1Part2.position, transform.rotation);
-            Instantiate(humans[spawnChoice], humanSpawn2Part2.position, transform.rotation);
-            Instantiate(humans[spawnChoice], humanSpawn3Part2.position, transform.rotation);
-        }
-            
+        ///////////////////////////////////////////////////////////////////////////////////////////  
         if(monsterBaseZone)
             Instantiate(humans[spawnChoice], monsterBaseSpawn.position, transform.rotation);
         if(humanBaseZone)
             Instantiate(humans[spawnChoice], humanBaseSpawn.position, transform.rotation);
+
+        if(battleZone1)
+            Instantiate(humans[spawnChoice], humanSpawn1.position, transform.rotation);
+        if(battleZone1Part2)
+            Instantiate(humans[spawnChoice], humanSpawn1Part2.position, transform.rotation);
+
+        if(battleZone2)
+            Instantiate(humans[spawnChoice], humanSpawn2.position, transform.rotation);
+        if(battleZone2Part2)
+            Instantiate(humans[spawnChoice], humanSpawn2Part2.position, transform.rotation);
+
+        if(battleZone3)
+            Instantiate(humans[spawnChoice], humanSpawn3.position, transform.rotation);
+        if(battleZone3Part2)
+            Instantiate(humans[spawnChoice], humanSpawn3Part2.position, transform.rotation);
         ///////////////////////////////////////////////////////////////////////////////////////////
 
         hCurrency -= humansCost[spawnChoice];
