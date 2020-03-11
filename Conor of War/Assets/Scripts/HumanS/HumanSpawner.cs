@@ -14,7 +14,7 @@ public class HumanSpawner : MonoBehaviour
     public GameObject[] humans;
 
     public Transform humanSpawn1, humanSpawn1Part2, humanSpawn2, humanSpawn2Part2, humanSpawn3, humanSpawn3Part2, humanBaseSpawn, monsterBaseSpawn;
-    [SerializeField] private bool battleZone1 = true, battleZone1Part2 = false, battleZone2 = false, battleZone2Part2 = false, battleZone3 = false, battleZone3Part2 = false, monsterBaseZone = false, humanBaseZone = false;
+    public static bool battleZone1 = true, battleZone1Part2 = false, battleZone2 = true, battleZone2Part2 = false, battleZone3 = true, battleZone3Part2 = false, monsterBaseZone = false, humanBaseZone = false;
 
     private void Start()
     {

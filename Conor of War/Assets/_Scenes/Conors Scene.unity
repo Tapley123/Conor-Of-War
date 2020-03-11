@@ -10329,14 +10329,6 @@ MonoBehaviour:
   humanSpawn3Part2: {fileID: 1741413011}
   humanBaseSpawn: {fileID: 531171790}
   monsterBaseSpawn: {fileID: 1365547182}
-  battleZone1: 0
-  battleZone1Part2: 0
-  battleZone2: 0
-  battleZone2Part2: 0
-  battleZone3: 0
-  battleZone3Part2: 0
-  monsterBaseZone: 0
-  humanBaseZone: 0
 --- !u!4 &528512740
 Transform:
   m_ObjectHideFlags: 0

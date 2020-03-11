@@ -7,7 +7,7 @@ public class Monster : MonoBehaviour
     private bool advanceStages = true; //if true you can win
     private bool winZone1 = false, winZone1Part2 = false, winZone2 = false, winZone2Part2 = false, winZone3 = false, winZone3Part2 = false, winZoneHumanBase = false, winZoneMonsterBase = false;
     private bool win1 = false, win1Part2 = false, win2 = false, win2Part2 = false, win3 = false, win3Part2 = false, winGame = false;
-    private float winTime = 1f;
+    private float winTime = 6f;
 
     private Rigidbody2D myRb;
     public Transform healthBar;
@@ -21,7 +21,7 @@ public class Monster : MonoBehaviour
     private float damagePerSecond;
     private float pointPerKill;
 
-    private float zombieSpeed = 2f, werewolfSpeed = 1f, vampireSpeed = 2f, skeletonSpeed = 30f, demonSpeed = 1f;
+    private float zombieSpeed = 2f, werewolfSpeed = 1f, vampireSpeed = 2f, skeletonSpeed = 3f, demonSpeed = 1f;
     private float zombiePPK = 15f, werewolfPPK = 45f, vampirePPK = 30f, skeletonPPK = 30f, demonPPK = 120f; //points per kill
     private float archerDPS = 15f, knightDPS = 60f, rogueDPS = 60f, soldierDPS = 20f, wizardDPS = 20f;
     private float mySpeed;

@@ -120,23 +120,23 @@ public class MapManager : MonoBehaviour
 
 
 
-            if (b1Status == 2)
-                humansWonBattle1 = true;
-            if (b1p2Status == 2)
-                humansWonBattle1Part2 = true;
+            //if (b1Status == 2)
+                //humansWonBattle1 = true;
+            //if (b1p2Status == 2)
+                //humansWonBattle1Part2 = true;
 
-            if (b2Status == 2)
-                humansWonBattle2 = true;
-            if (b2p2Status == 2)
-                humansWonBattle2Part2 = true;
+            //if (b2Status == 2)
+                //humansWonBattle2 = true;
+            //if (b2p2Status == 2)
+                //humansWonBattle2Part2 = true;
 
-            if (b3Status == 2)
-                humansWonBattle3 = true;
-            if (b3p2Status == 2)
-                humansWonBattle3Part2 = true;
+            //if (b3Status == 2)
+                //humansWonBattle3 = true;
+            //if (b3p2Status == 2)
+                //humansWonBattle3Part2 = true;
 
-            if (hbStatus == 2)
-                humansSavedTheirBase = true;
+            //if (hbStatus == 2)
+                //humansSavedTheirBase = true;
         }
 
         if (monsterCanProgress)
@@ -201,44 +201,151 @@ public class MapManager : MonoBehaviour
 
         if(humansCanProgress && monsterCanProgress)
         {
-            //if you are in Battle 1
-            if (b1Status == 0 || monstersWonBattle1 && humansWonBattle1Part2 || humansWonBattle1 && monstersSavedTheirBase)
+            //if you are in the monster base
+            if (humansWonBattle1)// || humansWonBattle2 || humansWonBattle3)
             {
-                button1.SetActive(true);
-                button1p2.SetActive(false);
-                monsterBase.SetActive(true);
-                tMonsterBase.SetActive(true);
-            }
-            //if you are in Battle 1 part 2
-            if (monstersWonBattle1)
-            {
+                //buttons
+                buttonHBase.SetActive(false);
                 button1.SetActive(false);
-                button1p2.SetActive(true);
+                button1p2.SetActive(false);
+                buttonMBase.SetActive(true);
+                //mapstate
                 monsterBase.SetActive(true);
-                tMonsterBase.SetActive(true);
-                battleZone1.SetActive(true);
+                tMonsterBase.SetActive(false);
+                battleZone1.SetActive(false);
+                battleZone1Part2.SetActive(false);
+                tHumanBase.SetActive(false);
+                humanBase.SetActive(false);
             }
 
             //if you are in the human base
-            if (monstersWonBattle1 && monstersWonBattle1Part2)
+            if(monstersWonBattle1Part2)// || monstersWonBattle2Part2 || monstersWonBattle2Part2)
             {
-                button1.SetActive(false);
+                //buttons
                 buttonHBase.SetActive(true);
+                button1.SetActive(false);
                 button1p2.SetActive(false);
+                buttonMBase.SetActive(false);
+                //mapstate
                 monsterBase.SetActive(true);
                 tMonsterBase.SetActive(true);
                 battleZone1.SetActive(true);
                 battleZone1Part2.SetActive(true);
                 tHumanBase.SetActive(true);
+                humanBase.SetActive(false);
             }
 
-            //if you are in the monster base
-            if(humansWonBattle1)
+            //if you are in Battle 1
+            if (b1Status == 0 || monstersWonBattle1 && humansWonBattle1Part2 || monstersSavedTheirBase)
             {
-                button1.SetActive(false);
+                //Debug.Log("MonstersSavedTheirBase = " + monstersSavedTheirBase);
+                //buttons
+                buttonHBase.SetActive(false);
+                button1.SetActive(true);
+                button1p2.SetActive(false);
                 buttonMBase.SetActive(false);
+                //mapstate
+                monsterBase.SetActive(true);
+                tMonsterBase.SetActive(true);
+                battleZone1.SetActive(false);
+                battleZone1Part2.SetActive(false);
+                tHumanBase.SetActive(false);
+                humanBase.SetActive(false);
+            }
+            //if you are in Battle 1 part 2
+            if (monstersWonBattle1)
+            {
+                //buttons
+                buttonHBase.SetActive(false);
+                button1.SetActive(false);
+                button1p2.SetActive(true);
+                buttonMBase.SetActive(false);
+                //mapstate
+                monsterBase.SetActive(true);
+                tMonsterBase.SetActive(true);
+                battleZone1.SetActive(true);
+                battleZone1Part2.SetActive(false);
+                tHumanBase.SetActive(false);
+                humanBase.SetActive(false);
+            }
+
+            //if you are in the human base
+            if (monstersWonBattle1 && monstersWonBattle1Part2)
+            {
+                //buttons
+                buttonHBase.SetActive(false);
+                button1.SetActive(false);
+                button1p2.SetActive(false);
+                buttonMBase.SetActive(true);
+                //mapstate
+                monsterBase.SetActive(true);
+                tMonsterBase.SetActive(true);
+                battleZone1.SetActive(true);
+                battleZone1Part2.SetActive(true);
+                tHumanBase.SetActive(true);
+                humanBase.SetActive(false);
             }
         }
+
+        //playtest
+        if (humansCanProgress && monsterCanProgress)
+        {
+            if (monstersWonBattle1)
+            {
+                //buttons
+                buttonHBase.SetActive(false);
+                button1.SetActive(false);
+                button1p2.SetActive(true);
+                buttonMBase.SetActive(false);
+                //mapstate
+                monsterBase.SetActive(true);
+                tMonsterBase.SetActive(true);
+                battleZone1.SetActive(true);
+                battleZone1Part2.SetActive(false);
+                tHumanBase.SetActive(false);
+                humanBase.SetActive(false);
+                //spawn zones
+                HumanSpawner.battleZone1 = false;
+                HumanSpawner.battleZone1Part2 = true;
+            }
+            if (monstersWonBattle2)
+            {
+                //buttons
+                buttonHBase.SetActive(false);
+                button2.SetActive(false);
+                button2p2.SetActive(true);
+                buttonMBase.SetActive(false);
+                //mapstate
+                monsterBase.SetActive(true);
+                mMonsterBase.SetActive(true);
+                battleZone2.SetActive(true);
+                battleZone2Part2.SetActive(false);
+                mHumanBase.SetActive(false);
+                humanBase.SetActive(false);
+                //spawn zones
+                HumanSpawner.battleZone2 = false;
+                HumanSpawner.battleZone2Part2 = true;
+            }
+            if (monstersWonBattle3)
+            {
+                //buttons
+                buttonHBase.SetActive(false);
+                button3.SetActive(false);
+                button3p2.SetActive(true);
+                buttonMBase.SetActive(false);
+                //mapstate
+                monsterBase.SetActive(true);
+                bMonsterBase.SetActive(true);
+                battleZone3.SetActive(true);
+                battleZone3Part2.SetActive(false);
+                bHumanBase.SetActive(false);
+                humanBase.SetActive(false);
+                //spawn zones
+                HumanSpawner.battleZone2 = false;
+                HumanSpawner.battleZone2Part2 = true;
+            }
+        }
+            
         
 
         /*
