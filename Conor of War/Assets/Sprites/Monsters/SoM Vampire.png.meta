@@ -1,0 +1,571 @@
+fileFormatVersion: 2
+guid: 3ff1265fb7e3eb447b041d8aa2abc083
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3059081377111644074
+    second: SoM Vampire_Hand
+  - first:
+      213: -9090060944227072435
+    second: SoM Vampire_1
+  - first:
+      213: -1970300443751284991
+    second: SoM Vampire_Head
+  - first:
+      213: -8094958297166480214
+    second: SoM Vampire_Bat
+  - first:
+      213: 8538354247299220009
+    second: SoM Vampire_Torso
+  - first:
+      213: -104570749333222368
+    second: SoM Vampire_5
+  - first:
+      213: -5519922731258096468
+    second: SoM Vampire_Cape
+  - first:
+      213: -1365350403122434643
+    second: SoM Vampire_7
+  - first:
+      213: -7771257645729886003
+    second: SoM Vampire_8
+  - first:
+      213: 9111009064308850674
+    second: SoM Vampire_Upper Arm
+  - first:
+      213: -8931137135682738179
+    second: SoM Vampire_10
+  - first:
+      213: -5490503760027203376
+    second: SoM Vampire_11
+  - first:
+      213: 8009404027121110541
+    second: SoM Vampire_12
+  - first:
+      213: 9128041879019025739
+    second: SoM Vampire_Lower Arm
+  - first:
+      213: 7577184785377249668
+    second: SoM Vampire_Pelvis
+  - first:
+      213: 5773530532972431201
+    second: SoM Vampire_Upper Leg
+  - first:
+      213: -5467815205881595755
+    second: SoM Vampire_Lower Leg
+  - first:
+      213: -7647865998133139375
+    second: SoM Vampire_Foot
+  - first:
+      213: 4212021035791433194
+    second: SoM Vampire_18
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SoM Vampire_Hand
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1175
+        width: 122
+        height: 135
+      alignment: 9
+      pivot: {x: 0.40755144, y: 0.800765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa790c50e4a047a20800000000000000
+      internalID: 3059081377111644074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1268
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4681b08bbd99d180800000000000000
+      internalID: -9090060944227072435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_Head
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 1051
+        width: 180
+        height: 284
+      alignment: 9
+      pivot: {x: 0.29949, y: 0.2934884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ff86d7f2618a4e0800000000000000
+      internalID: -1970300443751284991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_Bat
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 1251
+        width: 117
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac7ac1515ee8af80800000000000000
+      internalID: -8094958297166480214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_Torso
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 651
+        width: 248
+        height: 511
+      alignment: 9
+      pivot: {x: 0.44542572, y: 0.19099441}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922c7b423f35e7670800000000000000
+      internalID: 8538354247299220009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_5
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 1161
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02cc810257d7c8ef0800000000000000
+      internalID: -104570749333222368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_Cape
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 7
+        width: 436
+        height: 1086
+      alignment: 9
+      pivot: {x: 0.71729606, y: 0.8676481}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4d1cf858b4563b0800000000000000
+      internalID: -5519922731258096468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_7
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 1085
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad63f3da0d4d0de0800000000000000
+      internalID: -1365350403122434643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_8
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1084
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc05b385852f62490800000000000000
+      internalID: -7771257645729886003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_Upper Arm
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 781
+        width: 137
+        height: 357
+      alignment: 9
+      pivot: {x: 0.36827812, y: 0.8791159}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff3e77c87ec07e70800000000000000
+      internalID: 9111009064308850674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_10
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 1069
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7a453281a3e0480800000000000000
+      internalID: -8931137135682738179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_11
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 651
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8c1a19befcdc3b0800000000000000
+      internalID: -5490503760027203376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_12
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 653
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e032be68e172f60800000000000000
+      internalID: 8009404027121110541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_Lower Arm
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 477
+        width: 149
+        height: 234
+      alignment: 9
+      pivot: {x: 0.31832907, y: 0.8952363}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4571ddf9b15dae70800000000000000
+      internalID: 9128041879019025739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_Pelvis
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 226
+        width: 164
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489c7e9aa61972960800000000000000
+      internalID: 7577184785377249668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_Upper Leg
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 270
+        width: 170
+        height: 327
+      alignment: 9
+      pivot: {x: 0.4601925, y: 0.8932021}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16781b52e63bf1050800000000000000
+      internalID: 5773530532972431201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_Lower Leg
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 43
+        width: 185
+        height: 311
+      alignment: 9
+      pivot: {x: 0.71947783, y: 0.91343135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598b2fb3a0b6e14b0800000000000000
+      internalID: -5467815205881595755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_Foot
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 0
+        width: 201
+        height: 115
+      alignment: 9
+      pivot: {x: 0.35410655, y: 0.57846034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1586c7315625dd590800000000000000
+      internalID: -7647865998133139375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Vampire_18
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 87
+        width: 11
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed32d8d0da147a30800000000000000
+      internalID: 4212021035791433194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

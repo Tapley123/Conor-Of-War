@@ -1,0 +1,571 @@
+fileFormatVersion: 2
+guid: 290489a47c9318845813f21a10a3d987
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8918091993036362370
+    second: Human Archer_Arrow
+  - first:
+      213: -175038965576354783
+    second: Human Archer_Head
+  - first:
+      213: -1060162953133308186
+    second: Human Archer_Torso
+  - first:
+      213: 711612567011403921
+    second: Human Archer_Crossbow
+  - first:
+      213: 2539054322922793813
+    second: Human Archer_Upper Arm
+  - first:
+      213: -7978340411429683218
+    second: Human Archer_5
+  - first:
+      213: 6180526644379640060
+    second: Human Archer_Lower Arm
+  - first:
+      213: 1269339317949771131
+    second: Human Archer_7
+  - first:
+      213: 3270613215162472583
+    second: Human Archer_8
+  - first:
+      213: -592939599384778463
+    second: Human Archer_9
+  - first:
+      213: 6534463619112310512
+    second: Human Archer_Upper Leg
+  - first:
+      213: -7455264290157682717
+    second: Human Archer_Hand
+  - first:
+      213: 9189027006504795965
+    second: Human Archer_12
+  - first:
+      213: 166370051376530997
+    second: Human Archer_13
+  - first:
+      213: 7166245263638682377
+    second: Human Archer_Lower Leg
+  - first:
+      213: -6915834986849103122
+    second: Human Archer_Pelvis
+  - first:
+      213: 7417890360687794082
+    second: Human Archer_16
+  - first:
+      213: -4821700552648057878
+    second: Human Archer_Foot
+  - first:
+      213: 2607839053572403592
+    second: Human Archer_18
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Human Archer_Arrow
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1256
+        width: 209
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7defc815929c3480800000000000000
+      internalID: -8918091993036362370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_Head
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1102
+        width: 182
+        height: 222
+      alignment: 9
+      pivot: {x: 0.8346427, y: 0.22565302}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12438fafcf2229df0800000000000000
+      internalID: -175038965576354783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_Torso
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 762
+        width: 216
+        height: 520
+      alignment: 9
+      pivot: {x: 0.5939891, y: 0.11825925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6c57e396b8941f0800000000000000
+      internalID: -1060162953133308186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_Crossbow
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1016
+        width: 170
+        height: 140
+      alignment: 9
+      pivot: {x: 0.80518824, y: 0.33887503}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1982b620cd720e900800000000000000
+      internalID: 711612567011403921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_Upper Arm
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 751
+        width: 139
+        height: 293
+      alignment: 9
+      pivot: {x: 0.64605516, y: 0.86184204}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55bab3744788c3320800000000000000
+      internalID: 2539054322922793813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_5
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 746
+        width: 139
+        height: 293
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeff697baad374190800000000000000
+      internalID: -7978340411429683218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_Lower Arm
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 738
+        width: 147
+        height: 204
+      alignment: 9
+      pivot: {x: 0.7301776, y: 0.8206688}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0e51bbc34a5c550800000000000000
+      internalID: 6180526644379640060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_7
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 615
+        width: 147
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d25d962699d9110800000000000000
+      internalID: 1269339317949771131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_8
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 698
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7881577046d836d20800000000000000
+      internalID: 3270613215162472583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_9
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 682
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129686d639475c7f0800000000000000
+      internalID: -592939599384778463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_Upper Leg
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 352
+        width: 151
+        height: 327
+      alignment: 9
+      pivot: {x: 0.5746934, y: 0.8587107}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f617ee5a041faa50800000000000000
+      internalID: 6534463619112310512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_Hand
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 556
+        width: 117
+        height: 138
+      alignment: 9
+      pivot: {x: 0.7699173, y: 0.7942266}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef1f76b0a4998890800000000000000
+      internalID: -7455264290157682717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_12
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 482
+        width: 117
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f703a706bf58f70800000000000000
+      internalID: 9189027006504795965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_13
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 278
+        width: 151
+        height: 394
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536cf852ea01f4200800000000000000
+      internalID: 166370051376530997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_Lower Leg
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 179
+        width: 176
+        height: 265
+      alignment: 9
+      pivot: {x: 0.28211594, y: 0.90858674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b5280591e937360800000000000000
+      internalID: 7166245263638682377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_Pelvis
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 221
+        width: 164
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee214ab98b40600a0800000000000000
+      internalID: -6915834986849103122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_16
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 134
+        width: 170
+        height: 310
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7179b3bf3a1f660800000000000000
+      internalID: 7417890360687794082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_Foot
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 74
+        width: 218
+        height: 140
+      alignment: 9
+      pivot: {x: 0.7586857, y: 0.7577988}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb9b12d4e0e51db0800000000000000
+      internalID: -4821700552648057878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Archer_18
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 74
+        width: 218
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881f2936dc7e03420800000000000000
+      internalID: 2607839053572403592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
