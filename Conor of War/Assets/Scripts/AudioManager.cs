@@ -32,20 +32,20 @@ public class AudioManager : MonoBehaviour
     {
         audioS.PlayOneShot(zombiep);
     }
-    public void Vampire()
+    public static void Vampire()
     {
-        audioS.PlayOneShot(vampire);
+        audioS.PlayOneShot(vampirep);
     }
-    public void Skeleton()
+    public static void Skeleton()
     {
-        audioS.PlayOneShot(skeleton);
+        audioS.PlayOneShot(skeletonp);
     }
-    public void Demon()
+    public static void Demon()
     {
-        audioS.PlayOneShot(demon);
+        audioS.PlayOneShot(demonp);
     }
-    public void Werewolf()
+    public static void Werewolf()
     {
-        audioS.PlayOneShot(werewolf);
+        audioS.PlayOneShot(werewolfp);
     }
 }

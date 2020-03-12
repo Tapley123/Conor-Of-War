@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public static bool zombieCoolDownOver = true;
-    [SerializeField] GameObject zombieCoolDownBox;
+    public static bool zombieCoolDownOver = true, werewolfCoolDownOver = true, vampireCoolDownOver = true, skeletonCoolDownOver = true, demonCoolDownOver = true;
+    [SerializeField] GameObject zombieCoolDownBox, werewolfCoolDownBox, vampireCoolDownBox, skeletonCoolDownBox, demonCoolDownBox;
 
     public GameObject zombieDropDown, werewolfDropDown, vampireDropDown, skeletonDropDown, demonDropDown;
 
@@ -37,6 +37,10 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         zombieCoolDownBox.SetActive(false);
+        werewolfCoolDownBox.SetActive(false);
+        vampireCoolDownBox.SetActive(false);
+        skeletonCoolDownBox.SetActive(false);
+        demonCoolDownBox.SetActive(false);
 
         monsterSpawnPos = new Vector2(monsterSpawn1.transform.position.x, monsterSpawn1.transform.position.y);
         humanSpawnPos = new Vector2(humanSpawn.transform.position.x, humanSpawn.transform.position.y);
@@ -75,8 +79,6 @@ public class UIManager : MonoBehaviour
         monsterSpawnPos = new Vector2(monsterSpawn1Part2.transform.position.x, monsterSpawn1Part2.transform.position.y);
     }
 
-
-
     public void FightZone2()
     {
         cameraT.position = new Vector3(0, -15, cameraT.position.z);
@@ -87,8 +89,6 @@ public class UIManager : MonoBehaviour
         cameraT.position = new Vector3(0, -60, cameraT.position.z);
         monsterSpawnPos = new Vector2(monsterSpawn2Part2.transform.position.x, monsterSpawn2Part2.transform.position.y);
     }
-
-
 
     public void FightZone3()
     {
@@ -101,8 +101,6 @@ public class UIManager : MonoBehaviour
         monsterSpawnPos = new Vector2(monsterSpawn3Part2.transform.position.x, monsterSpawn3Part2.transform.position.y);
     }
 
-
-
     public void MyBase()
     {
         cameraT.position = new Vector3(0, -90, cameraT.position.z);
@@ -113,7 +111,6 @@ public class UIManager : MonoBehaviour
         cameraT.position = new Vector3(0, -105, cameraT.position.z);
         monsterSpawnPos = new Vector2(monsterSpawnEnemyBase.transform.position.x, monsterSpawnEnemyBase.transform.position.y);
     }
-    /// ///////////////////////////////CHANGING FIGHT ZONES////////////////////////////////////////////////////
 
 
     /// ///////////////////////////////SPAWNING MONSTERS////////////////////////////////////////////////////
@@ -132,37 +129,53 @@ public class UIManager : MonoBehaviour
 
     public void Werewolf()
     {
-        if (currency >= werewolfCost)
+        if(werewolfCoolDownOver)
         {
-            StartCoroutine(WerewolfCoroutine(werewolfCooldownTime));
-            currency -= werewolfCost;
+            if (currency >= werewolfCost)
+            {
+                StartCoroutine(WerewolfCoroutine(werewolfCooldownTime));
+                currency -= werewolfCost;
+                AudioManager.Werewolf();
+            }
         }
     }
 
     public void Vampire()
     {
-        if (currency >= vampireCost)
+        if(vampireCoolDownOver)
         {
-            StartCoroutine(VampireCoroutine(vampireCooldownTime));
-            currency -= vampireCost;
+            if (currency >= vampireCost)
+            {
+                StartCoroutine(VampireCoroutine(vampireCooldownTime));
+                currency -= vampireCost;
+                AudioManager.Vampire();
+            }
         }
     }
 
     public void Skeleton()
     {
-        if (currency >= skeletonCost)
+        if(skeletonCoolDownOver)
         {
-            StartCoroutine(SkeletonCoroutine(skeletonCooldownTime));
-            currency -= skeletonCost;
+            if (currency >= skeletonCost)
+            {
+                StartCoroutine(SkeletonCoroutine(skeletonCooldownTime));
+                currency -= skeletonCost;
+                AudioManager.Skeleton();
+            }
         }
     }
 
     public void Demon()
     {
-        if (currency >= demonCost)
+        if(demonCoolDownOver)
         {
-            StartCoroutine(DemonCoroutine(demonCooldownTime));
-            currency -= demonCost;
+            if (currency >= demonCost)
+            {
+                StartCoroutine(DemonCoroutine(demonCooldownTime));
+                currency -= demonCost;
+                AudioManager.Demon();
+            }
         }
     }
     /// ///////////////////////////////SPAWNING MONSTERS////////////////////////////////////////////////////
@@ -233,26 +246,42 @@ public class UIManager : MonoBehaviour
 
     IEnumerator WerewolfCoroutine(float time)
     {
+        werewolfCoolDownBox.SetActive(true);
+        werewolfCoolDownOver = false;
         yield return new WaitForSeconds(time);
         Instantiate(werewolf, monsterSpawnPos, zombie.transform.rotation);
+        werewolfCoolDownOver = true;
+        werewolfCoolDownBox.SetActive(false);
     }
 
     IEnumerator VampireCoroutine(float time)
     {
+        vampireCoolDownBox.SetActive(true);
+        vampireCoolDownOver = false;
         yield return new WaitForSeconds(time);
         Instantiate(vampire, monsterSpawnPos, zombie.transform.rotation);
+        vampireCoolDownOver = true;
+        vampireCoolDownBox.SetActive(false);
     }
 
     IEnumerator SkeletonCoroutine(float time)
     {
+        skeletonCoolDownBox.SetActive(true);
+        skeletonCoolDownOver = false;
         yield return new WaitForSeconds(time);
         Instantiate(skeleton, monsterSpawnPos, zombie.transform.rotation);
+        skeletonCoolDownOver = true;
+        skeletonCoolDownBox.SetActive(false);
     }
 
     IEnumerator DemonCoroutine(float time)
     {
+        demonCoolDownBox.SetActive(true);
+        demonCoolDownOver = false;
         yield return new WaitForSeconds(time);
         Instantiate(demon, monsterSpawnPos, zombie.transform.rotation);
+        demonCoolDownOver = true;
+        demonCoolDownBox.SetActive(false);
     }
     /// ///////////////////////////////MONSTER COOLDOWN TIMERS////////////////////////////////////////////////////
 }
