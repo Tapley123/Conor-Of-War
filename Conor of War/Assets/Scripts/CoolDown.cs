@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CoolDown : MonoBehaviour
 {
@@ -8,11 +9,13 @@ public class CoolDown : MonoBehaviour
     public float cooldownTime = 5f;
     public Transform coolDownBar;
     private float startCoolDownTime;
+    float counter;
 
     void Start()
     {
         coolDownBar.localScale = new Vector3(1f, 1f);
         startCoolDownTime = cooldownTime;
+        SetBarColour(Color.green);
     }
 
     
@@ -21,8 +24,17 @@ public class CoolDown : MonoBehaviour
         if(zombieButtonClicked)
         {
             StartCoroutine(CooldownCoroutine(cooldownTime));
+            SetBarColour(Color.red);
         }
     }
+
+
+    public void SetBarColour(Color colour)
+    {
+        coolDownBar.Find("BarSprite").GetComponent<Image>().color = colour;
+    }
+
+
 
     IEnumerator CooldownCoroutine(float cooldownTime)
     {
@@ -33,8 +45,10 @@ public class CoolDown : MonoBehaviour
             counter--;
             coolDownBar.localScale = new Vector3(counter / startCoolDownTime, 1f);
         }
+
         if (counter <= 0)
         {
+            yield return
             zombieButtonClicked = false;
         }
     }
