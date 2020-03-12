@@ -178,7 +178,6 @@ public class UIManager : MonoBehaviour
             }
         }
     }
-    /// ///////////////////////////////SPAWNING MONSTERS////////////////////////////////////////////////////
 
 
     /// ///////////////////////////////MONSTER DROP DOWN MENUS////////////////////////////////////////////////////
@@ -191,7 +190,6 @@ public class UIManager : MonoBehaviour
         zombieDropDown.SetActive(false);
     }
 
-
     public void WerewolfDropDown()
     {
         werewolfDropDown.SetActive(true);
@@ -200,7 +198,6 @@ public class UIManager : MonoBehaviour
     {
         werewolfDropDown.SetActive(false);
     }
-
 
     public void VampireDropDown()
     {
@@ -211,7 +208,6 @@ public class UIManager : MonoBehaviour
         vampireDropDown.SetActive(false);
     }
 
-
     public void SkeletonDropDown()
     {
         skeletonDropDown.SetActive(true);
@@ -221,7 +217,6 @@ public class UIManager : MonoBehaviour
         skeletonDropDown.SetActive(false);
     }
 
-
     public void DemonDropDown()
     {
         demonDropDown.SetActive(true);
@@ -230,7 +225,6 @@ public class UIManager : MonoBehaviour
     {
         demonDropDown.SetActive(false);
     }
-    /// ///////////////////////////////MONSTER DROP DOWN MENUS////////////////////////////////////////////////////
 
 
     /// ///////////////////////////////MONSTER COOLDOWN TIMERS////////////////////////////////////////////////////
@@ -283,5 +277,4 @@ public class UIManager : MonoBehaviour
         demonCoolDownOver = true;
         demonCoolDownBox.SetActive(false);
     }
-    /// ///////////////////////////////MONSTER COOLDOWN TIMERS////////////////////////////////////////////////////
 }
