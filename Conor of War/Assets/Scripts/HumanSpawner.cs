@@ -13,6 +13,8 @@ public class HumanSpawner : MonoBehaviour
 
     public GameObject[] humans;
 
+    public List<GameObject> humansOnScreen = new List<GameObject>();
+
     public Transform humanSpawn1, humanSpawn2, humanSpawn3;
 
     private void Start()
@@ -85,7 +87,7 @@ public class HumanSpawner : MonoBehaviour
 
         GameObject human = Instantiate(humans[spawnChoice], transform.position, transform.rotation);
         human.transform.parent = GameObject.Find("Humans1").transform;
-
+        humansOnScreen.Add(human);
         hCurrency -= humansCost[spawnChoice];
 
     }

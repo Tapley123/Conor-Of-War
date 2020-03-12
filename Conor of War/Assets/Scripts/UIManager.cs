@@ -20,8 +20,17 @@ public class UIManager : MonoBehaviour
     public Text currencyText;
     public string currencyName;
 
+    /////////UPGRADES STUFF/////////
+    public bool zombieMultiply;
+
+    public int zombieNum, zombieCounter = 3, chanceRequirement;
+
+    public List<string> upgrades = new List<string>();
+
     void Start()
     {
+        zombieNum = 1;
+        chanceRequirement = 0;
         monsterSpawnPos = new Vector2(monsterSpawn1.transform.position.x, monsterSpawn1.transform.position.y);
         humanSpawnPos = new Vector2(humanSpawn.transform.position.x, humanSpawn.transform.position.y);
 
@@ -107,8 +116,28 @@ public class UIManager : MonoBehaviour
     /// ///////////////////////////////MONSTER COOLDOWN TIMERS////////////////////////////////////////////////////
     IEnumerator ZombieCoroutine(float time)
     {
+        
         yield return new WaitForSeconds(time);
         GameObject zombGO = Instantiate(zombie, monsterSpawnPos, zombie.transform.rotation);
+
+        if(zombieCounter >= 2)
+        {
+            zombieCounter = 0;
+            zombieNum = 0;
+            zombieMultiply = false;
+        }
+
+        if((upgrades.Contains("Zombie Horde") && zombieCounter == 0 && zombieMultiply == true) || upgrades.Contains("Peel Flesh"))
+        {
+            //Debug.Log("horde present");
+            zombieNum = Random.Range(1, 10);
+        }
+
+        if (zombieNum >= chanceRequirement)
+        {
+            zombieCounter ++;
+            StartCoroutine(ZombieCoroutine(zombieCooldownTime));
+        }
         zombGO.transform.parent = GameObject.Find("Monsters1").transform;
     }
 

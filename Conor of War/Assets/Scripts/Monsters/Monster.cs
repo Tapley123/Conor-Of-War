@@ -23,6 +23,9 @@ public class Monster : MonoBehaviour
     private float zombieSpeed = 2f, werewolfSpeed = 1f, vampireSpeed = 2f, skeletonSpeed = 3f, demonSpeed = 1f;
     [SerializeField] private float mySpeed;
 
+    public string[] scenes = { "Scene1", "Scene2", "Scene3" };
+    public string myScene;
+
     void Start()
     {
 
@@ -73,6 +76,24 @@ public class Monster : MonoBehaviour
             speed = demonSpeed;
             damagePerSecond = 20f;
             pointPerKill = 120f;
+        }
+
+
+        /////////////////SCENE CHECK////////////////////////////
+
+        if (this.gameObject.transform.position.y > -3f)
+        {
+            myScene = scenes[0];
+        }
+
+        if (this.gameObject.transform.position.y > -18f && this.gameObject.transform.position.y < -3f)
+        {
+            myScene = scenes[1];
+        }
+
+        if (this.gameObject.transform.position.y < -19f)
+        {
+            myScene = scenes[2];
         }
     }
 

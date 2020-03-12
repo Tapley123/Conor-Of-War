@@ -16,7 +16,10 @@ public class Human : MonoBehaviour
     public float pointPerKill;
     public float mySpeed;
 
-    public bool isAttacking = false;
+    public bool isAttacking = false, isFrozen = false, hasCollided = false;
+
+    public string[] scenes = {"Scene1", "Scene2", "Scene3"};
+    public string myScene;
 
     public GameObject currentTarget;
 
@@ -24,6 +27,23 @@ public class Human : MonoBehaviour
     {
         myRb = GetComponent<Rigidbody2D>();
         mySpeed = speed;
+
+        /////////////////SCENE CHECK////////////////////////////
+        
+        if(this.gameObject.transform.position.y > -3f)
+        {
+            myScene = scenes[0];
+        }
+
+        if(this.gameObject.transform.position.y > -18f && this.gameObject.transform.position.y < -3f)
+        {
+            myScene = scenes[1];
+        }
+
+        if(this.gameObject.transform.position.y < -19f)
+        {
+            myScene = scenes[2];
+        }
     }
 
     void Update()
@@ -35,7 +55,7 @@ public class Human : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if(currentTarget == null)
+        if(currentTarget == null && isFrozen == false && hasCollided == false)
         {
             isAttacking = false;
             speed = mySpeed;
@@ -44,50 +64,20 @@ public class Human : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //slowing the object that collides with the back of another object
-        if (collision.CompareTag("Wizard") && collision.gameObject.transform.position.x < transform.position.x)
+        if(isFrozen == false)
         {
-            //Debug.Log("Demon");
-            GameObject humanInFront = collision.gameObject;
-            Human h = humanInFront.GetComponent<Human>();
-            speed = h.speed;
-        }
+            //slowing the object that collides with the back of another object
 
-        if (collision.CompareTag("Rogue") && collision.gameObject.transform.position.x < transform.position.x)
-        {
-            //Debug.Log("Skeleton");
-            //speed = skeletonSpeed;
-            GameObject humanInFront = collision.gameObject;
-            Human h = humanInFront.GetComponent<Human>();
-            speed = h.speed; ;
+            if (collision.transform.parent.tag == "Humans1" && collision.gameObject.transform.position.x < transform.position.x)
+            {
+                //Debug.Log("Demon");
+                hasCollided = true;
+                GameObject humanInFront = collision.gameObject;
+                Human h = humanInFront.GetComponent<Human>();
+                speed = h.speed;
+            }
         }
-
-        if (collision.CompareTag("Archer") && collision.gameObject.transform.position.x < transform.position.x)
-        {
-            // Debug.Log("Vampire");
-            //speed = vampireSpeed;
-            GameObject humanInFront = collision.gameObject;
-            Human h = humanInFront.GetComponent<Human>();
-            speed = h.speed;
-        }
-
-        if (collision.CompareTag("Knight") && collision.gameObject.transform.position.x < transform.position.x)
-        {
-            //Debug.Log("Werewolf");
-            //speed = werewolfSpeed;
-            GameObject humanInFront = collision.gameObject;
-            Human h = humanInFront.GetComponent<Human>();
-            speed = h.speed;
-        }
-
-        if (collision.CompareTag("Soldier") && collision.gameObject.transform.position.x < transform.position.x)
-        {
-            //Debug.Log("Zombie");
-            //speed = zombieSpeed;
-            GameObject humanInFront = collision.gameObject;
-            Human h = humanInFront.GetComponent<Human>();
-            speed = h.speed;
-        }
+        
 
 
         
@@ -109,17 +99,24 @@ public class Human : MonoBehaviour
         }
     }
 
-    /*private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         speed = mySpeed;
 
-        Debug.Log(gameObject.name + "has exited");
+        if (collision.transform.parent.tag == "Humans1" && collision.gameObject.transform.position.x < transform.position.x)
+        {
+            //Debug.Log("Demon");
+            hasCollided = false;
+           
+            speed = mySpeed;
+        }
+
         if (collision.gameObject.transform.parent.tag == "Monsters1")
         {
             isAttacking = false;
             currentTarget = null;
         }
-    }*/
+    }
 
     /* private void OnCollisionEnter2D(Collision2D collision)
      {
