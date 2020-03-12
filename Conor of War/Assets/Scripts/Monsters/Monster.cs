@@ -6,6 +6,10 @@ public class Monster : MonoBehaviour
 {
     private bool youWon = false; //this bool determines if you won the game
 
+    private float winBattleBonus = 500f;
+
+    private Transform cameraT;
+
     private bool inMBase = false, inB1 = false, inB1P2 = false, inB2 = false, inB2P2 = false, inB3 = false, inB3P2 = false, inHBase = false;
     private bool monstersCanBeRemovedFromInactiveZones = true;
 
@@ -34,6 +38,7 @@ public class Monster : MonoBehaviour
     void Start()
     {
         myRb = GetComponent<Rigidbody2D>();
+        cameraT = GameObject.Find("Main Camera").transform;
 
         if (monsterName == "Zombie")
         {
@@ -440,6 +445,9 @@ public class Monster : MonoBehaviour
             yield return new WaitForSeconds(winTime);
             MapController.battleZone1Active = false;
             MapController.battleZone1p2Active = true;
+            UIManager.currency += UIManager.winBattleBonusC; //get currency bonus from wining a battle
+            if (cameraT.position.y == 0)
+                cameraT.position = new Vector3(cameraT.position.x, 15, cameraT.position.z);
         }
         else yield return null;
     }
@@ -452,6 +460,9 @@ public class Monster : MonoBehaviour
             MapController.battleZone1Active = false;
             MapController.battleZone1p2Active = false;
             MapController.humanBaseActive = true;
+            UIManager.currency += UIManager.winBattleBonusC; //get currency bonus from wining a battle
+            if (cameraT.position.y == -45) //go back to map
+                cameraT.position = new Vector3(cameraT.position.x, 15, cameraT.position.z);
         }
         else yield return null;
     }
@@ -464,6 +475,9 @@ public class Monster : MonoBehaviour
             yield return new WaitForSeconds(winTime);
             MapController.battleZone2Active = false;
             MapController.battleZone2p2Active = true;
+            UIManager.currency += UIManager.winBattleBonusC; //get currency bonus from wining a battle
+            if (cameraT.position.y == -15)
+                cameraT.position = new Vector3(cameraT.position.x, 15, cameraT.position.z);
         }
         else yield return null;
     }
@@ -476,6 +490,9 @@ public class Monster : MonoBehaviour
             MapController.battleZone2Active = false;
             MapController.battleZone2p2Active = false;
             MapController.humanBaseActive = true;
+            UIManager.currency += UIManager.winBattleBonusC; //get currency bonus from wining a battle
+            if (cameraT.position.y == -60)
+                cameraT.position = new Vector3(cameraT.position.x, 15, cameraT.position.z);
         }
         else yield return null;
     }
@@ -488,6 +505,9 @@ public class Monster : MonoBehaviour
             yield return new WaitForSeconds(winTime);
             MapController.battleZone3Active = false;
             MapController.battleZone3p2Active = true;
+            UIManager.currency += UIManager.winBattleBonusC; //get currency bonus from wining a battle
+            if (cameraT.position.y == -30)
+                cameraT.position = new Vector3(cameraT.position.x, 15, cameraT.position.z);
         }
         else yield return null;
     }
@@ -500,6 +520,9 @@ public class Monster : MonoBehaviour
             MapController.battleZone3Active = false;
             MapController.battleZone3p2Active = false;
             MapController.humanBaseActive = true;
+            UIManager.currency += UIManager.winBattleBonusC; //get currency bonus from wining a battle
+            if (cameraT.position.y == -75)
+                cameraT.position = new Vector3(cameraT.position.x, 15, cameraT.position.z);
         }
         else yield return null;
     }
@@ -510,6 +533,9 @@ public class Monster : MonoBehaviour
         {
             yield return new WaitForSeconds(winTime);
             youWon = true;
+            MapController.win = true;
+            if (cameraT.position.y == -105)
+                cameraT.position = new Vector3(cameraT.position.x, 15, cameraT.position.z);
             //Debug.Log("Monsters Win");
         }
         else yield return null;
@@ -520,6 +546,11 @@ public class Monster : MonoBehaviour
         if (winZoneMonsterBase)
         {
             yield return new WaitForSeconds(winTime);
+
+            UIManager.currency += UIManager.winBattleBonusC; //get currency bonus from wining a battle
+            if (cameraT.position.y == -90)
+                cameraT.position = new Vector3(cameraT.position.x, 15, cameraT.position.z);
+
             //the base is breache through the first battle lane
             if (!MapController.battleZone1p2Active && !MapController.battleZone1Active)
             {

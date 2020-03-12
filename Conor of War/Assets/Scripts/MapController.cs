@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MapController : MonoBehaviour
 {
+    //Win/Lose
+    public static bool win = false, lose = false;
     //Activate Zones
     private bool advance1 = true, advance2 = true, advance3 = true;
     public static bool monsterBaseActive, humanBaseActive;
@@ -67,9 +69,6 @@ public class MapController : MonoBehaviour
     
     void Update()
     {
-        
-
-
         if(advance1)
         {
             if (monsterBaseActive && !battleZone1Active && !battleZone1p2Active) // add another check
@@ -336,6 +335,15 @@ public class MapController : MonoBehaviour
             buttonMBase.SetActive(true);
             //Spawn Zones
             HumanSpawner.monsterBaseZone = true;
+        }
+        
+        if(win)
+        {
+
+        }
+        if(lose)
+        {
+
         }
     }
 }

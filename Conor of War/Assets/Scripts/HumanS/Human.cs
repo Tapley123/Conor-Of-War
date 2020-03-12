@@ -6,6 +6,8 @@ public class Human : MonoBehaviour
 {
     private bool youLost = false; // this bool determins if you lost the game
 
+    private Transform cameraT;
+
     private bool inMBase = false, inB1 = false, inB1P2 = false, inB2 = false, inB2P2 = false, inB3 = false, inB3P2 = false, inHBase;
     private bool humansCanBeRemovedFromInactiveZones = true;
 
@@ -44,6 +46,8 @@ public class Human : MonoBehaviour
     {
         //for testing
         //speed = speed * testingSpeedBoost;
+
+        cameraT = GameObject.Find("Main Camera").transform;
 
         myRb = GetComponent<Rigidbody2D>();
         mySpeed = speed;
@@ -406,6 +410,8 @@ public class Human : MonoBehaviour
             MapController.monsterBaseActive = true;
             MapController.battleZone1Active = false;
             MapController.battleZone1p2Active = false;
+            if (cameraT.position.y == 0)
+                cameraT.position = new Vector3(cameraT.position.x, 15, cameraT.position.z);
         }
         else yield return null;
     }
@@ -415,6 +421,8 @@ public class Human : MonoBehaviour
         {
             MapController.battleZone1Active = true;
             MapController.battleZone1p2Active = false;
+            if (cameraT.position.y == -45)
+                cameraT.position = new Vector3(cameraT.position.x, 15, cameraT.position.z);
         }
         else yield return null;
     }
@@ -428,6 +436,8 @@ public class Human : MonoBehaviour
             MapController.monsterBaseActive = true;
             MapController.battleZone2Active = false;
             MapController.battleZone2p2Active = false;
+            if (cameraT.position.y == -15)
+                cameraT.position = new Vector3(cameraT.position.x, 15, cameraT.position.z);
         }
         else yield return null;
     }
@@ -438,6 +448,8 @@ public class Human : MonoBehaviour
             yield return new WaitForSeconds(loseTime);
             MapController.battleZone2Active = true;
             MapController.battleZone2p2Active = false;
+            if (cameraT.position.y == -60)
+                cameraT.position = new Vector3(cameraT.position.x, 15, cameraT.position.z);
         }
         else yield return null;
     }
@@ -451,6 +463,8 @@ public class Human : MonoBehaviour
             MapController.monsterBaseActive = true;
             MapController.battleZone3Active = false;
             MapController.battleZone3p2Active = false;
+            if (cameraT.position.y == -30)
+                cameraT.position = new Vector3(cameraT.position.x, 15, cameraT.position.z);
         }
         else yield return null;
     }
@@ -461,6 +475,8 @@ public class Human : MonoBehaviour
             yield return new WaitForSeconds(loseTime);
             MapController.battleZone3Active = true;
             MapController.battleZone3p2Active = false;
+            if (cameraT.position.y == -75)
+                cameraT.position = new Vector3(cameraT.position.x, 15, cameraT.position.z);
         }
         else yield return null;
     }
@@ -469,6 +485,10 @@ public class Human : MonoBehaviour
         if(winHBase)
         {
             yield return new WaitForSeconds(loseTime);
+
+            if (cameraT.position.y == -105)
+                cameraT.position = new Vector3(cameraT.position.x, 15, cameraT.position.z);
+
             //the base is breache through the first battle lane
             if (!MapController.battleZone1p2Active && !MapController.battleZone1Active)
             {
@@ -498,7 +518,10 @@ public class Human : MonoBehaviour
         if (winGame)
         {
             //Debug.Log("Humans Win");
+            if (cameraT.position.y == -90)
+                cameraT.position = new Vector3(cameraT.position.x, 15, cameraT.position.z);
             youLost = true;
+            MapController.lose = true;
         }
         else yield return null;
     }

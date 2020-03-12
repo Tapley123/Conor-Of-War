@@ -20576,6 +20576,8 @@ MonoBehaviour:
   vampireCost: 20
   skeletonCost: 20
   demonCost: 80
+  startingCurrency: 300
+  winBattleBonus: 500
   currencyText: {fileID: 2142498890}
   currencyName: Soul Points
 --- !u!4 &975501624
