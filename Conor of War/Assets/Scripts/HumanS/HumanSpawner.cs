@@ -27,7 +27,8 @@ public class HumanSpawner : MonoBehaviour
     private void Update()
     {
         
-        if(hCurrency < 0)
+
+        if (hCurrency < 0)
         {
             hCurrency = 0;
         }
@@ -42,7 +43,6 @@ public class HumanSpawner : MonoBehaviour
                 CheckHumans();
             }
         }
-        
     }
 
     
@@ -70,10 +70,6 @@ public class HumanSpawner : MonoBehaviour
 
             }
         }
-
-        
-
-
     }
 
     public void SpawnHuman()
@@ -85,26 +81,26 @@ public class HumanSpawner : MonoBehaviour
         //Debug.Log(humansCost[spawnChoice]);
 
         ///////////////////////////////////////////////////////////////////////////////////////////  
-        if(monsterBaseZone)
+        if (monsterBaseZone)
             Instantiate(humans[spawnChoice], monsterBaseSpawn.position, transform.rotation);
-        if(humanBaseZone)
+        if (humanBaseZone)
             Instantiate(humans[spawnChoice], humanBaseSpawn.position, transform.rotation);
 
-        if(battleZone1)
+        if (battleZone1)
             Instantiate(humans[spawnChoice], humanSpawn1.position, transform.rotation);
-        if(battleZone1Part2)
+        if (battleZone1Part2)
             Instantiate(humans[spawnChoice], humanSpawn1Part2.position, transform.rotation);
 
-        if(battleZone2)
-            Instantiate(humans[spawnChoice], humanSpawn2.position, transform.rotation);
-        if(battleZone2Part2)
+        if (battleZone2)
+            Instantiate(humans[spawnChoice], humanSpawn2.position, transform.rotation); 
+        if (battleZone2Part2)
             Instantiate(humans[spawnChoice], humanSpawn2Part2.position, transform.rotation);
 
-        if(battleZone3)
+        if (battleZone3)
             Instantiate(humans[spawnChoice], humanSpawn3.position, transform.rotation);
-        if(battleZone3Part2)
+        if (battleZone3Part2)
             Instantiate(humans[spawnChoice], humanSpawn3Part2.position, transform.rotation);
-        ///////////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////////
 
         hCurrency -= humansCost[spawnChoice];
     }

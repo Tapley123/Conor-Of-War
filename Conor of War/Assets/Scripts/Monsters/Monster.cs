@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
+    private bool youWon = false; //this bool determines if you won the game
+
+    private bool inMBase = false, inB1 = false, inB1P2 = false, inB2 = false, inB2P2 = false, inB3 = false, inB3P2 = false, inHBase = false;
+    private bool monstersCanBeRemovedFromInactiveZones = true;
+
     private bool advanceStages = true; //if true you can win
     private bool winZone1 = false, winZone1Part2 = false, winZone2 = false, winZone2Part2 = false, winZone3 = false, winZone3Part2 = false, winZoneHumanBase = false, winZoneMonsterBase = false;
     private bool win1 = false, win1Part2 = false, win2 = false, win2Part2 = false, win3 = false, win3Part2 = false, winGame = false;
-    private float winTime = 6f;
+    private float winTime = 1f;
 
     private Rigidbody2D myRb;
     public Transform healthBar;
@@ -21,7 +26,7 @@ public class Monster : MonoBehaviour
     private float damagePerSecond;
     private float pointPerKill;
 
-    private float zombieSpeed = 2f, werewolfSpeed = 1f, vampireSpeed = 2f, skeletonSpeed = 3f, demonSpeed = 1f;
+    private float zombieSpeed = 2f, werewolfSpeed = 1f, vampireSpeed = 2f, skeletonSpeed = 30f, demonSpeed = 1f;
     private float zombiePPK = 15f, werewolfPPK = 45f, vampirePPK = 30f, skeletonPPK = 30f, demonPPK = 120f; //points per kill
     private float archerDPS = 15f, knightDPS = 60f, rogueDPS = 60f, soldierDPS = 20f, wizardDPS = 20f;
     private float mySpeed;
@@ -81,42 +86,9 @@ public class Monster : MonoBehaviour
 
     void Update()
     {
-        ///////Map And Advance Stages//////
-        /*
-        if(advanceStages)
-        {
-            if (win1)
-            {
-                MapManager.battleZone1Owned = true;
-            }
-            if (win1Part2)
-            {
-                MapManager.battleZone1Part2Owned = true;
-            }
-
-
-            if (win2)
-            {
-                MapManager.battleZone2Owned = true;
-            }
-            if (win2Part2)
-            {
-                MapManager.battleZone2Part2Owned = true;
-            }
-
-
-            if (win3)
-            {
-                MapManager.battleZone3Owned = true;
-            }
-            if (win3Part2)
-            {
-                MapManager.battleZone3Part2Owned = true;
-            }
-        }
-        */
+        KillMonstersWhenInactive();
         /////////////////////////////////////////////////////Win Conditions/////////////////////////////////////////////////////
-        if(advanceStages)
+        if (advanceStages)
         {
             if (winZone1)
                 StartCoroutine(WinCoroutine1(winTime));
@@ -184,7 +156,6 @@ public class Monster : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-
     public void SetHealthBarSize(float sizeNormalized)
     {
         healthBar.localScale = new Vector3(sizeNormalized, 1f);
@@ -195,11 +166,63 @@ public class Monster : MonoBehaviour
         healthBar.Find("Bar Sprite").GetComponent<SpriteRenderer>().color = colour;
     }
 
+    private void KillMonstersWhenInactive()
+    {
+        //if monster is in monster base and monster base isnt active
+        if (inMBase && !MapController.monsterBaseActive)
+            Dead();
+        
+        if (inB1 && !MapController.battleZone1Active)
+            Dead();
+        if (inB1P2 && !MapController.battleZone1p2Active)
+            Dead();
+        
+        if (inB2 && !MapController.battleZone2Active)
+            Dead();
+        if (inB2P2 && !MapController.battleZone2p2Active)
+            Dead();
+
+        if (inB3 && !MapController.battleZone3Active)
+            Dead();
+        if (inB3P2 && !MapController.battleZone3p2Active)
+            Dead();
+
+        //if monster is in human base and monster human isnt active
+        if (inHBase && !MapController.humanBaseActive)
+            Dead();
+    }
+
+
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(advanceStages)
+        //kill any monseters in inactive zones
+        if (monstersCanBeRemovedFromInactiveZones)
+        {
+            if (collision.CompareTag("KillAllMBase"))
+                inMBase = true;
+
+            if (collision.CompareTag("KillAllB1"))
+                inB1 = true;
+            if (collision.CompareTag("KillAllB1P2"))
+                inB1P2 = true;
+
+            if (collision.CompareTag("KillAllB2"))
+                inB2 = true;
+            if (collision.CompareTag("KillAllB2P2"))
+                inB2P2 = true;
+
+            if (collision.CompareTag("KillAllB3"))
+                inB3 = true;
+            if (collision.CompareTag("KillAllB3P2"))
+                inB3P2 = true;
+
+            if (collision.CompareTag("KillAllHBase"))
+                inHBase = true;
+        }
+
+        if (advanceStages)
         {
             if (collision.CompareTag("Win1"))
                 winZone1 = true;
@@ -219,7 +242,7 @@ public class Monster : MonoBehaviour
             if (collision.CompareTag("WinGame"))
                 winZoneHumanBase = true;
 
-            if (collision.CompareTag("LoseGame"))
+            if (collision.CompareTag("MSaveBase"))
                 winZoneMonsterBase = true;
         }
         
@@ -356,6 +379,15 @@ public class Monster : MonoBehaviour
     }
 
     
+
+
+
+
+
+
+
+
+
     /// //////////////////////////////////////////////ATTACK COROUTINES///////////////////////////////////////////////////
     IEnumerator AttackArcherCoroutine()
     {
@@ -406,11 +438,8 @@ public class Monster : MonoBehaviour
         if (winZone1)
         {
             yield return new WaitForSeconds(winTime);
-            //MapManager.battle1Neutral = false;
-            //MapManager.battleZone1Owned = true;
-            //MapManager.humansWonBattle1 = false;
-            //MapManager.monstersWonBattle1 = true;
-            MapManager.b1Status = 1;
+            MapController.battleZone1Active = false;
+            MapController.battleZone1p2Active = true;
         }
         else yield return null;
     }
@@ -420,11 +449,9 @@ public class Monster : MonoBehaviour
         if (winZone1Part2)
         {
             yield return new WaitForSeconds(winTime);
-            //MapManager.battle1Part2Neutral = false;
-            //MapManager.battleZone1Part2Owned = true;
-            //MapManager.humansWonBattle1Part2 = false;
-            //MapManager.monstersWonBattle1Part2 = true;
-            MapManager.b1p2Status = 1;
+            MapController.battleZone1Active = false;
+            MapController.battleZone1p2Active = false;
+            MapController.humanBaseActive = true;
         }
         else yield return null;
     }
@@ -435,11 +462,8 @@ public class Monster : MonoBehaviour
         if (winZone2)
         {
             yield return new WaitForSeconds(winTime);
-            //MapManager.battle2Neutral = false;
-            //MapManager.battleZone2Owned = true;
-            //MapManager.humansWonBattle2 = false;
-            //MapManager.monstersWonBattle2 = true;
-            MapManager.b2Status = 1;
+            MapController.battleZone2Active = false;
+            MapController.battleZone2p2Active = true;
         }
         else yield return null;
     }
@@ -449,11 +473,9 @@ public class Monster : MonoBehaviour
         if (winZone2Part2)
         {
             yield return new WaitForSeconds(winTime);
-            //MapManager.battle2Part2Neutral = false;
-            //MapManager.battleZone2Part2Owned = true;
-            //MapManager.humansWonBattle2Part2 = false;
-            //MapManager.monstersWonBattle2Part2 = true;
-            MapManager.b2p2Status = 1;
+            MapController.battleZone2Active = false;
+            MapController.battleZone2p2Active = false;
+            MapController.humanBaseActive = true;
         }
         else yield return null;
     }
@@ -464,11 +486,8 @@ public class Monster : MonoBehaviour
         if (winZone3)
         {
             yield return new WaitForSeconds(winTime);
-            //MapManager.battle3Neutral = false;
-            //MapManager.battleZone3Owned = true;
-            //MapManager.humansWonBattle3 = false;
-            //MapManager.monstersWonBattle3 = true;
-            MapManager.b3Status = 1;
+            MapController.battleZone3Active = false;
+            MapController.battleZone3p2Active = true;
         }
         else yield return null;
     }
@@ -478,11 +497,9 @@ public class Monster : MonoBehaviour
         if (winZone3Part2)
         {
             yield return new WaitForSeconds(winTime);
-            //MapManager.battle3Part2Neutral = false;
-            //MapManager.battleZone3Part2Owned = true;
-            //MapManager.humansWonBattle3Part2 = false;
-            //MapManager.monstersWonBattle3Part2 = true;
-            MapManager.b3p2Status = 1;
+            MapController.battleZone3Active = false;
+            MapController.battleZone3p2Active = false;
+            MapController.humanBaseActive = true;
         }
         else yield return null;
     }
@@ -492,10 +509,8 @@ public class Monster : MonoBehaviour
         if (winZoneHumanBase)
         {
             yield return new WaitForSeconds(winTime);
-            winGame = true;
-            //MapManager.battleHbaseNeutral = false;
-            //MapManager.humanBaseOwned = true;
-            MapManager.hbStatus = 1;
+            youWon = true;
+            //Debug.Log("Monsters Win");
         }
         else yield return null;
     }
@@ -505,10 +520,27 @@ public class Monster : MonoBehaviour
         if (winZoneMonsterBase)
         {
             yield return new WaitForSeconds(winTime);
-            winGame = true;
-            //MapManager.battleHbaseNeutral = false;
-            //MapManager.humanBaseOwned = true;
-            MapManager.hbStatus = 1;
+            //the base is breache through the first battle lane
+            if (!MapController.battleZone1p2Active && !MapController.battleZone1Active)
+            {
+                MapController.battleZone1Active = true;
+                MapController.battleZone1p2Active = false;
+                MapController.monsterBaseActive = false;
+            }
+            //the base is breache through the second battle lane
+            if (!MapController.battleZone2p2Active && !MapController.battleZone2Active)
+            {
+                MapController.battleZone2Active = true;
+                MapController.battleZone2p2Active = false;
+                MapController.monsterBaseActive = false;
+            }
+            //the base is breache through the third battle lane
+            if (!MapController.battleZone1p2Active && !MapController.battleZone1Active)
+            {
+                MapController.battleZone3Active = true;
+                MapController.battleZone3p2Active = false;
+                MapController.monsterBaseActive = false;
+            }
         }
         else yield return null;
     }

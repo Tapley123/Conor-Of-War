@@ -31,6 +31,16 @@ TagManager:
   - Lose2Part2
   - Lose3Part2
   - LoseGame
+  - HSaveBase
+  - MSaveBase
+  - KillAllMBase
+  - KillAllHBase
+  - KillAllB1
+  - KillAllB1P2
+  - KillAllB2
+  - KillAllB2P2
+  - KillAllB3
+  - KillAllB3P2
   layers:
   - Default
   - TransparentFX
