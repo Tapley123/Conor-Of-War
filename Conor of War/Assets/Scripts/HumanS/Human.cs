@@ -11,7 +11,7 @@ public class Human : MonoBehaviour
 
     private bool humansCanPushBack = true;
     private bool win1 = false, win1Part2 = false, win2 = false, win2Part2 = false, win3 = false, win3Part2 = false, winGame = false, winHBase = false;
-    private float loseTime = 1f;
+    private float loseTime = 6f;
 
     private bool slowingObjects = true, attacking = true;
 
@@ -43,7 +43,7 @@ public class Human : MonoBehaviour
     void Start()
     {
         //for testing
-        speed = speed * testingSpeedBoost;
+        //speed = speed * testingSpeedBoost;
 
         myRb = GetComponent<Rigidbody2D>();
         mySpeed = speed;
