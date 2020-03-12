@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    public static bool zombieCoolDownOver = true;
+    [SerializeField] GameObject zombieCoolDownBox;
+
     public GameObject zombieDropDown, werewolfDropDown, vampireDropDown, skeletonDropDown, demonDropDown;
 
     public GameObject zombie, werewolf, vampire, skeleton, demon;
@@ -33,6 +36,8 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        zombieCoolDownBox.SetActive(false);
+
         monsterSpawnPos = new Vector2(monsterSpawn1.transform.position.x, monsterSpawn1.transform.position.y);
         humanSpawnPos = new Vector2(humanSpawn.transform.position.x, humanSpawn.transform.position.y);
 
@@ -114,11 +119,14 @@ public class UIManager : MonoBehaviour
     /// ///////////////////////////////SPAWNING MONSTERS////////////////////////////////////////////////////
     public void Zombie()
     {
-        if(currency >= zombieCost)
+        if (zombieCoolDownOver)
         {
-            StartCoroutine(ZombieCoroutine(zombieCooldownTime));
-            currency -= zombieCost;
-            CoolDown.zombieButtonClicked = true;
+            if (currency >= zombieCost)
+            {
+                StartCoroutine(ZombieCoroutine(zombieCooldownTime));
+                currency -= zombieCost;
+                AudioManager.Zombie();
+            }
         }
     }
 
@@ -215,8 +223,12 @@ public class UIManager : MonoBehaviour
     /// ///////////////////////////////MONSTER COOLDOWN TIMERS////////////////////////////////////////////////////
     IEnumerator ZombieCoroutine(float time)
     {
+        zombieCoolDownBox.SetActive(true);
+        zombieCoolDownOver = false;
         yield return new WaitForSeconds(time);
         Instantiate(zombie, monsterSpawnPos, zombie.transform.rotation);
+        zombieCoolDownOver = true;
+        zombieCoolDownBox.SetActive(false);
     }
 
     IEnumerator WerewolfCoroutine(float time)

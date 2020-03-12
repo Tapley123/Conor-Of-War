@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    private AudioSource audioS;
+    public static AudioSource audioS;
+    public static AudioClip buttonp, zombiep, vampirep, skeletonp, demonp, werewolfp;
     [SerializeField] private AudioClip button, zombie, vampire, skeleton, demon, werewolf;
 
     void Start()
     {
-        audioS = GetComponent<AudioSource>();   
+        audioS = GetComponent<AudioSource>();
+        buttonp = button;
+        zombiep = zombie;
+        vampirep = vampire;
+        skeletonp = skeleton;
+        demonp = demon;
+        werewolfp = werewolf;
     }
 
     void Update()
@@ -21,9 +28,9 @@ public class AudioManager : MonoBehaviour
     {
         audioS.PlayOneShot(button);
     }
-    public void Zombie()
+    public static void Zombie()
     {
-        audioS.PlayOneShot(zombie);
+        audioS.PlayOneShot(zombiep);
     }
     public void Vampire()
     {
