@@ -118,6 +118,7 @@ public class UIManager : MonoBehaviour
         {
             StartCoroutine(ZombieCoroutine(zombieCooldownTime));
             currency -= zombieCost;
+            CoolDown.zombieButtonClicked = true;
         }
     }
 
