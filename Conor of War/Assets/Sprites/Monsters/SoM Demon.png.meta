@@ -1,0 +1,355 @@
+fileFormatVersion: 2
+guid: ea34953273147564982b60621d121f84
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7528252846651114504
+    second: SoM Demon_Torso
+  - first:
+      213: -5674079706226246844
+    second: SoM Demon_Pelvis
+  - first:
+      213: 1922055471898627827
+    second: SoM Demon_Head
+  - first:
+      213: -4721308136037499417
+    second: SoM Demon_Upper Arm
+  - first:
+      213: 4598882189230608055
+    second: SoM Demon_Staff
+  - first:
+      213: -7986896116727134493
+    second: SoM Demon_Upper Leg
+  - first:
+      213: 5656130117137001155
+    second: SoM Demon_Hand
+  - first:
+      213: 5284365284324882893
+    second: SoM Demon_Lower Leg
+  - first:
+      213: 2984577144411012086
+    second: SoM Demon_Lower Arm
+  - first:
+      213: 7755298642440070469
+    second: SoM Demon_Foot
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SoM Demon_Torso
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 810
+        width: 223
+        height: 470
+      alignment: 9
+      pivot: {x: 0.4292988, y: 0.16933711}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80486ffd31ab97860800000000000000
+      internalID: 7528252846651114504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Demon_Pelvis
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1123
+        width: 191
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44bb12bd19e9141b0800000000000000
+      internalID: -5674079706226246844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Demon_Head
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 1021
+        width: 201
+        height: 305
+      alignment: 9
+      pivot: {x: 0.26468122, y: 0.14553343}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe0d19a4438caa10800000000000000
+      internalID: 1922055471898627827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Demon_Upper Arm
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 771
+        width: 117
+        height: 244
+      alignment: 9
+      pivot: {x: 0.65400684, y: 0.8230823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edb25cc34b8a7eb0800000000000000
+      internalID: -4721308136037499417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Demon_Staff
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 39
+        width: 95
+        height: 796
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be06f43cf282df30800000000000000
+      internalID: 4598882189230608055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Demon_Upper Leg
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 318
+        width: 217
+        height: 354
+      alignment: 9
+      pivot: {x: 0.40658492, y: 0.9072036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e648885c48d82190800000000000000
+      internalID: -7986896116727134493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Demon_Hand
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 591
+        width: 107
+        height: 82
+      alignment: 9
+      pivot: {x: 0.26845145, y: 0.71974146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cae653cf5c9e7e40800000000000000
+      internalID: 5656130117137001155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Demon_Lower Leg
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 32
+        width: 156
+        height: 263
+      alignment: 9
+      pivot: {x: 0.5721909, y: 0.8168696}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc937937a36d55940800000000000000
+      internalID: 5284365284324882893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Demon_Lower Arm
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 228
+        width: 174
+        height: 200
+      alignment: 9
+      pivot: {x: 0.3317215, y: 0.837852}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb3e5199195b6920800000000000000
+      internalID: 2984577144411012086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Demon_Foot
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 22
+        width: 120
+        height: 111
+      alignment: 9
+      pivot: {x: 0.40615246, y: 0.8043715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 545a5b5a60b50ab60800000000000000
+      internalID: 7755298642440070469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
