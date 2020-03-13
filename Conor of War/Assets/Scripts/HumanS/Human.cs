@@ -122,6 +122,7 @@ public class Human : MonoBehaviour
     private void Dead()
     {
         StartCoroutine(DeathCoroutine(3)); //delay destroying the gameobject
+        GameObject.Find("Human Spawner").GetComponent<HumanSpawner>().humansOnScreen.Remove(this.gameObject);
         this.transform.position = new Vector3(1000, 1000);
     }
 

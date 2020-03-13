@@ -25,7 +25,7 @@ public class Monster : MonoBehaviour
     public bool vampCantAttack = false;
 
     public string monsterName;
-    private float health;
+    public float health;
     private float fullHealth;
     public float speed;
     private float damagePerSecond;
@@ -37,6 +37,8 @@ public class Monster : MonoBehaviour
     private float mySpeed;
 
     bool isAttacking = false;
+
+    public bool canExplode = false;
 
     void Start()
     {
@@ -162,6 +164,17 @@ public class Monster : MonoBehaviour
     private void Dead()
     {
         Destroy(this.gameObject);
+
+        if(this.gameObject.tag == "Skeleton" && canExplode)
+        {
+            for(int i = 0; i <= 2; i++)
+            {
+                GameObject.Find("Human Spawner").GetComponent<HumanSpawner>().humansOnScreen[i].GetComponent<Human>().health -= 40;
+            }
+
+            
+            
+        }
     }
 
     public void SetHealthBarSize(float sizeNormalized)

@@ -28,6 +28,8 @@ public class UIManager : MonoBehaviour
     public Text currencyText;
     public string currencyName;
 
+    public List<Transform> myTroops = new List<Transform>();
+
     private void Awake()
     {
         currency = startingCurrency;
@@ -234,6 +236,7 @@ public class UIManager : MonoBehaviour
         zombieCoolDownOver = false;
         yield return new WaitForSeconds(time);
         Instantiate(zombie, monsterSpawnPos, zombie.transform.rotation);
+        myTroops.Add(zombie.transform);
         zombieCoolDownOver = true;
         zombieCoolDownBox.SetActive(false);
     }
@@ -244,6 +247,7 @@ public class UIManager : MonoBehaviour
         werewolfCoolDownOver = false;
         yield return new WaitForSeconds(time);
         Instantiate(werewolf, monsterSpawnPos, zombie.transform.rotation);
+        myTroops.Add(werewolf.transform);
         werewolfCoolDownOver = true;
         werewolfCoolDownBox.SetActive(false);
     }
@@ -254,6 +258,7 @@ public class UIManager : MonoBehaviour
         vampireCoolDownOver = false;
         yield return new WaitForSeconds(time);
         Instantiate(vampire, monsterSpawnPos, zombie.transform.rotation);
+        myTroops.Add(vampire.transform);
         vampireCoolDownOver = true;
         vampireCoolDownBox.SetActive(false);
     }
@@ -264,6 +269,7 @@ public class UIManager : MonoBehaviour
         skeletonCoolDownOver = false;
         yield return new WaitForSeconds(time);
         Instantiate(skeleton, monsterSpawnPos, zombie.transform.rotation);
+        myTroops.Add(skeleton.transform);
         skeletonCoolDownOver = true;
         skeletonCoolDownBox.SetActive(false);
     }
@@ -274,6 +280,7 @@ public class UIManager : MonoBehaviour
         demonCoolDownOver = false;
         yield return new WaitForSeconds(time);
         Instantiate(demon, monsterSpawnPos, zombie.transform.rotation);
+        myTroops.Add(demon.transform);
         demonCoolDownOver = true;
         demonCoolDownBox.SetActive(false);
     }

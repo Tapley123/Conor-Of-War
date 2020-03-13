@@ -21,21 +21,21 @@ public class Upgrades : MonoBehaviour
 
     LayerMask myLayerMask;
 
+    public bool canExplode = false;
+
     private void Start()
     {
-        Zombie();
-        Werewolf();
-        
+       
+
     }
 
     private void Update()
     {
         humanScript = GameObject.Find("Humans").GetComponentInChildren<Human>();
        
-        Werewolf();
         
 
-        
+                
         if (zombieSpawnCount >= 2)
         {
             chanceRequirement = 0;
@@ -51,48 +51,59 @@ public class Upgrades : MonoBehaviour
 
             if(hit.collider != null)
             {
-                Debug.Log(hit.transform.gameObject.name);
+                
                 selectedUnit = hit.transform;
-                Vampire();
+                
+                Debug.Log(selectedUnit.name);
             }
         }
+
         
+        
+
+        
+
     }
 
     public void Zombie()
     {
         chanceRequirement = Random.Range(1, 10);
         zombieSpawnCount = 0;
-       
-        /*if (upgradeName == "Zombie Horde")
-        {
-            uiScript.upgrades.Add("Zombie Horde");
-            uiScript.zombieMultiply = true;
-            uiScript.chanceRequirement = 7;
-        }
-
-        if (upgradeName == "Peel Flesh")
-        {
-            uiScript.upgrades.Add("Peel Flesh");
-            uiScript.chanceRequirement = 6;
-        }*/
     }
 
     public void Werewolf()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (selectedUnit.tag == "Werewolf" && selectedUnit != null)
         {
-            
             StartCoroutine("Freeze");
-
         }
     }
 
     public void Vampire()
     {
-        if(selectedUnit.tag == "Vampire" && selectedUnit != null)
+        
+        if (selectedUnit.tag == "Vampire" && selectedUnit != null)
         {
             selectedUnit.GetComponent<Monster>().vampCantAttack = false;
+        }
+
+    }
+
+    public void Skeleton()
+    {
+        if (selectedUnit.tag == "Skeleton" && selectedUnit != null)
+        {
+            selectedUnit.GetComponent<Monster>().canExplode = true;
+        }
+        
+       
+    }
+
+    public void Demon()
+    {
+        if (selectedUnit.tag == "Demon" && selectedUnit != null)
+        {
+            StartCoroutine("Immortality");
         }
     }
 
@@ -126,6 +137,20 @@ public class Upgrades : MonoBehaviour
             }*/
         }
         
+    }
+
+    IEnumerator Immortality()
+    {
+        foreach(Transform troop in uiScript.myTroops)
+        {
+            float currentHP = troop.GetComponent<Monster>().health;
+
+            troop.GetComponent<Monster>().health = currentHP;
+
+            yield return new WaitForSeconds(5f);
+
+            troop.GetComponent<Monster>().health = troop.GetComponent<Monster>().health;
+        }
     }
 
     public void GetUpgrade()
