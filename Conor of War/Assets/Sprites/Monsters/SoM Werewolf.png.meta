@@ -1,0 +1,451 @@
+fileFormatVersion: 2
+guid: ff1a22d146292394b80cf89d46d4ff41
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6292781222585180103
+    second: SoM Werewolf_Torso
+  - first:
+      213: -2583707217205020864
+    second: SoM Werewolf_Mane
+  - first:
+      213: -5528845733742173209
+    second: SoM Werewolf_Head
+  - first:
+      213: 1654274704854465054
+    second: SoM Werewolf_Lower Arm
+  - first:
+      213: 4939911153250869234
+    second: SoM Werewolf_Upper Arm
+  - first:
+      213: 3089681557151711522
+    second: SoM Werewolf_Hand
+  - first:
+      213: -5008610087498986600
+    second: SoM Werewolf_Upper Leg
+  - first:
+      213: 7753564391838835064
+    second: SoM Werewolf_Lower Leg
+  - first:
+      213: 5345695654269481513
+    second: SoM Werewolf_Pelvis
+  - first:
+      213: -4985318906594428039
+    second: SoM Werewolf_9
+  - first:
+      213: 8836695258523623409
+    second: SoM Werewolf_10
+  - first:
+      213: 7658713675495113117
+    second: SoM Werewolf_11
+  - first:
+      213: 472321635095454421
+    second: SoM Werewolf_12
+  - first:
+      213: -6093582132239642221
+    second: SoM Werewolf_Foot
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SoM Werewolf_Torso
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 533
+        width: 247
+        height: 540
+      alignment: 9
+      pivot: {x: 0.40881205, y: 0.120438755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930ef8291dc8ba8a0800000000000000
+      internalID: -6292781222585180103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Werewolf_Mane
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 974
+        width: 182
+        height: 297
+      alignment: 9
+      pivot: {x: 0.5495024, y: 0.6061716}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047b1ea99f3d42cd0800000000000000
+      internalID: -2583707217205020864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Werewolf_Head
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 1072
+        width: 275
+        height: 227
+      alignment: 9
+      pivot: {x: 0.2379095, y: 0.24202295}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e32d5629189543b0800000000000000
+      internalID: -5528845733742173209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Werewolf_Lower Arm
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 655
+        width: 175
+        height: 206
+      alignment: 9
+      pivot: {x: 0.33268344, y: 0.81707793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ab3cf441a25f610800000000000000
+      internalID: 1654274704854465054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Werewolf_Upper Arm
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 768
+        width: 117
+        height: 248
+      alignment: 9
+      pivot: {x: 0.61550564, y: 0.82695353}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff128765071e8440800000000000000
+      internalID: 4939911153250869234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Werewolf_Hand
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 391
+        width: 107
+        height: 81
+      alignment: 9
+      pivot: {x: 0.24740173, y: 0.69464827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2218a13a101c0ea20800000000000000
+      internalID: 3089681557151711522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Werewolf_Upper Leg
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 167
+        width: 276
+        height: 498
+      alignment: 9
+      pivot: {x: 0.54896456, y: 0.8799137}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89b4f2489a7dd7ab0800000000000000
+      internalID: -5008610087498986600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Werewolf_Lower Leg
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 99
+        width: 156
+        height: 272
+      alignment: 9
+      pivot: {x: 0.60106677, y: 0.83122724}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 871eba6fbb13a9b60800000000000000
+      internalID: 7753564391838835064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Werewolf_Pelvis
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 105
+        width: 205
+        height: 163
+      alignment: 9
+      pivot: {x: 0.46703923, y: 0.6658171}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922f416ffd9bf2a40800000000000000
+      internalID: 5345695654269481513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Werewolf_9
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 261
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b76682ed690dab0800000000000000
+      internalID: -4985318906594428039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Werewolf_10
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 186
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ffdda0d48f32aa70800000000000000
+      internalID: 8836695258523623409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Werewolf_11
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 153
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d910050a287394a60800000000000000
+      internalID: 7658713675495113117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Werewolf_12
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 60
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2a89f46060e8600800000000000000
+      internalID: 472321635095454421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Werewolf_Foot
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 17
+        width: 250
+        height: 117
+      alignment: 9
+      pivot: {x: 0.2026914, y: 0.7695112}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391503ef55f3f6ba0800000000000000
+      internalID: -6093582132239642221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
