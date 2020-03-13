@@ -20,6 +20,9 @@ public class HumanSpawner : MonoBehaviour
 
     private void Start()
     {
+        battleZone1 = true;
+        battleZone2 = true;
+        battleZone3 = true;
         availableHumans = 0;
         spawnChoice = 0;
         int[] humansCost = { soldierCost, archerCost, rogueCost, knightCost, wizardCost };
@@ -85,6 +88,23 @@ public class HumanSpawner : MonoBehaviour
         GameObject human;
         ///////////////////////////////////////////////////////////////////////////////////////////  
         if (monsterBaseZone)
+            Instantiate(humans[spawnChoice], monsterBaseSpawn.position, transform.rotation);
+        if (humanBaseZone)
+            Instantiate(humans[spawnChoice], humanBaseSpawn.position, transform.rotation);
+        if (battleZone1)
+            Instantiate(humans[spawnChoice], humanSpawn1.position, transform.rotation);
+        if (battleZone1Part2)
+            human = Instantiate(humans[spawnChoice], humanSpawn1Part2.position, transform.rotation);
+        if (battleZone2)
+            Instantiate(humans[spawnChoice], humanSpawn2.position, transform.rotation);
+        if (battleZone2Part2)
+            Instantiate(humans[spawnChoice], humanSpawn2Part2.position, transform.rotation);
+        if (battleZone3)
+            Instantiate(humans[spawnChoice], humanSpawn3.position, transform.rotation);
+        if (battleZone3Part2)
+            Instantiate(humans[spawnChoice], humanSpawn3Part2.position, transform.rotation);
+        /*
+            if (monsterBaseZone)
         {
             human = Instantiate(humans[spawnChoice], monsterBaseSpawn.position, transform.rotation);
             humansOnScreen.Add(human);
@@ -139,6 +159,7 @@ public class HumanSpawner : MonoBehaviour
             humansOnScreen.Add(human);
             human.transform.parent = GameObject.Find("Humans").transform;
         }
+        */
         ///////////////////////////////////////////////////////////////////////////////////////////
 
         hCurrency -= humansCost[spawnChoice];
