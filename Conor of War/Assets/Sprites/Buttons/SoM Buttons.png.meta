@@ -4,13 +4,19 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -1423320280313883231
-    second: SoM Buttons_Selekton
-  - first:
-      213: -1269287434819886892
     second: SoM Buttons_Zombie
   - first:
-      213: 4161545937687634218
+      213: -1269287434819886892
     second: SoM Buttons_Vampire
+  - first:
+      213: 4161545937687634218
+    second: SoM Buttons_Skeleton
+  - first:
+      213: -4736915308939815887
+    second: SoM Buttons_Werewolf
+  - first:
+      213: -5814074258949904738
+    second: SoM Buttons_Demon
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -107,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SoM Buttons_Selekton
+      name: SoM Buttons_Zombie
       rect:
         serializedVersion: 2
-        x: 893
-        y: 1060
-        width: 162
-        height: 205
+        x: 188
+        y: 1029
+        width: 232
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,13 +134,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SoM Buttons_Zombie
+      name: SoM Buttons_Vampire
       rect:
         serializedVersion: 2
-        x: 185
-        y: 1033
-        width: 223
-        height: 257
+        x: 537
+        y: 1000
+        width: 232
+        height: 290
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,13 +155,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SoM Buttons_Vampire
+      name: SoM Buttons_Skeleton
       rect:
         serializedVersion: 2
-        x: 503
-        y: 1042
-        width: 223
-        height: 261
+        x: 861
+        y: 1049
+        width: 239
+        height: 232
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,6 +171,48 @@ TextureImporter:
       bones: []
       spriteID: a2167544bf7c0c930800000000000000
       internalID: 4161545937687634218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Buttons_Werewolf
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 639
+        width: 385
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134588faf98134eb0800000000000000
+      internalID: -4736915308939815887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoM Buttons_Demon
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 644
+        width: 295
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e966c890442405fa0800000000000000
+      internalID: -5814074258949904738
       vertices: []
       indices: 
       edges: []
