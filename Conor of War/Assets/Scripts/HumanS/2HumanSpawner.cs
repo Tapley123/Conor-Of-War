@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HumanSpawner : MonoBehaviour
+public class IHumanSpawner : MonoBehaviour
 {
     public int hCurrency, spawnChoice;
     public int knightCost, rogueCost, soldierCost, wizardCost, archerCost;
@@ -81,7 +81,6 @@ public class HumanSpawner : MonoBehaviour
 
         int[] humansCost = { soldierCost, archerCost, rogueCost, knightCost, wizardCost };
         //Debug.Log(humansCost[spawnChoice]);
-
         GameObject human;
         ///////////////////////////////////////////////////////////////////////////////////////////  
         if (monsterBaseZone)
@@ -90,56 +89,58 @@ public class HumanSpawner : MonoBehaviour
             humansOnScreen.Add(human);
             human.transform.parent = GameObject.Find("Humans").transform;
         }
-
+            
         if (humanBaseZone)
         {
             human = Instantiate(humans[spawnChoice], humanBaseSpawn.position, transform.rotation);
             humansOnScreen.Add(human);
             human.transform.parent = GameObject.Find("Humans").transform;
         }
-
+            
         if (battleZone1)
         {
             human = Instantiate(humans[spawnChoice], humanSpawn1.position, transform.rotation);
             humansOnScreen.Add(human);
             human.transform.parent = GameObject.Find("Humans").transform;
         }
-
+           
         if (battleZone1Part2)
         {
             human = Instantiate(humans[spawnChoice], humanSpawn1Part2.position, transform.rotation);
             humansOnScreen.Add(human);
             human.transform.parent = GameObject.Find("Humans").transform;
         }
-
+            
         if (battleZone2)
         {
             human = Instantiate(humans[spawnChoice], humanSpawn2.position, transform.rotation);
             humansOnScreen.Add(human);
             human.transform.parent = GameObject.Find("Humans").transform;
         }
-
+            
         if (battleZone2Part2)
         {
             human = Instantiate(humans[spawnChoice], humanSpawn2Part2.position, transform.rotation);
             humansOnScreen.Add(human);
             human.transform.parent = GameObject.Find("Humans").transform;
         }
-
+            
         if (battleZone3)
         {
             human = Instantiate(humans[spawnChoice], humanSpawn3.position, transform.rotation);
             humansOnScreen.Add(human);
             human.transform.parent = GameObject.Find("Humans").transform;
         }
-
+            
         if (battleZone3Part2)
         {
             human = Instantiate(humans[spawnChoice], humanSpawn3Part2.position, transform.rotation);
             humansOnScreen.Add(human);
             human.transform.parent = GameObject.Find("Humans").transform;
         }
+
         ///////////////////////////////////////////////////////////////////////////////////////////
+        
 
         hCurrency -= humansCost[spawnChoice];
     }

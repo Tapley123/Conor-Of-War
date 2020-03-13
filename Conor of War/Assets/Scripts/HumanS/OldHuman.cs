@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Human : MonoBehaviour
+public class OldHuman : MonoBehaviour
 {
     private bool youLost = false; // this bool determins if you lost the game
 
@@ -15,7 +15,7 @@ public class Human : MonoBehaviour
     private bool win1 = false, win1Part2 = false, win2 = false, win2Part2 = false, win3 = false, win3Part2 = false, winGame = false, winHBase = false;
     private float loseTime = 10f;
 
-    private bool slowingObjects = true, attacking = true;
+    private bool slowingObjects = true, attacking = false;
 
     private string attacker;
     private bool dead = false;
@@ -40,7 +40,8 @@ public class Human : MonoBehaviour
     public float pointPerKill;
 
     private float zombieDPS = 20f, werewolfDPS = 60f, vampireDPS = 15f, skeletonDPS = 60f, demonDPS = 20f;
-    
+
+   
 
     void Start()
     {
@@ -383,7 +384,7 @@ public class Human : MonoBehaviour
     {
         while (health > 0)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(3f);
             health -= vampireDPS;
             attacking = false;
         }

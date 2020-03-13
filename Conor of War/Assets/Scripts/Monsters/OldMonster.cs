@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster : MonoBehaviour
+public class OldMonster : MonoBehaviour
 {
     private bool youWon = false; //this bool determines if you won the game
 
@@ -27,7 +27,7 @@ public class Monster : MonoBehaviour
     public string monsterName;
     private float health;
     private float fullHealth;
-    public float speed;
+    private float speed;
     private float damagePerSecond;
     private float pointPerKill;
 
@@ -35,8 +35,6 @@ public class Monster : MonoBehaviour
     private float zombiePPK = 15f, werewolfPPK = 45f, vampirePPK = 30f, skeletonPPK = 30f, demonPPK = 120f; //points per kill
     private float archerDPS = 15f, knightDPS = 60f, rogueDPS = 60f, soldierDPS = 20f, wizardDPS = 20f;
     private float mySpeed;
-
-    bool isAttacking = false;
 
     void Start()
     {
@@ -301,7 +299,7 @@ public class Monster : MonoBehaviour
             else
                 speed = m.speed;
 
-            if (this.gameObject.tag == "Vampire")
+            if(this.gameObject.tag == "Vampire")
             {
                 vampCantAttack = true;
             }
@@ -321,51 +319,48 @@ public class Monster : MonoBehaviour
 
 
         ////////////////////////////////////////////////////////ATTACK/////////////////////////////////////////////////
-        if ((this.gameObject.tag == "Vampire" && collision.transform.position.x < this.transform.position.x + 5f) || this.gameObject.tag != "Vampire")
+        ///
+
+        if((this.gameObject.tag == "Vampire" && collision.transform.position.x < this.transform.position.x + 5f) || this.gameObject.tag != "Vampire")
         {
-            if(isAttacking == false)
+            if (collision.CompareTag("Archer"))
             {
-                if (collision.CompareTag("Archer"))
-                {
-                    stopped = true;
-                    speed = 0;
-                    StartCoroutine(AttackArcherCoroutine());
-                    isAttacking = true;
-                }
-                if (collision.CompareTag("Knight"))
-                {
-                    stopped = true;
-                    speed = 0;
-                    StartCoroutine(AttackKnightCoroutine());
-                    isAttacking = true;
-                }
-                if (collision.CompareTag("Rogue"))
-                {
-                    stopped = true;
-                    speed = 0;
-                    StartCoroutine(AttackRogueCoroutine());
-                    isAttacking = true;
-                }
-                if (collision.CompareTag("Soldier"))
-                {
-                    stopped = true;
-                    speed = 0;
-                    StartCoroutine(AttackSoldierCoroutine());
-                    isAttacking = true;
-                }
-                if (collision.CompareTag("Wizard"))
-                {
-                    stopped = true;
-                    speed = 0;
-                    StartCoroutine(AttackWizardCoroutine());
-                    isAttacking = true;
-                }
+                stopped = true;
+                speed = 0;
+                StartCoroutine(AttackArcherCoroutine());
+            }
+            if (collision.CompareTag("Knight"))
+            {
+                stopped = true;
+                speed = 0;
+                StartCoroutine(AttackKnightCoroutine());
+            }
+            if (collision.CompareTag("Rogue"))
+            {
+                stopped = true;
+                speed = 0;
+                StartCoroutine(AttackRogueCoroutine());
+            }
+            if (collision.CompareTag("Soldier"))
+            {
+                stopped = true;
+                speed = 0;
+                StartCoroutine(AttackSoldierCoroutine());
+            }
+            if (collision.CompareTag("Wizard"))
+            {
+                stopped = true;
+                speed = 0;
+                StartCoroutine(AttackWizardCoroutine());
             }
         }
-            
+        
+        
+        
         ////////////////////////////////////////////////////////ATTACK/////////////////////////////////////////////////
     }
 
+    
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (advanceStages)
@@ -402,7 +397,7 @@ public class Monster : MonoBehaviour
                 UIManager.currency = UIManager.currency + demonPPK;
         }
 
-        if (collision.CompareTag("Werewolf") && this.gameObject.tag == "Vampire")
+        if(collision.CompareTag("Werewolf") && this.gameObject.tag == "Vampire")
         {
             vampCantAttack = false;
         }
@@ -425,7 +420,6 @@ public class Monster : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             health -= archerDPS;
-            isAttacking = false;
         }
     }
     IEnumerator AttackKnightCoroutine()
@@ -434,7 +428,6 @@ public class Monster : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             health -= knightDPS;
-            isAttacking = false;
         }
     }
     IEnumerator AttackRogueCoroutine()
@@ -443,7 +436,6 @@ public class Monster : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             health -= rogueDPS;
-            isAttacking = false;
         }
     }
     IEnumerator AttackSoldierCoroutine()
@@ -452,7 +444,6 @@ public class Monster : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             health -= soldierDPS;
-            isAttacking = false;
         }
     }
     IEnumerator AttackWizardCoroutine()
@@ -461,7 +452,6 @@ public class Monster : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             health -= wizardDPS;
-            isAttacking = false;
         }
     }
     /// //////////////////////////////////////////////ATTACK COROUTINES///////////////////////////////////////////////////
