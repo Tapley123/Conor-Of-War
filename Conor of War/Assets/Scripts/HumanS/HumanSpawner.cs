@@ -88,21 +88,53 @@ public class HumanSpawner : MonoBehaviour
         GameObject human;
         ///////////////////////////////////////////////////////////////////////////////////////////  
         if (monsterBaseZone)
-            Instantiate(humans[spawnChoice], monsterBaseSpawn.position, transform.rotation);
+        {
+            human = Instantiate(humans[spawnChoice], monsterBaseSpawn.position, transform.rotation);
+            humansOnScreen.Add(human);
+        }
+            
         if (humanBaseZone)
-            Instantiate(humans[spawnChoice], humanBaseSpawn.position, transform.rotation);
+        {
+            human = Instantiate(humans[spawnChoice], humanBaseSpawn.position, transform.rotation);
+            humansOnScreen.Add(human);
+        }
+            
         if (battleZone1)
-            Instantiate(humans[spawnChoice], humanSpawn1.position, transform.rotation);
+        {
+            human = Instantiate(humans[spawnChoice], humanSpawn1.position, transform.rotation);
+            humansOnScreen.Add(human);
+        }
+            
         if (battleZone1Part2)
+        {
             human = Instantiate(humans[spawnChoice], humanSpawn1Part2.position, transform.rotation);
+            humansOnScreen.Add(human);
+        }
+            
         if (battleZone2)
-            Instantiate(humans[spawnChoice], humanSpawn2.position, transform.rotation);
+        {
+            human = Instantiate(humans[spawnChoice], humanSpawn2.position, transform.rotation);
+            humansOnScreen.Add(human);
+        }
+            
         if (battleZone2Part2)
-            Instantiate(humans[spawnChoice], humanSpawn2Part2.position, transform.rotation);
+        {
+            human = Instantiate(humans[spawnChoice], humanSpawn2Part2.position, transform.rotation);
+            humansOnScreen.Add(human);
+        }
+            
         if (battleZone3)
-            Instantiate(humans[spawnChoice], humanSpawn3.position, transform.rotation);
+        {
+            human = Instantiate(humans[spawnChoice], humanSpawn3.position, transform.rotation);
+            humansOnScreen.Add(human);
+        }
+            
         if (battleZone3Part2)
-            Instantiate(humans[spawnChoice], humanSpawn3Part2.position, transform.rotation);
+        {
+            human = Instantiate(humans[spawnChoice], humanSpawn3Part2.position, transform.rotation);
+            humansOnScreen.Add(human);
+        }
+            
         /*
             if (monsterBaseZone)
         {

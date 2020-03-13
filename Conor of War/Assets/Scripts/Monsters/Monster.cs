@@ -167,6 +167,7 @@ public class Monster : MonoBehaviour
 
         if(this.gameObject.tag == "Skeleton" && canExplode)
         {
+            Debug.Log("boom");
             for(int i = 0; i <= 2; i++)
             {
                 GameObject.Find("Human Spawner").GetComponent<HumanSpawner>().humansOnScreen[i].GetComponent<Human>().health -= 40;
