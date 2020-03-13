@@ -6,6 +6,7 @@ public class MapController : MonoBehaviour
 {
     //Win/Lose
     public static bool win = false, lose = false;
+    public GameObject winScreen, loseScreen;
     //Activate Zones
     private bool advance1 = true, advance2 = true, advance3 = true;
     public static bool monsterBaseActive, humanBaseActive;
@@ -27,6 +28,9 @@ public class MapController : MonoBehaviour
 
     void Start()
     {
+        //win/lose screens
+        winScreen.SetActive(false);
+        loseScreen.SetActive(false);
         //Controller Bools
         monsterBaseActive = false;
         battleZone1Active = true;
@@ -69,7 +73,16 @@ public class MapController : MonoBehaviour
     
     void Update()
     {
-        if(advance1)
+        if(win)
+            winScreen.SetActive(true);
+        else
+            winScreen.SetActive(false);
+        if (lose)
+            loseScreen.SetActive(true);
+        else
+            loseScreen.SetActive(false);
+
+        if (advance1)
         {
             if (monsterBaseActive && !battleZone1Active && !battleZone1p2Active) // add another check
             {

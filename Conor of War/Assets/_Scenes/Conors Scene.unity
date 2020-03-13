@@ -150,6 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ebfb16fe5108e24297faaf99498a6a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winScreen: {fileID: 1582042579}
+  loseScreen: {fileID: 638718726}
   monsterBase: {fileID: 1137253698}
   tMonsterBase: {fileID: 358573957}
   battleZone1: {fileID: 1636321067}
