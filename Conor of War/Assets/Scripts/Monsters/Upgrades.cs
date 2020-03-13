@@ -11,7 +11,7 @@ public class Upgrades : MonoBehaviour
 
     public Monster[] monScript;
 
-    public Human humanScript;
+    //public Human humanScript;
 
     public HumanSpawner humanSpawnScript;
 
@@ -31,7 +31,7 @@ public class Upgrades : MonoBehaviour
 
     private void Update()
     {
-        humanScript = GameObject.Find("Humans").GetComponentInChildren<Human>();
+        //humanScript = GameObject.Find("Humans").GetComponentInChildren<Human>();
        
         
 
